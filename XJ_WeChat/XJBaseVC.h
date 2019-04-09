@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XJBaseVC.h
 //  XJ_WeChat
 //
 //  Created by mac on 2019/4/9.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface XJBaseVC : UIViewController
 
 @end
-
