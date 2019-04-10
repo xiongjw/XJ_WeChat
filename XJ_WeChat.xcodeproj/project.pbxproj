@@ -14,6 +14,9 @@
 		0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABF3225C3EBD00236154 /* XJAddressBookMainVC.m */; };
 		0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABF6225C3ECC00236154 /* XJDiscoveryMainVC.m */; };
 		0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABF9225C3ED700236154 /* XJMineMainVC.m */; };
+		0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFC225C3F1B00236154 /* XJTabBarVC.m */; };
+		0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFF225C3F2D00236154 /* XJLoginVC.m */; };
+		044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C991A225D9C1D0030AE9A /* XJChatVC.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -35,6 +38,12 @@
 		0430ABF6225C3ECC00236154 /* XJDiscoveryMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJDiscoveryMainVC.m; sourceTree = "<group>"; };
 		0430ABF8225C3ED700236154 /* XJMineMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMineMainVC.h; sourceTree = "<group>"; };
 		0430ABF9225C3ED700236154 /* XJMineMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMineMainVC.m; sourceTree = "<group>"; };
+		0430ABFB225C3F1B00236154 /* XJTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTabBarVC.h; sourceTree = "<group>"; };
+		0430ABFC225C3F1B00236154 /* XJTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTabBarVC.m; sourceTree = "<group>"; };
+		0430ABFE225C3F2D00236154 /* XJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLoginVC.h; sourceTree = "<group>"; };
+		0430ABFF225C3F2D00236154 /* XJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLoginVC.m; sourceTree = "<group>"; };
+		044C9919225D9C1D0030AE9A /* XJChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatVC.h; sourceTree = "<group>"; };
+		044C991A225D9C1D0030AE9A /* XJChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatVC.m; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,60 +77,158 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0430ABD9225C3AB300236154 /* ThirdParts */ = {
+		044C9920225D9E8E0030AE9A /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				044C9924225D9E8E0030AE9A /* 聊天 */,
+				044C992A225D9E8E0030AE9A /* 消息 */,
+				044C9927225D9E8E0030AE9A /* 通讯录 */,
+				044C9932225D9E8E0030AE9A /* 发现 */,
+				044C9921225D9E8E0030AE9A /* 我的 */,
+				044C992D225D9E8E0030AE9A /* Main */,
 			);
-			name = ThirdParts;
+			path = Business;
 			sourceTree = "<group>";
 		};
-		0430ABDA225C3ABE00236154 /* AppTools */ = {
+		044C9921225D9E8E0030AE9A /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				044C9922225D9E8E0030AE9A /* 我的 */,
 			);
-			name = AppTools;
+			path = "我的";
 			sourceTree = "<group>";
 		};
-		0430ABDB225C3AD400236154 /* Business */ = {
+		044C9922225D9E8E0030AE9A /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABEE225C3E8200236154 /* 消息 */,
-				0430ABED225C3E7D00236154 /* 通讯录 */,
-				0430ABEC225C3E7700236154 /* 发现 */,
-				0430ABEB225C3E6400236154 /* 我的 */,
-				0430ABDC225C3B0500236154 /* Main */,
+				044C9923225D9E8E0030AE9A /* ViewController */,
 			);
-			name = Business;
+			path = "我的";
 			sourceTree = "<group>";
 		};
-		0430ABDC225C3B0500236154 /* Main */ = {
+		044C9923225D9E8E0030AE9A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABDE225C3DBB00236154 /* AppDelegate */,
-				0430ABE0225C3DD500236154 /* Base */,
-				0430ABEA225C3E4300236154 /* Login */,
-				0430ABDF225C3DCC00236154 /* Tabbar */,
+				0430ABF8225C3ED700236154 /* XJMineMainVC.h */,
+				0430ABF9225C3ED700236154 /* XJMineMainVC.m */,
 			);
-			name = Main;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		0430ABDE225C3DBB00236154 /* AppDelegate */ = {
+		044C9924225D9E8E0030AE9A /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				044C9925225D9E8E0030AE9A /* 聊天 */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
+		044C9925225D9E8E0030AE9A /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				044C9926225D9E8E0030AE9A /* ViewController */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
+		044C9926225D9E8E0030AE9A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				044C9919225D9C1D0030AE9A /* XJChatVC.h */,
+				044C991A225D9C1D0030AE9A /* XJChatVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		044C9927225D9E8E0030AE9A /* 通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				044C9928225D9E8E0030AE9A /* 通讯录 */,
+			);
+			path = "通讯录";
+			sourceTree = "<group>";
+		};
+		044C9928225D9E8E0030AE9A /* 通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				044C9929225D9E8E0030AE9A /* ViewController */,
+			);
+			path = "通讯录";
+			sourceTree = "<group>";
+		};
+		044C9929225D9E8E0030AE9A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0430ABF2225C3EBD00236154 /* XJAddressBookMainVC.h */,
+				0430ABF3225C3EBD00236154 /* XJAddressBookMainVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		044C992A225D9E8E0030AE9A /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				044C992B225D9E8E0030AE9A /* 消息 */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		044C992B225D9E8E0030AE9A /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				044C992C225D9E8E0030AE9A /* ViewController */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		044C992C225D9E8E0030AE9A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0430ABEF225C3EAE00236154 /* XJMessageMainVC.h */,
+				0430ABF0225C3EAE00236154 /* XJMessageMainVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		044C992D225D9E8E0030AE9A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				044C992F225D9E8E0030AE9A /* AppDelegate */,
+				044C9931225D9E8E0030AE9A /* Base */,
+				044C9930225D9E8E0030AE9A /* Login */,
+				044C992E225D9E8E0030AE9A /* TabBar */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		044C992E225D9E8E0030AE9A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0430ABFB225C3F1B00236154 /* XJTabBarVC.h */,
+				0430ABFC225C3F1B00236154 /* XJTabBarVC.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		044C992F225D9E8E0030AE9A /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				04E4D4F9225C351D0067D70C /* AppDelegate.h */,
 				04E4D4FA225C351D0067D70C /* AppDelegate.m */,
 			);
-			name = AppDelegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		0430ABDF225C3DCC00236154 /* Tabbar */ = {
+		044C9930225D9E8E0030AE9A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0430ABFE225C3F2D00236154 /* XJLoginVC.h */,
+				0430ABFF225C3F2D00236154 /* XJLoginVC.m */,
 			);
-			name = Tabbar;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		0430ABE0225C3DD500236154 /* Base */ = {
+		044C9931225D9E8E0030AE9A /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				0430ABE1225C3DEF00236154 /* XJBaseVC.h */,
@@ -131,50 +238,78 @@
 				0430ABE7225C3E2100236154 /* XJBaseWebVC.h */,
 				0430ABE8225C3E2100236154 /* XJBaseWebVC.m */,
 			);
-			name = Base;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		0430ABEA225C3E4300236154 /* Login */ = {
+		044C9932225D9E8E0030AE9A /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				044C9933225D9E8E0030AE9A /* 发现 */,
 			);
-			name = Login;
+			path = "发现";
 			sourceTree = "<group>";
 		};
-		0430ABEB225C3E6400236154 /* 我的 */ = {
+		044C9933225D9E8E0030AE9A /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABF8225C3ED700236154 /* XJMineMainVC.h */,
-				0430ABF9225C3ED700236154 /* XJMineMainVC.m */,
+				044C9934225D9E8E0030AE9A /* ViewController */,
 			);
-			name = "我的";
+			path = "发现";
 			sourceTree = "<group>";
 		};
-		0430ABEC225C3E7700236154 /* 发现 */ = {
+		044C9934225D9E8E0030AE9A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				0430ABF5225C3ECC00236154 /* XJDiscoveryMainVC.h */,
 				0430ABF6225C3ECC00236154 /* XJDiscoveryMainVC.m */,
 			);
-			name = "发现";
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		0430ABED225C3E7D00236154 /* 通讯录 */ = {
+		044C9935225D9F7F0030AE9A /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABF2225C3EBD00236154 /* XJAddressBookMainVC.h */,
-				0430ABF3225C3EBD00236154 /* XJAddressBookMainVC.m */,
+				044C993A225D9FF70030AE9A /* 图片浏览 */,
 			);
-			name = "通讯录";
+			path = ThirdParts;
 			sourceTree = "<group>";
 		};
-		0430ABEE225C3E8200236154 /* 消息 */ = {
+		044C9936225D9F7F0030AE9A /* AppTools */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABEF225C3EAE00236154 /* XJMessageMainVC.h */,
-				0430ABF0225C3EAE00236154 /* XJMessageMainVC.m */,
+				044C9939225D9FD80030AE9A /* 工具类 */,
+				044C9938225D9FCE0030AE9A /* 类别 */,
+				044C9937225D9FC60030AE9A /* 宏定义 */,
 			);
-			name = "消息";
+			path = AppTools;
+			sourceTree = "<group>";
+		};
+		044C9937225D9FC60030AE9A /* 宏定义 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "宏定义";
+			sourceTree = "<group>";
+		};
+		044C9938225D9FCE0030AE9A /* 类别 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "类别";
+			sourceTree = "<group>";
+		};
+		044C9939225D9FD80030AE9A /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
+		044C993A225D9FF70030AE9A /* 图片浏览 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "图片浏览";
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {
@@ -198,9 +333,9 @@
 		04E4D4F8225C351D0067D70C /* XJ_WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABDB225C3AD400236154 /* Business */,
-				0430ABDA225C3ABE00236154 /* AppTools */,
-				0430ABD9225C3AB300236154 /* ThirdParts */,
+				044C9920225D9E8E0030AE9A /* Business */,
+				044C9936225D9F7F0030AE9A /* AppTools */,
+				044C9935225D9F7F0030AE9A /* ThirdParts */,
 				0430ABD8225C39FC00236154 /* Supporting Files */,
 			);
 			path = XJ_WeChat;
@@ -323,6 +458,9 @@
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
+				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
+				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
+				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
 				0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
