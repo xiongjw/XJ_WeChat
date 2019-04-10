@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface XJAddressBookMainVC : UIViewController
+@interface XJAddressBookMainVC : XJBaseVC
 
 @end
-
-NS_ASSUME_NONNULL_END

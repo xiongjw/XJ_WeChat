@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface XJMessageMainVC : UIViewController
+@interface XJMessageMainVC : XJBaseVC
 
 @end
-
-NS_ASSUME_NONNULL_END

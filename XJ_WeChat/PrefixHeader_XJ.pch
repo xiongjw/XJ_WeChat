@@ -1,0 +1,25 @@
+//
+//  PrefixHeader_XJ.pch
+//  XJ_WeChat
+//
+//  Created by mac on 2019/4/10.
+//  Copyright © 2019 mac. All rights reserved.
+//
+
+#ifndef PrefixHeader_XJ_pch
+#define PrefixHeader_XJ_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVCaptureDevice.h>
+#import <AVFoundation/AVMediaFormat.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+
+#import "XJBaseVC.h"
+
+#import "XJMacro.h"
+
+#endif /* PrefixHeader_XJ_pch */

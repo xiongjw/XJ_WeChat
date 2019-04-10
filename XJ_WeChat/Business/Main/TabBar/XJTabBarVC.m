@@ -8,6 +8,13 @@
 
 #import "XJTabBarVC.h"
 
+#import "XJNavigationController.h"
+
+#define kClassKey   @"rootVCClassString"
+#define kTitleKey   @"title"
+#define kImgKey     @"imageName"
+#define kSelImgKey  @"selectedImageName"
+
 @interface XJTabBarVC ()
 
 @end
@@ -17,16 +24,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[UITabBar appearance] setTranslucent:NO];
+    NSArray *childItemsArray = @[
+                                 @{kClassKey  : @"XJMessageMainVC",
+                                   kTitleKey  : @"微信",
+                                   kImgKey    : @"tabbar_mainframe",
+                                   kSelImgKey : @"tabbar_mainframeHL"},
+                                 
+                                 @{kClassKey  : @"XJAddressBookMainVC",
+                                   kTitleKey  : @"通讯录",
+                                   kImgKey    : @"tabbar_contacts",
+                                   kSelImgKey : @"tabbar_contactsHL"},
+                                 
+                                 @{kClassKey  : @"XJDiscoveryMainVC",
+                                   kTitleKey  : @"发现",
+                                   kImgKey    : @"tabbar_discover",
+                                   kSelImgKey : @"tabbar_discoverHL"},
+                                 
+                                 @{kClassKey  : @"XJMineMainVC",
+                                   kTitleKey  : @"我",
+                                   kImgKey    : @"tabbar_me",
+                                   kSelImgKey : @"tabbar_meHL"} ];
+    
+    [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
+        XJBaseVC *vc = [NSClassFromString(dict[kClassKey]) new];
+        vc.title = dict[kTitleKey];
+        XJNavigationController *nav = [[XJNavigationController alloc] initWithRootViewController:vc];
+        UITabBarItem *item = nav.tabBarItem;
+        item.title = dict[kTitleKey];
+        item.image = [UIImage imageNamed:dict[kImgKey]];
+        item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [item setTitleTextAttributes:@{NSForegroundColorAttributeName : RGBCOLOR(0, 190, 12)} forState:UIControlStateSelected];
+        [self addChildViewController:nav];
+    }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

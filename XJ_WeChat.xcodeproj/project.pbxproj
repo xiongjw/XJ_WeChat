@@ -17,6 +17,10 @@
 		0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFC225C3F1B00236154 /* XJTabBarVC.m */; };
 		0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFF225C3F2D00236154 /* XJLoginVC.m */; };
 		044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C991A225D9C1D0030AE9A /* XJChatVC.m */; };
+		044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */; };
+		044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9942225DA4C50030AE9A /* UIColor+AppColor.m */; };
+		044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9947225DC5700030AE9A /* XJNavigationController.m */; };
+		044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C994A225DC63D0030AE9A /* AppDelegate+Config.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -44,6 +48,16 @@
 		0430ABFF225C3F2D00236154 /* XJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLoginVC.m; sourceTree = "<group>"; };
 		044C9919225D9C1D0030AE9A /* XJChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatVC.h; sourceTree = "<group>"; };
 		044C991A225D9C1D0030AE9A /* XJChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatVC.m; sourceTree = "<group>"; };
+		044C993E225DA38B0030AE9A /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
+		044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZJBlockBarButtonItem.m; sourceTree = "<group>"; };
+		044C9941225DA4C50030AE9A /* UIColor+AppColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
+		044C9942225DA4C50030AE9A /* UIColor+AppColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
+		044C9944225DBD8B0030AE9A /* XJMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMacro.h; sourceTree = "<group>"; };
+		044C9945225DC39C0030AE9A /* PrefixHeader_XJ.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader_XJ.pch; sourceTree = "<group>"; };
+		044C9946225DC5700030AE9A /* XJNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJNavigationController.h; sourceTree = "<group>"; };
+		044C9947225DC5700030AE9A /* XJNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJNavigationController.m; sourceTree = "<group>"; };
+		044C9949225DC63D0030AE9A /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
+		044C994A225DC63D0030AE9A /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +87,7 @@
 				04E4D502225C351E0067D70C /* Assets.xcassets */,
 				04E4D507225C351E0067D70C /* Info.plist */,
 				04E4D508225C351E0067D70C /* main.m */,
+				044C9945225DC39C0030AE9A /* PrefixHeader_XJ.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -215,6 +230,8 @@
 			children = (
 				04E4D4F9225C351D0067D70C /* AppDelegate.h */,
 				04E4D4FA225C351D0067D70C /* AppDelegate.m */,
+				044C9949225DC63D0030AE9A /* AppDelegate+Config.h */,
+				044C994A225DC63D0030AE9A /* AppDelegate+Config.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -237,6 +254,8 @@
 				0430ABE5225C3E1000236154 /* XJBaseTableVC.m */,
 				0430ABE7225C3E2100236154 /* XJBaseWebVC.h */,
 				0430ABE8225C3E2100236154 /* XJBaseWebVC.m */,
+				044C9946225DC5700030AE9A /* XJNavigationController.h */,
+				044C9947225DC5700030AE9A /* XJNavigationController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -287,6 +306,7 @@
 		044C9937225D9FC60030AE9A /* 宏定义 */ = {
 			isa = PBXGroup;
 			children = (
+				044C9944225DBD8B0030AE9A /* XJMacro.h */,
 			);
 			path = "宏定义";
 			sourceTree = "<group>";
@@ -294,6 +314,8 @@
 		044C9938225D9FCE0030AE9A /* 类别 */ = {
 			isa = PBXGroup;
 			children = (
+				044C9941225DA4C50030AE9A /* UIColor+AppColor.h */,
+				044C9942225DA4C50030AE9A /* UIColor+AppColor.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -301,6 +323,7 @@
 		044C9939225D9FD80030AE9A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -310,6 +333,15 @@
 			children = (
 			);
 			path = "图片浏览";
+			sourceTree = "<group>";
+		};
+		044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				044C993E225DA38B0030AE9A /* ZZJBlockBarButtonItem.h */,
+				044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */,
+			);
+			path = ZZJBlockBarButtonItem;
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {
@@ -456,14 +488,18 @@
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
+				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
+				044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */,
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
 				0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */,
+				044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
+				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +623,10 @@
 			baseConfigurationReference = 51D8559C78280093F1FD5FCF /* Pods-XJ_WeChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2VV6YBT2XB;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XJ_WeChat/PrefixHeader_XJ.pch";
 				INFOPLIST_FILE = XJ_WeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +644,10 @@
 			baseConfigurationReference = 0F4D5CE3FCACC0B058DEB9EE /* Pods-XJ_WeChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2VV6YBT2XB;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XJ_WeChat/PrefixHeader_XJ.pch";
 				INFOPLIST_FILE = XJ_WeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
