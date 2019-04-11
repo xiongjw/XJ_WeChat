@@ -10,7 +10,7 @@
 
 @interface XJConversationCell ()
 
-@property (nonatomic,strong) UIImageView *iconView;
+@property (nonatomic,strong) UIImageView *headIcon;
 @property (nonatomic,strong) UILabel *badgeLb;
 @property (nonatomic,strong) UILabel *nameLb;
 @property (nonatomic,strong) UILabel *timeLb;
@@ -25,11 +25,11 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        _iconView = [UIImageView createImageViewWithFrame:CGRectMake(15, 10, 40, 40) radius:5];
-        [self.contentView addSubview:_iconView];
+        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(15, 10, 40, 40) radius:5];
+        [self.contentView addSubview:_headIcon];
         
         _badgeLb = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
-        _badgeLb.center = CGPointMake(_iconView.right, _iconView.top);
+        _badgeLb.center = CGPointMake(_headIcon.right, _headIcon.top);
         _badgeLb.layer.cornerRadius = _badgeLb.height/2;
         _badgeLb.layer.masksToBounds = YES;
         _badgeLb.textColor = [UIColor whiteColor];
@@ -44,7 +44,7 @@
         _timeLb.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:_timeLb];
         
-        _nameLb = [[UILabel alloc] initWithFrame:CGRectMake(_iconView.right + 10, 10, _timeLb.left - (_iconView.right + 10), 20)];
+        _nameLb = [[UILabel alloc] initWithFrame:CGRectMake(_headIcon.right + 10, 10, _timeLb.left - (_headIcon.right + 10), 20)];
         _nameLb.font = [UIFont systemFontOfSize:16];
         _nameLb.textColor = [UIColor titleColor];
         [self.contentView addSubview:_nameLb];
@@ -81,7 +81,7 @@
 {
     _model = model;
     
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:model.headImageUrl]];
+    [_headIcon sd_setImageWithURL:[NSURL URLWithString:model.headImageUrl]];
     _nameLb.text = model.nickname;
     _timeLb.text = @"17:34";
     _descLb.text = model.desc;
@@ -91,15 +91,18 @@
         _badgeLb.hidden = NO;
         if (model.unReadNum < 10) {
             _badgeLb.width = 16;
+            _badgeLb.text = FormatString(@"%ld",model.unReadNum);
         }
         else if (model.unReadNum < 100) {
-            _badgeLb.width = 22;
+            _badgeLb.width = 24;
+            _badgeLb.text = FormatString(@"%ld",model.unReadNum);
         }
         else {
-            _badgeLb.width = 30;
+            _badgeLb.width = 32;
+            _badgeLb.text = @"99+";
         }
-        _badgeLb.center = CGPointMake(_iconView.right, _iconView.top);
-        _badgeLb.text = FormatString(@"%ld",model.unReadNum);
+        _badgeLb.center = CGPointMake(_headIcon.right, _headIcon.top);
+        
     }
     
 }

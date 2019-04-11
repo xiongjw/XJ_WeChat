@@ -18,6 +18,7 @@
 #import <AVFoundation/AVMediaFormat.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+/// app
 #import "XJBaseVC.h"
 #import "XJBaseTableVC.h"
 
@@ -28,6 +29,9 @@
 #import "UIColor+AppColor.h"
 #import "UIView+Create.h"
 #import "UIView+Ex.h"
+
+/// 模块
+#import "XJChatDefine.h"
 
 /// thirdParts
 #import <AFNetworking.h>

@@ -26,4 +26,14 @@
     return imageView;
 }
 
+
+
++ (UILabel *)createLabelWithFont:(UIFont *)font textColor:(UIColor *)textColor
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = font;
+    label.textColor = textColor;
+    return label;
+}
+
 @end

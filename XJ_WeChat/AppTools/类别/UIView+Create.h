@@ -13,4 +13,6 @@
 + (UIImageView *)createImageViewWithFrame:(CGRect)frame;
 + (UIImageView *)createImageViewWithFrame:(CGRect)frame radius:(CGFloat)radius;
 
++ (UILabel *)createLabelWithFont:(UIFont *)font textColor:(UIColor *)textColor;
+
 @end

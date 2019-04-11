@@ -27,13 +27,13 @@
     self.mTableView.height = Screen_Height - NavHeight - TabBarHeight;
     [self.mTableView registerClass:[XJConversationCell class] forCellReuseIdentifier:@"XJConversationCell"];
     
-    for (int i = 0; i < 20; i++) {
+    for (int i = 100; i > 0; i--) {
         XJConversationModel *model = [[XJConversationModel alloc] init];
         model.headImageUrl = @"https://img4.duitang.com/uploads/item/201507/11/20150711193532_E2zF8.thumb.700_0.jpeg";
         model.nickname = @"大熊、";
         //model.time =
         model.desc = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
-        model.unReadNum = i + 1;
+        model.unReadNum = i;
         [self.mutArray addObject:model];
     }
     
@@ -63,7 +63,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    XJConversationModel *model = self.mutArray[indexPath.row];
     XJChatVC *vc = [[XJChatVC alloc] init];
+    vc.navigationItem.title = model.nickname;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

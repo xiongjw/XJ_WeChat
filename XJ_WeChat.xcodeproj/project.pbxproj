@@ -25,6 +25,19 @@
 		044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9952225DEA5A0030AE9A /* XJConversationModel.m */; };
 		044C9957225DED850030AE9A /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9956225DED850030AE9A /* UIView+Create.m */; };
 		044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9959225DF1150030AE9A /* UIView+Ex.m */; };
+		04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799907225EEA8C00470217 /* XJMessageBaseCell.m */; };
+		0479990D225EEB2100470217 /* XJChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479990C225EEB2100470217 /* XJChatUtil.m */; };
+		04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799910225EEE1500470217 /* XJMessageTextCell.m */; };
+		04799914225EEE2C00470217 /* XJMessageImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799913225EEE2C00470217 /* XJMessageImageCell.m */; };
+		04799917225EEE3700470217 /* XJMessageVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799916225EEE3700470217 /* XJMessageVoiceCell.m */; };
+		0479991D225EEF2800470217 /* XJMessageVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479991C225EEF2800470217 /* XJMessageVideoCell.m */; };
+		04799920225EEF5800470217 /* XJMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479991F225EEF5800470217 /* XJMessageModel.m */; };
+		04799923225EEF6E00470217 /* XJMessageLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799922225EEF6E00470217 /* XJMessageLocationCell.m */; };
+		04799926225EEF9F00470217 /* XJMessageTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799925225EEF9F00470217 /* XJMessageTipsCell.m */; };
+		0479992A225EFAE600470217 /* XJLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799929225EFAE600470217 /* XJLocationModel.m */; };
+		04799933225F403F00470217 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479992D225F403F00470217 /* SDPhotoBrowser.m */; };
+		04799934225F403F00470217 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479992E225F403F00470217 /* SDWaitingView.m */; };
+		04799935225F403F00470217 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479992F225F403F00470217 /* SDBrowserImageView.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -70,6 +83,34 @@
 		044C9956225DED850030AE9A /* UIView+Create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
 		044C9958225DF1150030AE9A /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
 		044C9959225DF1150030AE9A /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		04799906225EEA8C00470217 /* XJMessageBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageBaseCell.h; sourceTree = "<group>"; };
+		04799907225EEA8C00470217 /* XJMessageBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageBaseCell.m; sourceTree = "<group>"; };
+		0479990A225EEB0E00470217 /* XJChatDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatDefine.h; sourceTree = "<group>"; };
+		0479990B225EEB2100470217 /* XJChatUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatUtil.h; sourceTree = "<group>"; };
+		0479990C225EEB2100470217 /* XJChatUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatUtil.m; sourceTree = "<group>"; };
+		0479990F225EEE1500470217 /* XJMessageTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageTextCell.h; sourceTree = "<group>"; };
+		04799910225EEE1500470217 /* XJMessageTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageTextCell.m; sourceTree = "<group>"; };
+		04799912225EEE2C00470217 /* XJMessageImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageImageCell.h; sourceTree = "<group>"; };
+		04799913225EEE2C00470217 /* XJMessageImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageImageCell.m; sourceTree = "<group>"; };
+		04799915225EEE3700470217 /* XJMessageVoiceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageVoiceCell.h; sourceTree = "<group>"; };
+		04799916225EEE3700470217 /* XJMessageVoiceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageVoiceCell.m; sourceTree = "<group>"; };
+		0479991B225EEF2800470217 /* XJMessageVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageVideoCell.h; sourceTree = "<group>"; };
+		0479991C225EEF2800470217 /* XJMessageVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageVideoCell.m; sourceTree = "<group>"; };
+		0479991E225EEF5800470217 /* XJMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageModel.h; sourceTree = "<group>"; };
+		0479991F225EEF5800470217 /* XJMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageModel.m; sourceTree = "<group>"; };
+		04799921225EEF6E00470217 /* XJMessageLocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageLocationCell.h; sourceTree = "<group>"; };
+		04799922225EEF6E00470217 /* XJMessageLocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageLocationCell.m; sourceTree = "<group>"; };
+		04799924225EEF9F00470217 /* XJMessageTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageTipsCell.h; sourceTree = "<group>"; };
+		04799925225EEF9F00470217 /* XJMessageTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageTipsCell.m; sourceTree = "<group>"; };
+		04799928225EFAE600470217 /* XJLocationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLocationModel.h; sourceTree = "<group>"; };
+		04799929225EFAE600470217 /* XJLocationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLocationModel.m; sourceTree = "<group>"; };
+		0479992C225F403F00470217 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		0479992D225F403F00470217 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		0479992E225F403F00470217 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		0479992F225F403F00470217 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		04799930225F403F00470217 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		04799931225F403F00470217 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		04799932225F403F00470217 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				044C9926225D9E8E0030AE9A /* ViewController */,
+				04799903225EE95900470217 /* View */,
+				04799902225EE94E00470217 /* Model */,
+				04799904225EE96000470217 /* Util */,
 			);
 			path = "聊天";
 			sourceTree = "<group>";
@@ -203,9 +247,9 @@
 		044C992B225D9E8E0030AE9A /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
-				044C9950225DEA330030AE9A /* Model */,
-				044C994C225DE9160030AE9A /* View */,
 				044C992C225D9E8E0030AE9A /* ViewController */,
+				044C994C225DE9160030AE9A /* View */,
+				044C9950225DEA330030AE9A /* Model */,
 			);
 			path = "消息";
 			sourceTree = "<group>";
@@ -302,8 +346,8 @@
 		044C9935225D9F7F0030AE9A /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
+				0479992B225F403F00470217 /* SDPhotoBrowser */,
 				044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */,
-				044C993A225D9FF70030AE9A /* 图片浏览 */,
 			);
 			path = ThirdParts;
 			sourceTree = "<group>";
@@ -342,16 +386,10 @@
 		044C9939225D9FD80030AE9A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				04799936225F43DE00470217 /* ViewPhoto */,
 				044C9954225DEB1F0030AE9A /* DB */,
 			);
 			path = "工具类";
-			sourceTree = "<group>";
-		};
-		044C993A225D9FF70030AE9A /* 图片浏览 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "图片浏览";
 			sourceTree = "<group>";
 		};
 		044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */ = {
@@ -386,6 +424,93 @@
 			children = (
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		04799902225EE94E00470217 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0479991E225EEF5800470217 /* XJMessageModel.h */,
+				0479991F225EEF5800470217 /* XJMessageModel.m */,
+				04799928225EFAE600470217 /* XJLocationModel.h */,
+				04799929225EFAE600470217 /* XJLocationModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04799903225EE95900470217 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04799905225EEA6200470217 /* MessageCell */,
+				04799927225EF10C00470217 /* Toolbar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04799904225EE96000470217 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0479990A225EEB0E00470217 /* XJChatDefine.h */,
+				0479990B225EEB2100470217 /* XJChatUtil.h */,
+				0479990C225EEB2100470217 /* XJChatUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		04799905225EEA6200470217 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				04799906225EEA8C00470217 /* XJMessageBaseCell.h */,
+				04799907225EEA8C00470217 /* XJMessageBaseCell.m */,
+				0479990E225EEB3F00470217 /* CellBubble */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
+		0479990E225EEB3F00470217 /* CellBubble */ = {
+			isa = PBXGroup;
+			children = (
+				0479990F225EEE1500470217 /* XJMessageTextCell.h */,
+				04799910225EEE1500470217 /* XJMessageTextCell.m */,
+				04799912225EEE2C00470217 /* XJMessageImageCell.h */,
+				04799913225EEE2C00470217 /* XJMessageImageCell.m */,
+				04799915225EEE3700470217 /* XJMessageVoiceCell.h */,
+				04799916225EEE3700470217 /* XJMessageVoiceCell.m */,
+				0479991B225EEF2800470217 /* XJMessageVideoCell.h */,
+				0479991C225EEF2800470217 /* XJMessageVideoCell.m */,
+				04799921225EEF6E00470217 /* XJMessageLocationCell.h */,
+				04799922225EEF6E00470217 /* XJMessageLocationCell.m */,
+				04799924225EEF9F00470217 /* XJMessageTipsCell.h */,
+				04799925225EEF9F00470217 /* XJMessageTipsCell.m */,
+			);
+			path = CellBubble;
+			sourceTree = "<group>";
+		};
+		04799927225EF10C00470217 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		0479992B225F403F00470217 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				04799932225F403F00470217 /* SDBrowserImageView.h */,
+				0479992F225F403F00470217 /* SDBrowserImageView.m */,
+				04799931225F403F00470217 /* SDPhotoBrowser.h */,
+				0479992D225F403F00470217 /* SDPhotoBrowser.m */,
+				0479992C225F403F00470217 /* SDPhotoBrowserConfig.h */,
+				04799930225F403F00470217 /* SDWaitingView.h */,
+				0479992E225F403F00470217 /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		04799936225F43DE00470217 /* ViewPhoto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewPhoto;
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {
@@ -552,25 +677,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				0430ABE9225C3E2100236154 /* XJBaseWebVC.m in Sources */,
+				04799914225EEE2C00470217 /* XJMessageImageCell.m in Sources */,
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
+				04799933225F403F00470217 /* SDPhotoBrowser.m in Sources */,
+				04799935225F403F00470217 /* SDBrowserImageView.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
 				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
 				044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */,
+				0479991D225EEF2800470217 /* XJMessageVideoCell.m in Sources */,
+				04799923225EEF6E00470217 /* XJMessageLocationCell.m in Sources */,
+				04799926225EEF9F00470217 /* XJMessageTipsCell.m in Sources */,
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
+				04799920225EEF5800470217 /* XJMessageModel.m in Sources */,
+				04799934225F403F00470217 /* SDWaitingView.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
 				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
+				0479992A225EFAE600470217 /* XJLocationModel.m in Sources */,
 				0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */,
 				044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */,
+				04799917225EEE3700470217 /* XJMessageVoiceCell.m in Sources */,
 				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
 				044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */,
+				04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */,
+				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
+				0479990D225EEB2100470217 /* XJChatUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
