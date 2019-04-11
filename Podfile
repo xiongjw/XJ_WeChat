@@ -11,4 +11,10 @@ pod 'AFNetworking', '~> 3.2.1'
 pod 'MJRefresh'
 pod 'SDWebImage'
 
+pod 'MLLabel'
+pod 'BaiduMapKit'
+pod 'BMKLocationKit'
+pod 'FMDB', '~> 2.7.2'
+pod 'SVProgressHUD'
+
 end
