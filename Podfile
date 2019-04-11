@@ -8,5 +8,7 @@ target 'XJ_WeChat' do
   # Pods for XJ_WeChat
 
 pod 'AFNetworking', '~> 3.2.1'
+pod 'MJRefresh'
+pod 'SDWebImage'
 
 end

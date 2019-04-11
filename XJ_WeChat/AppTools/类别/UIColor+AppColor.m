@@ -12,32 +12,32 @@
 
 + (UIColor *)themeColor
 {
-    return [UIColor yellowColor];
+    return RGBCOLOR(0, 190, 12);
 }
 
 + (UIColor *)titleColor
 {
-    return [UIColor blackColor];
+    return RGBCOLOR(50, 50, 50);
 }
 
 + (UIColor *)contentColor
 {
-    return [UIColor darkGrayColor];
+    return RGBCOLOR(83, 83, 90);
 }
 
 + (UIColor *)descColor
 {
-    return [UIColor lightGrayColor];
+    return RGBCOLOR(169, 169, 169);
 }
 
 + (UIColor *)bgColor
 {
-    return [UIColor lightGrayColor];
+    return RGBCOLOR(247, 247, 247);
 }
 
 + (UIColor *)lineColor
 {
-    return [UIColor lightGrayColor];
+    return RGBCOLOR(222, 223, 226);
 }
 
 @end

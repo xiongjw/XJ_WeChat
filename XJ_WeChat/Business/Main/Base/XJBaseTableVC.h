@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@interface XJBaseTableVC : XJBaseVC <UITableViewDelegate,UITableViewDataSource>
 
-@interface XJBaseTableVC : UIViewController
+@property (nonatomic,strong) UITableView *mTableView;
+
+@property (nonatomic,strong) NSMutableArray *mutArray;
+@property (nonatomic,strong) NSArray *array;
+
+
+- (void)headerBeginRefreshing;
+- (void)endRefreshing;
+
+- (void)addHeaderAction;
+- (void)addFooterAction;
+- (void)addHeaderAndFooterAction;
 
 @end
-
-NS_ASSUME_NONNULL_END

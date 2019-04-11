@@ -19,7 +19,19 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #import "XJBaseVC.h"
+#import "XJBaseTableVC.h"
 
 #import "XJMacro.h"
+
+#import "ZZJBlockBarButtonItem.h"
+
+#import "UIColor+AppColor.h"
+#import "UIView+Create.h"
+#import "UIView+Ex.h"
+
+/// thirdParts
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
 
 #endif /* PrefixHeader_XJ_pch */

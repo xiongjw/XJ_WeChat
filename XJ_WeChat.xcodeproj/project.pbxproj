@@ -21,6 +21,10 @@
 		044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9942225DA4C50030AE9A /* UIColor+AppColor.m */; };
 		044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9947225DC5700030AE9A /* XJNavigationController.m */; };
 		044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C994A225DC63D0030AE9A /* AppDelegate+Config.m */; };
+		044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C994E225DE9BD0030AE9A /* XJConversationCell.m */; };
+		044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9952225DEA5A0030AE9A /* XJConversationModel.m */; };
+		044C9957225DED850030AE9A /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9956225DED850030AE9A /* UIView+Create.m */; };
+		044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9959225DF1150030AE9A /* UIView+Ex.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -58,6 +62,14 @@
 		044C9947225DC5700030AE9A /* XJNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJNavigationController.m; sourceTree = "<group>"; };
 		044C9949225DC63D0030AE9A /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
 		044C994A225DC63D0030AE9A /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		044C994D225DE9BD0030AE9A /* XJConversationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJConversationCell.h; sourceTree = "<group>"; };
+		044C994E225DE9BD0030AE9A /* XJConversationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJConversationCell.m; sourceTree = "<group>"; };
+		044C9951225DEA5A0030AE9A /* XJConversationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJConversationModel.h; sourceTree = "<group>"; };
+		044C9952225DEA5A0030AE9A /* XJConversationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJConversationModel.m; sourceTree = "<group>"; };
+		044C9955225DED850030AE9A /* UIView+Create.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Create.h"; sourceTree = "<group>"; };
+		044C9956225DED850030AE9A /* UIView+Create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
+		044C9958225DF1150030AE9A /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		044C9959225DF1150030AE9A /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,6 +203,8 @@
 		044C992B225D9E8E0030AE9A /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				044C9950225DEA330030AE9A /* Model */,
+				044C994C225DE9160030AE9A /* View */,
 				044C992C225D9E8E0030AE9A /* ViewController */,
 			);
 			path = "消息";
@@ -288,6 +302,7 @@
 		044C9935225D9F7F0030AE9A /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
+				044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */,
 				044C993A225D9FF70030AE9A /* 图片浏览 */,
 			);
 			path = ThirdParts;
@@ -316,6 +331,10 @@
 			children = (
 				044C9941225DA4C50030AE9A /* UIColor+AppColor.h */,
 				044C9942225DA4C50030AE9A /* UIColor+AppColor.m */,
+				044C9955225DED850030AE9A /* UIView+Create.h */,
+				044C9956225DED850030AE9A /* UIView+Create.m */,
+				044C9958225DF1150030AE9A /* UIView+Ex.h */,
+				044C9959225DF1150030AE9A /* UIView+Ex.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -323,7 +342,7 @@
 		044C9939225D9FD80030AE9A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
-				044C993D225DA38B0030AE9A /* ZZJBlockBarButtonItem */,
+				044C9954225DEB1F0030AE9A /* DB */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -342,6 +361,31 @@
 				044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */,
 			);
 			path = ZZJBlockBarButtonItem;
+			sourceTree = "<group>";
+		};
+		044C994C225DE9160030AE9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044C994D225DE9BD0030AE9A /* XJConversationCell.h */,
+				044C994E225DE9BD0030AE9A /* XJConversationCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044C9950225DEA330030AE9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044C9951225DEA5A0030AE9A /* XJConversationModel.h */,
+				044C9952225DEA5A0030AE9A /* XJConversationModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044C9954225DEB1F0030AE9A /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {
@@ -401,6 +445,7 @@
 				04E4D4F2225C351D0067D70C /* Sources */,
 				04E4D4F3225C351D0067D70C /* Frameworks */,
 				04E4D4F4225C351D0067D70C /* Resources */,
+				E982AEE06B4468CFCFC760DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -455,6 +500,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E982AEE06B4468CFCFC760DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XJ_WeChat/Pods-XJ_WeChat-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJ_WeChat/Pods-XJ_WeChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EAE0393550528246A032249B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,6 +554,7 @@
 				0430ABE9225C3E2100236154 /* XJBaseWebVC.m in Sources */,
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
+				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
 				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
@@ -494,9 +562,12 @@
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
+				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
 				0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */,
 				044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */,
+				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
+				044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,

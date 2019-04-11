@@ -8,6 +8,12 @@
 
 #import "XJMessageMainVC.h"
 
+#import "XJConversationCell.h"
+
+#import "XJConversationModel.h"
+
+#import "XJChatVC.h"
+
 @interface XJMessageMainVC ()
 
 @end
@@ -17,16 +23,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.mTableView.height = Screen_Height - NavHeight - TabBarHeight;
+    [self.mTableView registerClass:[XJConversationCell class] forCellReuseIdentifier:@"XJConversationCell"];
+    
+    for (int i = 0; i < 20; i++) {
+        XJConversationModel *model = [[XJConversationModel alloc] init];
+        model.headImageUrl = @"https://img4.duitang.com/uploads/item/201507/11/20150711193532_E2zF8.thumb.700_0.jpeg";
+        model.nickname = @"大熊、";
+        //model.time =
+        model.desc = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
+        model.unReadNum = i + 1;
+        [self.mutArray addObject:model];
+    }
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.mutArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    XJConversationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XJConversationCell" forIndexPath:indexPath];
+    cell.model = self.mutArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    XJChatVC *vc = [[XJChatVC alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

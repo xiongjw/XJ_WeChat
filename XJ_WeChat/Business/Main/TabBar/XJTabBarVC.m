@@ -55,7 +55,7 @@
         item.title = dict[kTitleKey];
         item.image = [UIImage imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        [item setTitleTextAttributes:@{NSForegroundColorAttributeName : RGBCOLOR(0, 190, 12)} forState:UIControlStateSelected];
+        [item setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor themeColor]} forState:UIControlStateSelected];
         [self addChildViewController:nav];
     }];
 }

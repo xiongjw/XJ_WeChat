@@ -10,4 +10,7 @@
 
 @interface XJBaseVC : UIViewController
 
+///请求
+-(void)requestWithRefresh:(BOOL)refresh;
+
 @end
