@@ -27,7 +27,7 @@
     
     [self setUpUI];
     
-    self.mutArray = [XJChatUtil chatDemoList];
+    self.mutArray = [XJChatUtil demoData];
 }
 
 - (void)setUpUI

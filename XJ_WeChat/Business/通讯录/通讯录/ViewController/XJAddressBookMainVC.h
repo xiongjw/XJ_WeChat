@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XJAddressBookMainVC : XJBaseVC
+@interface XJAddressBookMainVC : XJBaseTableVC
 
 @end

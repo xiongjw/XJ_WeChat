@@ -27,7 +27,7 @@
     self.mTableView.height = Screen_Height - NavHeight - TabBarHeight;
     [self.mTableView registerClass:[XJConversationCell class] forCellReuseIdentifier:@"XJConversationCell"];
     
-    for (int i = 100; i > 0; i--) {
+    for (int i = 10; i > 0; i--) {
         XJConversationModel *model = [[XJConversationModel alloc] init];
         model.headImageUrl = @"https://img4.duitang.com/uploads/item/201507/11/20150711193532_E2zF8.thumb.700_0.jpeg";
         model.nickname = @"大熊、";

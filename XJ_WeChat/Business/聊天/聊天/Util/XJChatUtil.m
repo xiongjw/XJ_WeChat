@@ -10,7 +10,7 @@
 
 @implementation XJChatUtil
 
-+ (NSMutableArray *)chatDemoList
++ (NSMutableArray *)demoData
 {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++) {

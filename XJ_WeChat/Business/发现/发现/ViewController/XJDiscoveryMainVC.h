@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XJDiscoveryMainVC : XJBaseVC
+@interface XJDiscoveryMainVC : XJBaseTableVC
 
 @end

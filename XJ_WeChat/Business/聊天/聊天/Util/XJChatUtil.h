@@ -10,7 +10,7 @@
 
 @interface XJChatUtil : NSObject
 
-+ (NSMutableArray *)chatDemoList;
++ (NSMutableArray *)demoData;
 
 + (CGSize)getLabelSize:(NSString *)text font:(UIFont *)font width:(CGFloat)width;
 
