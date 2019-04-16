@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040EE11422656FB800C66475 /* XJEditFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11322656FB800C66475 /* XJEditFieldCell.m */; };
+		040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11622657FEE00C66475 /* XJHeadModel.m */; };
+		040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11A2265958F00C66475 /* XJAppUtil.m */; };
+		040EE1212265AE3200C66475 /* XJEditInfoHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1202265AE3200C66475 /* XJEditInfoHelpVC.m */; };
 		040F0F3022645A1500F5371B /* XJAddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F2F22645A1500F5371B /* XJAddressBookCell.m */; };
 		040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F3222645A2800F5371B /* XJAddressBookModel.m */; };
 		040F0F3622645C6300F5371B /* XJAddressBookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F3522645C6300F5371B /* XJAddressBookUtil.m */; };
@@ -17,6 +21,17 @@
 		040F0F4A22646AAB00F5371B /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F4222646AAB00F5371B /* PinyinFormatter.m */; };
 		040F0F4B22646AAB00F5371B /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040F0F4522646AAB00F5371B /* unicode_to_hanyu_pinyin.txt */; };
 		040F0F52226471D400F5371B /* XJDiscoveryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F51226471D400F5371B /* XJDiscoveryUtil.m */; };
+		040F0F5A22647A1A00F5371B /* XJCircleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F5922647A1A00F5371B /* XJCircleListVC.m */; };
+		040F0F5D22647A2B00F5371B /* XJCircleListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F5C22647A2B00F5371B /* XJCircleListCell.m */; };
+		040F0F6022647B0500F5371B /* XJCircleListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F5F22647B0500F5371B /* XJCircleListModel.m */; };
+		040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F6822648C4700F5371B /* XJEditInfoVC.m */; };
+		040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F6B22648C5800F5371B /* XJEditInfoModel.m */; };
+		040F0F6F22648D4D00F5371B /* XJEditHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F6E22648D4D00F5371B /* XJEditHeadCell.m */; };
+		040F0F7222648D6300F5371B /* XJEditLbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7122648D6300F5371B /* XJEditLbCell.m */; };
+		040F0F7522648D6F00F5371B /* XJEditImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7422648D6F00F5371B /* XJEditImageCell.m */; };
+		040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7722648DCF00F5371B /* XJEditQuestionCell.m */; };
+		040F0F7B22648E1F00F5371B /* XJEditBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7A22648E1F00F5371B /* XJEditBaseCell.m */; };
+		040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7D22648E3900F5371B /* XJEditInfoUtil.m */; };
 		0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABE2225C3DEF00236154 /* XJBaseVC.m */; };
 		0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABE5225C3E1000236154 /* XJBaseTableVC.m */; };
 		0430ABE9225C3E2100236154 /* XJBaseWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABE8225C3E2100236154 /* XJBaseWebVC.m */; };
@@ -55,6 +70,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040EE11222656FB800C66475 /* XJEditFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditFieldCell.h; sourceTree = "<group>"; };
+		040EE11322656FB800C66475 /* XJEditFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditFieldCell.m; sourceTree = "<group>"; };
+		040EE11522657FEE00C66475 /* XJHeadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHeadModel.h; sourceTree = "<group>"; };
+		040EE11622657FEE00C66475 /* XJHeadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHeadModel.m; sourceTree = "<group>"; };
+		040EE1192265958F00C66475 /* XJAppUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAppUtil.h; sourceTree = "<group>"; };
+		040EE11A2265958F00C66475 /* XJAppUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAppUtil.m; sourceTree = "<group>"; };
+		040EE11F2265AE3200C66475 /* XJEditInfoHelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoHelpVC.h; sourceTree = "<group>"; };
+		040EE1202265AE3200C66475 /* XJEditInfoHelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoHelpVC.m; sourceTree = "<group>"; };
 		040F0F2E22645A1500F5371B /* XJAddressBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAddressBookCell.h; sourceTree = "<group>"; };
 		040F0F2F22645A1500F5371B /* XJAddressBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAddressBookCell.m; sourceTree = "<group>"; };
 		040F0F3122645A2800F5371B /* XJAddressBookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAddressBookModel.h; sourceTree = "<group>"; };
@@ -75,6 +98,28 @@
 		040F0F4522646AAB00F5371B /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
 		040F0F50226471D400F5371B /* XJDiscoveryUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJDiscoveryUtil.h; sourceTree = "<group>"; };
 		040F0F51226471D400F5371B /* XJDiscoveryUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJDiscoveryUtil.m; sourceTree = "<group>"; };
+		040F0F5822647A1A00F5371B /* XJCircleListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCircleListVC.h; sourceTree = "<group>"; };
+		040F0F5922647A1A00F5371B /* XJCircleListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCircleListVC.m; sourceTree = "<group>"; };
+		040F0F5B22647A2B00F5371B /* XJCircleListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCircleListCell.h; sourceTree = "<group>"; };
+		040F0F5C22647A2B00F5371B /* XJCircleListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCircleListCell.m; sourceTree = "<group>"; };
+		040F0F5E22647B0500F5371B /* XJCircleListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCircleListModel.h; sourceTree = "<group>"; };
+		040F0F5F22647B0500F5371B /* XJCircleListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCircleListModel.m; sourceTree = "<group>"; };
+		040F0F6722648C4700F5371B /* XJEditInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoVC.h; sourceTree = "<group>"; };
+		040F0F6822648C4700F5371B /* XJEditInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoVC.m; sourceTree = "<group>"; };
+		040F0F6A22648C5800F5371B /* XJEditInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoModel.h; sourceTree = "<group>"; };
+		040F0F6B22648C5800F5371B /* XJEditInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoModel.m; sourceTree = "<group>"; };
+		040F0F6D22648D4D00F5371B /* XJEditHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditHeadCell.h; sourceTree = "<group>"; };
+		040F0F6E22648D4D00F5371B /* XJEditHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditHeadCell.m; sourceTree = "<group>"; };
+		040F0F7022648D6300F5371B /* XJEditLbCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditLbCell.h; sourceTree = "<group>"; };
+		040F0F7122648D6300F5371B /* XJEditLbCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditLbCell.m; sourceTree = "<group>"; };
+		040F0F7322648D6F00F5371B /* XJEditImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditImageCell.h; sourceTree = "<group>"; };
+		040F0F7422648D6F00F5371B /* XJEditImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditImageCell.m; sourceTree = "<group>"; };
+		040F0F7622648DCF00F5371B /* XJEditQuestionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditQuestionCell.h; sourceTree = "<group>"; };
+		040F0F7722648DCF00F5371B /* XJEditQuestionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditQuestionCell.m; sourceTree = "<group>"; };
+		040F0F7922648E1F00F5371B /* XJEditBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditBaseCell.h; sourceTree = "<group>"; };
+		040F0F7A22648E1F00F5371B /* XJEditBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditBaseCell.m; sourceTree = "<group>"; };
+		040F0F7C22648E3900F5371B /* XJEditInfoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoUtil.h; sourceTree = "<group>"; };
+		040F0F7D22648E3900F5371B /* XJEditInfoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoUtil.m; sourceTree = "<group>"; };
 		0430ABE1225C3DEF00236154 /* XJBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJBaseVC.h; sourceTree = "<group>"; };
 		0430ABE2225C3DEF00236154 /* XJBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseVC.m; sourceTree = "<group>"; };
 		0430ABE4225C3E1000236154 /* XJBaseTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJBaseTableVC.h; sourceTree = "<group>"; };
@@ -164,6 +209,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040EE1182265958100C66475 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				040EE1192265958F00C66475 /* XJAppUtil.h */,
+				040EE11A2265958F00C66475 /* XJAppUtil.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		040F0F2B226459C100F5371B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,8 +292,123 @@
 		040F0F4F226471A000F5371B /* 朋友圈 */ = {
 			isa = PBXGroup;
 			children = (
+				040F0F53226479A400F5371B /* ViewController */,
+				040F0F56226479A400F5371B /* View */,
+				040F0F57226479A400F5371B /* Model */,
+				040F0F54226479A400F5371B /* Util */,
+				040F0F55226479A400F5371B /* ViewModel */,
 			);
 			path = "朋友圈";
+			sourceTree = "<group>";
+		};
+		040F0F53226479A400F5371B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F5822647A1A00F5371B /* XJCircleListVC.h */,
+				040F0F5922647A1A00F5371B /* XJCircleListVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		040F0F54226479A400F5371B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		040F0F55226479A400F5371B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		040F0F56226479A400F5371B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F5B22647A2B00F5371B /* XJCircleListCell.h */,
+				040F0F5C22647A2B00F5371B /* XJCircleListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		040F0F57226479A400F5371B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F5E22647B0500F5371B /* XJCircleListModel.h */,
+				040F0F5F22647B0500F5371B /* XJCircleListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		040F0F6122648C0300F5371B /* 编辑资料 */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F6222648C3200F5371B /* ViewController */,
+				040F0F6322648C3200F5371B /* View */,
+				040F0F6622648C3200F5371B /* Model */,
+				040F0F6522648C3200F5371B /* Util */,
+				040F0F6422648C3200F5371B /* ViewModel */,
+			);
+			path = "编辑资料";
+			sourceTree = "<group>";
+		};
+		040F0F6222648C3200F5371B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F6722648C4700F5371B /* XJEditInfoVC.h */,
+				040F0F6822648C4700F5371B /* XJEditInfoVC.m */,
+				040EE11F2265AE3200C66475 /* XJEditInfoHelpVC.h */,
+				040EE1202265AE3200C66475 /* XJEditInfoHelpVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		040F0F6322648C3200F5371B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F7922648E1F00F5371B /* XJEditBaseCell.h */,
+				040F0F7A22648E1F00F5371B /* XJEditBaseCell.m */,
+				040F0F6D22648D4D00F5371B /* XJEditHeadCell.h */,
+				040F0F6E22648D4D00F5371B /* XJEditHeadCell.m */,
+				040EE11222656FB800C66475 /* XJEditFieldCell.h */,
+				040EE11322656FB800C66475 /* XJEditFieldCell.m */,
+				040F0F7022648D6300F5371B /* XJEditLbCell.h */,
+				040F0F7122648D6300F5371B /* XJEditLbCell.m */,
+				040F0F7322648D6F00F5371B /* XJEditImageCell.h */,
+				040F0F7422648D6F00F5371B /* XJEditImageCell.m */,
+				040F0F7622648DCF00F5371B /* XJEditQuestionCell.h */,
+				040F0F7722648DCF00F5371B /* XJEditQuestionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		040F0F6422648C3200F5371B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		040F0F6522648C3200F5371B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F7C22648E3900F5371B /* XJEditInfoUtil.h */,
+				040F0F7D22648E3900F5371B /* XJEditInfoUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		040F0F6622648C3200F5371B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				040F0F6A22648C5800F5371B /* XJEditInfoModel.h */,
+				040F0F6B22648C5800F5371B /* XJEditInfoModel.m */,
+				040EE11522657FEE00C66475 /* XJHeadModel.h */,
+				040EE11622657FEE00C66475 /* XJHeadModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0430ABD8225C39FC00236154 /* Supporting Files */ = {
@@ -270,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				044C9922225D9E8E0030AE9A /* 我的 */,
+				040F0F6122648C0300F5371B /* 编辑资料 */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -499,6 +669,7 @@
 		044C9939225D9FD80030AE9A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				040EE1182265958100C66475 /* Tool */,
 				040F0F3722646AAB00F5371B /* PinYin4Objc */,
 				04799936225F43DE00470217 /* ViewPhoto */,
 				044C9954225DEB1F0030AE9A /* DB */,
@@ -800,41 +971,56 @@
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
+				040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */,
+				040F0F6F22648D4D00F5371B /* XJEditHeadCell.m in Sources */,
 				040F0F4922646AAB00F5371B /* ChineseToPinyinResource.m in Sources */,
 				04799933225F403F00470217 /* SDPhotoBrowser.m in Sources */,
 				04799935225F403F00470217 /* SDBrowserImageView.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
+				040F0F5D22647A2B00F5371B /* XJCircleListCell.m in Sources */,
 				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
 				040F0F4A22646AAB00F5371B /* PinyinFormatter.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
+				040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */,
 				044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */,
 				040F0F3622645C6300F5371B /* XJAddressBookUtil.m in Sources */,
 				0479991D225EEF2800470217 /* XJMessageVideoCell.m in Sources */,
 				04799923225EEF6E00470217 /* XJMessageLocationCell.m in Sources */,
 				04799926225EEF9F00470217 /* XJMessageTipsCell.m in Sources */,
+				040F0F5A22647A1A00F5371B /* XJCircleListVC.m in Sources */,
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
 				04799920225EEF5800470217 /* XJMessageModel.m in Sources */,
+				040F0F7B22648E1F00F5371B /* XJEditBaseCell.m in Sources */,
+				040EE11422656FB800C66475 /* XJEditFieldCell.m in Sources */,
+				040EE1212265AE3200C66475 /* XJEditInfoHelpVC.m in Sources */,
 				04799934225F403F00470217 /* SDWaitingView.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
+				040F0F7522648D6F00F5371B /* XJEditImageCell.m in Sources */,
 				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
+				040F0F7222648D6300F5371B /* XJEditLbCell.m in Sources */,
 				040F0F3022645A1500F5371B /* XJAddressBookCell.m in Sources */,
 				0479992A225EFAE600470217 /* XJLocationModel.m in Sources */,
 				0430ABF7225C3ECC00236154 /* XJDiscoveryMainVC.m in Sources */,
 				044C994B225DC63D0030AE9A /* AppDelegate+Config.m in Sources */,
+				040F0F6022647B0500F5371B /* XJCircleListModel.m in Sources */,
 				040F0F52226471D400F5371B /* XJDiscoveryUtil.m in Sources */,
 				04799917225EEE3700470217 /* XJMessageVoiceCell.m in Sources */,
 				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
+				040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */,
 				040F0F4722646AAB00F5371B /* PinyinHelper.m in Sources */,
 				044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */,
+				040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */,
 				040F0F4822646AAB00F5371B /* HanyuPinyinOutputFormat.m in Sources */,
 				04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */,
+				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
+				040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */,
 				040F0F4622646AAB00F5371B /* NSString+PinYin4Cocoa.m in Sources */,
 				0479990D225EEB2100470217 /* XJChatUtil.m in Sources */,
 			);

@@ -1,34 +1,42 @@
 //
-//  XJMessageImageCell.m
+//  XJEditHeadCell.m
 //  XJ_WeChat
 //
-//  Created by mac on 2019/4/11.
+//  Created by mac on 2019/4/15.
 //  Copyright © 2019 mac. All rights reserved.
 //
 
-#import "XJMessageImageCell.h"
+#import "XJEditHeadCell.h"
 
 #import "SDPhotoBrowser.h"
 
-@interface XJMessageImageCell () <SDPhotoBrowserDelegate>
+@interface XJEditHeadCell () <SDPhotoBrowserDelegate>
 
 @end
 
-@implementation XJMessageImageCell
+@implementation XJEditHeadCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+                
+        [self.contentView addSubview:self.headIcon];
+        self.keyLb.centerY = self.headIcon.centerY;
         
-        self.imageIcon = [UIImageView createImageViewWithFrame:CGRectMake(0, 0, Screen_Width*0.4, Screen_Width*0.4) radius:5];
-        [self.contentView addSubview:self.imageIcon];
-        
-        self.imageIcon.userInteractionEnabled = YES;
+        self.headIcon.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [self.imageIcon addGestureRecognizer:tap];
+        [self.headIcon addGestureRecognizer:tap];
     }
     return self;
+}
+
+-(UIImageView *)headIcon
+{
+    if (!_headIcon) {
+        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(Screen_Width - 48 - 15, 15, 48, 48) radius:24];
+    }
+    return _headIcon;
 }
 
 - (void)tap:(UITapGestureRecognizer *)tap
@@ -45,13 +53,13 @@
 // 返回临时占位图片（即原来的小图）
 - (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
 {
-    return self.imageIcon.image;
+    return self.headIcon.image;
 }
 
 // 返回高质量图片的url
 - (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
 {
-    return [NSURL URLWithString:self.model.imageUrl];
+    return [NSURL URLWithString:self.model.showValue];
 }
 
 - (void)awakeFromNib {
@@ -65,18 +73,10 @@
     // Configure the view for the selected state
 }
 
--(void)setModel:(XJMessageModel *)model
+-(void)setModel:(XJEditInfoModel *)model
 {
     [super setModel:model];
-    self.bubbleIcon.hidden = YES;
-    
-    if (model.isSender) {
-        self.imageIcon.left = self.headIcon.left - 10 - self.imageIcon.width;
-    }
-    else {
-        self.imageIcon.left = self.headIcon.right + 10;
-    }
-    [self.imageIcon sd_setImageWithURL:[NSURL URLWithString:model.imageUrl]];
+    [_headIcon sd_setImageWithURL:[NSURL URLWithString:model.showValue]];
 }
 
 @end

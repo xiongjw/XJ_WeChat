@@ -23,6 +23,7 @@
 #import "XJBaseTableVC.h"
 
 #import "XJMacro.h"
+#import "XJAppUtil.h"
 
 #import "ZZJBlockBarButtonItem.h"
 

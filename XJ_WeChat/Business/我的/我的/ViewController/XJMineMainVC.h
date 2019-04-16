@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XJMineMainVC : XJBaseVC
+@interface XJMineMainVC : XJBaseTableVC
 
 @end
