@@ -11,6 +11,12 @@
 		040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11622657FEE00C66475 /* XJHeadModel.m */; };
 		040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11A2265958F00C66475 /* XJAppUtil.m */; };
 		040EE1212265AE3200C66475 /* XJEditInfoHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1202265AE3200C66475 /* XJEditInfoHelpVC.m */; };
+		040EE1242265C79D00C66475 /* XJViewPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1232265C79D00C66475 /* XJViewPhoto.m */; };
+		040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1262265C7B500C66475 /* XJSelectPhoto.m */; };
+		040EE12A2265C7CB00C66475 /* XJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1292265C7CB00C66475 /* XJAlertView.m */; };
+		040EE12D2265C7E900C66475 /* XJActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE12C2265C7E900C66475 /* XJActionSheet.m */; };
+		040EE1302265C80700C66475 /* XJPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE12F2265C80700C66475 /* XJPickerView.m */; };
+		040EE1332265D10700C66475 /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE1322265D10700C66475 /* UIImage+color.m */; };
 		040F0F3022645A1500F5371B /* XJAddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F2F22645A1500F5371B /* XJAddressBookCell.m */; };
 		040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F3222645A2800F5371B /* XJAddressBookModel.m */; };
 		040F0F3622645C6300F5371B /* XJAddressBookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F3522645C6300F5371B /* XJAddressBookUtil.m */; };
@@ -78,6 +84,18 @@
 		040EE11A2265958F00C66475 /* XJAppUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAppUtil.m; sourceTree = "<group>"; };
 		040EE11F2265AE3200C66475 /* XJEditInfoHelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoHelpVC.h; sourceTree = "<group>"; };
 		040EE1202265AE3200C66475 /* XJEditInfoHelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoHelpVC.m; sourceTree = "<group>"; };
+		040EE1222265C79D00C66475 /* XJViewPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJViewPhoto.h; sourceTree = "<group>"; };
+		040EE1232265C79D00C66475 /* XJViewPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJViewPhoto.m; sourceTree = "<group>"; };
+		040EE1252265C7B500C66475 /* XJSelectPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSelectPhoto.h; sourceTree = "<group>"; };
+		040EE1262265C7B500C66475 /* XJSelectPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSelectPhoto.m; sourceTree = "<group>"; };
+		040EE1282265C7CB00C66475 /* XJAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAlertView.h; sourceTree = "<group>"; };
+		040EE1292265C7CB00C66475 /* XJAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAlertView.m; sourceTree = "<group>"; };
+		040EE12B2265C7E900C66475 /* XJActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJActionSheet.h; sourceTree = "<group>"; };
+		040EE12C2265C7E900C66475 /* XJActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJActionSheet.m; sourceTree = "<group>"; };
+		040EE12E2265C80700C66475 /* XJPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerView.h; sourceTree = "<group>"; };
+		040EE12F2265C80700C66475 /* XJPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPickerView.m; sourceTree = "<group>"; };
+		040EE1312265D10700C66475 /* UIImage+color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+color.h"; sourceTree = "<group>"; };
+		040EE1322265D10700C66475 /* UIImage+color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+color.m"; sourceTree = "<group>"; };
 		040F0F2E22645A1500F5371B /* XJAddressBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAddressBookCell.h; sourceTree = "<group>"; };
 		040F0F2F22645A1500F5371B /* XJAddressBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAddressBookCell.m; sourceTree = "<group>"; };
 		040F0F3122645A2800F5371B /* XJAddressBookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAddressBookModel.h; sourceTree = "<group>"; };
@@ -214,6 +232,16 @@
 			children = (
 				040EE1192265958F00C66475 /* XJAppUtil.h */,
 				040EE11A2265958F00C66475 /* XJAppUtil.m */,
+				040EE1222265C79D00C66475 /* XJViewPhoto.h */,
+				040EE1232265C79D00C66475 /* XJViewPhoto.m */,
+				040EE1252265C7B500C66475 /* XJSelectPhoto.h */,
+				040EE1262265C7B500C66475 /* XJSelectPhoto.m */,
+				040EE1282265C7CB00C66475 /* XJAlertView.h */,
+				040EE1292265C7CB00C66475 /* XJAlertView.m */,
+				040EE12B2265C7E900C66475 /* XJActionSheet.h */,
+				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
+				040EE12E2265C80700C66475 /* XJPickerView.h */,
+				040EE12F2265C80700C66475 /* XJPickerView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -662,6 +690,8 @@
 				044C9956225DED850030AE9A /* UIView+Create.m */,
 				044C9958225DF1150030AE9A /* UIView+Ex.h */,
 				044C9959225DF1150030AE9A /* UIView+Ex.m */,
+				040EE1312265D10700C66475 /* UIImage+color.h */,
+				040EE1322265D10700C66475 /* UIImage+color.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -976,6 +1006,7 @@
 				040F0F4922646AAB00F5371B /* ChineseToPinyinResource.m in Sources */,
 				04799933225F403F00470217 /* SDPhotoBrowser.m in Sources */,
 				04799935225F403F00470217 /* SDBrowserImageView.m in Sources */,
+				040EE12D2265C7E900C66475 /* XJActionSheet.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
 				040F0F5D22647A2B00F5371B /* XJCircleListCell.m in Sources */,
 				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
@@ -985,6 +1016,8 @@
 				044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */,
 				040F0F3622645C6300F5371B /* XJAddressBookUtil.m in Sources */,
 				0479991D225EEF2800470217 /* XJMessageVideoCell.m in Sources */,
+				040EE1332265D10700C66475 /* UIImage+color.m in Sources */,
+				040EE1242265C79D00C66475 /* XJViewPhoto.m in Sources */,
 				04799923225EEF6E00470217 /* XJMessageLocationCell.m in Sources */,
 				04799926225EEF9F00470217 /* XJMessageTipsCell.m in Sources */,
 				040F0F5A22647A1A00F5371B /* XJCircleListVC.m in Sources */,
@@ -1014,7 +1047,10 @@
 				040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */,
 				040F0F4822646AAB00F5371B /* HanyuPinyinOutputFormat.m in Sources */,
 				04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */,
+				040EE1302265C80700C66475 /* XJPickerView.m in Sources */,
+				040EE12A2265C7CB00C66475 /* XJAlertView.m in Sources */,
 				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
+				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,

@@ -15,6 +15,8 @@
 /// cell类型，
 //@property (nonatomic,  copy) NSString *cellType;
 
+@property (nonatomic,assign) BOOL canNotClick;
+
 @property (nonatomic,  copy) NSString *title;
 @property (nonatomic,strong) UIColor *titleColor;
 

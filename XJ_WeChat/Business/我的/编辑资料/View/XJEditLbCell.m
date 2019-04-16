@@ -79,7 +79,27 @@
     }
     else {
         self.valueLb.text = model.placeholder;
-        self.valueLb.textColor = [UIColor descColor];
+        
+        if (model.placeholderColor) {
+            self.valueLb.textColor = model.placeholderColor;
+        }
+        else {
+            self.valueLb.textColor = [UIColor descColor];
+        }
+    }
+    
+    if (model.titleColor) {
+        self.keyLb.textColor = model.titleColor;
+    }
+    else {
+        self.keyLb.textColor = [UIColor titleColor];
+    }
+    
+    if (model.canNotClick) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    else {
+        self.selectionStyle = UITableViewCellSelectionStyleGray;
     }
 }
 

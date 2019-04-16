@@ -61,7 +61,7 @@
     self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self tableRegisterClass];
     
-    self.mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 30)];
+    //self.mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 30)];
 }
 
 - (void)tableRegisterClass
@@ -91,10 +91,21 @@
              [@"sex" isEqualToString:model.code] ||
              [@"age" isEqualToString:model.code] ||
              [@"area" isEqualToString:model.code] ||
-             [@"sign" isEqualToString:model.code]) {
+             [@"sign" isEqualToString:model.code] ||
+             
+             [@"school" isEqualToString:model.code] ||
+             [@"in_school" isEqualToString:model.code] ||
+             [@"industry" isEqualToString:model.code] ||
+             [@"occupation" isEqualToString:model.code] ||
+             
+             [@"emotion" isEqualToString:model.code] ||
+             [@"question" isEqualToString:model.code]) {
         return 46;
     }
     else if ([@"PhotoWall" isEqualToString:model.code]) {
+        if (model.dataList.count > 0) {
+            return 46 + 50 + 15;
+        }
         return 46;
     }
     return 46;
@@ -103,7 +114,99 @@
 #pragma mark - didSelectRowAtIndexPath
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    XJEditInfoModel *model = ((XJHeadModel *)self.mutArray[indexPath.section]).dataSource[indexPath.row];
+    MJWeakSelf
+    if (![@"nickname" isEqualToString:model.code]) {
+        [self.view endEditing:YES];
+    }
+    if ([@"head" isEqualToString:model.code]) {
+        [XJSelectPhoto selectPhotoWithActionSheet];
+    }
+    else if ([@"sex" isEqualToString:model.code] ||
+             [@"in_school" isEqualToString:model.code] ||
+             [@"emotion" isEqualToString:model.code]) {
+        
+        if ([@"in_school" isEqualToString:model.code]) {
+            
+            XJHeadModel *headModel = self.mutArray[1];
+            XJEditInfoModel *model = [headModel.dataSource firstObject];
+            if (model.showValue.length == 0) {
+                [SVProgressHUD showErrorWithStatus:@"请选择学校"];
+                return;
+            }
+        }
+        __block XJEditInfoModel *blockModel = model;
+        [XJActionSheet showWithList:model.dataList clickItemBlock:^(NSDictionary *item) {
+            blockModel.value = item[@"code"];
+            blockModel.showValue = item[@"name"];
+            if ([@"in_school" isEqualToString:model.code]) {
+                
+                XJHeadModel *headModel = self.mutArray[1];
+                for (XJEditInfoModel *model in headModel.dataSource)
+                {
+                    if ([@"industry" isEqualToString:model.code] || [@"occupation" isEqualToString:model.code]) {
+                        
+                        if ([@"1" isEqualToString:item[@"code"]]) {
+                            model.titleColor = [UIColor descColor];
+                            model.canNotClick = YES;
+                            // 是否需要清空
+//                            if (model.showValue.length > 0) {
+//                                model.value = model.showValue = @"";
+//                            }
+                        }
+                        else if ([@"2" isEqualToString:item[@"code"]]) {
+                            model.titleColor = nil;
+                            model.canNotClick = NO;
+                        }
+                    }
+                }
+                [weakSelf.mTableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
+            }
+            else {
+                [weakSelf.mTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            }
+        }];
+    }
+    else if ([@"age" isEqualToString:model.code]) {
+        
+    }
+    else if ([@"area" isEqualToString:model.code]) {
+        
+    }
+    else if ([@"sign" isEqualToString:model.code]) {
+        
+    }
+    else if ([@"PhotoWall" isEqualToString:model.code]) {
+        
+    }
     
+    else if ([@"school" isEqualToString:model.code]) {
+        model.value = @"1";
+        model.showValue = @"武汉纺织大学";
+        [weakSelf.mTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        
+//        XJEditLbCell *cell = [self.mTableView cellForRowAtIndexPath:indexPath];
+//        cell.valueLb.text = model.showValue;
+//        cell.valueLb.textColor = [UIColor contentColor];
+    }
+//    else if ([@"in_school" isEqualToString:model.code]) {
+//    }
+    else if ([@"industry" isEqualToString:model.code]) {
+        if (!model.canNotClick) {
+            NSLog(@"push");
+        }
+    }
+    else if ([@"occupation" isEqualToString:model.code]) {
+        if (!model.canNotClick) {
+            NSLog(@"push");
+        }
+    }
+    
+//    else if ([@"emotion" isEqualToString:model.code]) {
+//    }
+    else if ([@"question" isEqualToString:model.code]) {
+        
+    }
 }
 
 #pragma mark - viewForHeaderInSection

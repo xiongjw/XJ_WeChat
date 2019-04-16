@@ -37,6 +37,9 @@
                 model.showValue = @"";
                 model.placeholder = placeholders[i];
                 
+                if ([@"id" isEqualToString:model.code]) {
+                    model.canNotClick = YES;
+                }
                 if ([@"sex" isEqualToString:model.code]) {
                     model.dataList = @[
                                        @{@"name":@"男",@"code":@"1"},
@@ -61,9 +64,16 @@
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
                 model.title = titles[i];
+                if ([@"industry" isEqualToString:model.code] || [@"occupation" isEqualToString:model.code]) {
+                    model.titleColor = [UIColor descColor];
+                    model.canNotClick = YES;
+                }
                 model.value = @"";
                 model.showValue = @"";
                 model.placeholder = placeholders[i];
+                if ([@"school" isEqualToString:model.code]) {
+                    model.placeholderColor = [UIColor themeColor];
+                }
                 
                 if ([@"in_school" isEqualToString:model.code]) {
                     model.dataList = @[
@@ -92,6 +102,9 @@
                 model.value = @"";
                 model.showValue = @"";
                 model.placeholder = placeholders[i];
+                if ([@"question" isEqualToString:model.code]) {
+                    model.placeholderColor = [UIColor themeColor];
+                }
                 
                 if ([@"emotion" isEqualToString:model.code]) {
                     model.dataList = @[

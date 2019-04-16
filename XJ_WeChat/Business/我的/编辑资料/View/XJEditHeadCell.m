@@ -8,12 +8,6 @@
 
 #import "XJEditHeadCell.h"
 
-#import "SDPhotoBrowser.h"
-
-@interface XJEditHeadCell () <SDPhotoBrowserDelegate>
-
-@end
-
 @implementation XJEditHeadCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -41,25 +35,7 @@
 
 - (void)tap:(UITapGestureRecognizer *)tap
 {
-    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
-    browser.sourceImagesContainerView = tap.view;
-    browser.imageCount = 1;
-    browser.currentImageIndex = 0;
-    browser.delegate = self;
-    [browser show];
-}
-
-#pragma mark - photobrowser代理方法
-// 返回临时占位图片（即原来的小图）
-- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
-{
-    return self.headIcon.image;
-}
-
-// 返回高质量图片的url
-- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
-{
-    return [NSURL URLWithString:self.model.showValue];
+    [XJViewPhoto viewSinglePhoto:tap.view urlString:self.model.showValue];
 }
 
 - (void)awakeFromNib {
