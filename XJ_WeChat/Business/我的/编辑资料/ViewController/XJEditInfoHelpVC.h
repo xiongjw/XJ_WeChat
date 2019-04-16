@@ -20,6 +20,8 @@
 
 @interface XJEditInfoHelpVC : XJBaseTableVC
 
+- (void)submit;
+
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

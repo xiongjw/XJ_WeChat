@@ -14,8 +14,14 @@
 
 @implementation XJEditInfoHelpVC
 
+- (void)submit
+{
+    
+}
+
 - (void)requestWithRefresh:(BOOL)refresh
 {
+    // 请求接口并赋值
     for (XJHeadModel *headModel in self.mutArray) {
         for (XJEditInfoModel *model in headModel.dataSource) {
             if ([@"head" isEqualToString:model.code]) {
@@ -54,6 +60,8 @@
     
     self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self tableRegisterClass];
+    
+    self.mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 30)];
 }
 
 - (void)tableRegisterClass
