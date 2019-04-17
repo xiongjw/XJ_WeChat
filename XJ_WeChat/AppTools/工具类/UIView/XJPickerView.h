@@ -11,3 +11,7 @@
 @interface XJPickerView : UIView
 
 @end
+
+@interface XJPickerModel : NSObject
+
+@end

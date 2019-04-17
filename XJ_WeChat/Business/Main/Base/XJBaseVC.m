@@ -39,7 +39,7 @@
 - (void)showBackBtn:(BOOL)showBackBtn withTitle:(NSString *)title
 {
     if (title && title.length > 0) {
-        self.navigationItem.title = @"";
+        self.navigationItem.title = title;
     }
     if (showBackBtn) {
         MJWeakSelf

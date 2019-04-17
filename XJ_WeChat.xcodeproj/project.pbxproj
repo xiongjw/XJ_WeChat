@@ -236,25 +236,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040EE1182265958100C66475 /* Tool */ = {
+		040EE1182265958100C66475 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				040EE1192265958F00C66475 /* XJAppUtil.h */,
-				040EE11A2265958F00C66475 /* XJAppUtil.m */,
-				040EE1222265C79D00C66475 /* XJViewPhoto.h */,
-				040EE1232265C79D00C66475 /* XJViewPhoto.m */,
-				040EE1252265C7B500C66475 /* XJSelectPhoto.h */,
-				040EE1262265C7B500C66475 /* XJSelectPhoto.m */,
 				040EE1282265C7CB00C66475 /* XJAlertView.h */,
 				040EE1292265C7CB00C66475 /* XJAlertView.m */,
 				040EE12B2265C7E900C66475 /* XJActionSheet.h */,
 				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
 				040EE12E2265C80700C66475 /* XJPickerView.h */,
 				040EE12F2265C80700C66475 /* XJPickerView.m */,
-				04ADEBBD2266D9A10029E3BD /* XJHud.h */,
-				04ADEBBE2266D9A10029E3BD /* XJHud.m */,
 			);
-			path = Tool;
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		040F0F2B226459C100F5371B /* Model */ = {
@@ -681,9 +673,10 @@
 		044C9936225D9F7F0030AE9A /* AppTools */ = {
 			isa = PBXGroup;
 			children = (
-				044C9939225D9FD80030AE9A /* 工具类 */,
-				044C9938225D9FCE0030AE9A /* 类别 */,
 				044C9937225D9FC60030AE9A /* 宏定义 */,
+				044C9938225D9FCE0030AE9A /* 类别 */,
+				044C9939225D9FD80030AE9A /* 工具类 */,
+				04ADEBC02266DFD10029E3BD /* AppSdk */,
 			);
 			path = AppTools;
 			sourceTree = "<group>";
@@ -714,9 +707,8 @@
 		044C9939225D9FD80030AE9A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
-				040EE1182265958100C66475 /* Tool */,
-				040F0F3722646AAB00F5371B /* PinYin4Objc */,
-				04799936225F43DE00470217 /* ViewPhoto */,
+				04ADEBC12266E01A0029E3BD /* NSObject */,
+				040EE1182265958100C66475 /* UIView */,
 				044C9954225DEB1F0030AE9A /* DB */,
 			);
 			path = "工具类";
@@ -836,11 +828,27 @@
 			path = SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
-		04799936225F43DE00470217 /* ViewPhoto */ = {
+		04ADEBC02266DFD10029E3BD /* AppSdk */ = {
 			isa = PBXGroup;
 			children = (
+				040F0F3722646AAB00F5371B /* PinYin4Objc */,
 			);
-			path = ViewPhoto;
+			path = AppSdk;
+			sourceTree = "<group>";
+		};
+		04ADEBC12266E01A0029E3BD /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				040EE1192265958F00C66475 /* XJAppUtil.h */,
+				040EE11A2265958F00C66475 /* XJAppUtil.m */,
+				040EE1222265C79D00C66475 /* XJViewPhoto.h */,
+				040EE1232265C79D00C66475 /* XJViewPhoto.m */,
+				040EE1252265C7B500C66475 /* XJSelectPhoto.h */,
+				040EE1262265C7B500C66475 /* XJSelectPhoto.m */,
+				04ADEBBD2266D9A10029E3BD /* XJHud.h */,
+				04ADEBBE2266D9A10029E3BD /* XJHud.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {

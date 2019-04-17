@@ -11,3 +11,7 @@
 @implementation XJPickerView
 
 @end
+
+@implementation XJPickerModel
+
+@end
