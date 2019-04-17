@@ -10,7 +10,18 @@
 
 @interface XJBaseVC : UIViewController
 
-///请求
+/// 禁页面滑动返回事件
+@property (nonatomic) BOOL disablePopGesture;
+
+/// 页面请求
 -(void)requestWithRefresh:(BOOL)refresh;
+
+/// 返回按钮、title
+- (void)showBackBtn:(BOOL)showBackBtn;
+- (void)showBackBtn:(BOOL)showBackBtn withTitle:(NSString *)title;
+- (void)backAction;
+
+/// 选择数据block
+@property (nonatomic, copy) void (^selectDataBlock)(NSDictionary *item);
 
 @end

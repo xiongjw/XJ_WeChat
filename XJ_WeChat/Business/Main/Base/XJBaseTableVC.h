@@ -10,6 +10,8 @@
 
 @interface XJBaseTableVC : XJBaseVC <UITableViewDelegate,UITableViewDataSource>
 
+- (UITableViewStyle)tableViewStyle;
+
 @property (nonatomic,strong) UITableView *mTableView;
 
 @property (nonatomic,strong) NSMutableArray *mutArray;
@@ -22,5 +24,9 @@
 - (void)addHeaderAction;
 - (void)addFooterAction;
 - (void)addHeaderAndFooterAction;
+
+
+- (void)reloadRowWithIndexPath:(NSIndexPath *)indexPath;
+- (void)reloadSectionWithSection:(NSInteger)section;
 
 @end

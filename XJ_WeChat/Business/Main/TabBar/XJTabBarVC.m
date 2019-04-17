@@ -8,8 +8,6 @@
 
 #import "XJTabBarVC.h"
 
-#import "XJNavigationController.h"
-
 #define kClassKey   @"rootVCClassString"
 #define kTitleKey   @"title"
 #define kImgKey     @"imageName"

@@ -10,6 +10,8 @@
 
 @interface XJEditInfoUtil : NSObject
 
-+ (NSMutableArray *)pageData;
++ (NSMutableArray *)editPageData;
+
++ (NSMutableArray *)schoolPageData;
 
 @end

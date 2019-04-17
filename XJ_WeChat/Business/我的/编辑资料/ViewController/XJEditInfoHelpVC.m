@@ -8,7 +8,12 @@
 
 #import "XJEditInfoHelpVC.h"
 
+#import "XJEditSelectSchoolVC.h"
+#import "XJEditSelectDataVC.h"
+
 @interface XJEditInfoHelpVC ()
+
+@property (nonatomic,strong) NSMutableArray *viewsForHeader;
 
 @end
 
@@ -22,6 +27,20 @@
 - (void)requestWithRefresh:(BOOL)refresh
 {
     // 请求接口并赋值
+    //[super requestWithRefresh:refresh];
+    [XJHud showWithStatus:@"加载中..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [XJHud dismiss];
+        [self setUpUI:nil];
+    });
+}
+
+- (void)setUpUI:(NSDictionary *)data
+{
+    /// 页面数据源
+    self.mutArray = [XJEditInfoUtil editPageData];
+    
+    /// 赋值操作
     for (XJHeadModel *headModel in self.mutArray) {
         for (XJEditInfoModel *model in headModel.dataSource) {
             if ([@"head" isEqualToString:model.code]) {
@@ -52,6 +71,8 @@
             }
         }
     }
+    
+    [self.mTableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -93,7 +114,7 @@
              [@"area" isEqualToString:model.code] ||
              [@"sign" isEqualToString:model.code] ||
              
-             [@"school" isEqualToString:model.code] ||
+             [@"schoolAll" isEqualToString:model.code] ||
              [@"in_school" isEqualToString:model.code] ||
              [@"industry" isEqualToString:model.code] ||
              [@"occupation" isEqualToString:model.code] ||
@@ -114,7 +135,7 @@
 #pragma mark - didSelectRowAtIndexPath
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XJEditInfoModel *model = ((XJHeadModel *)self.mutArray[indexPath.section]).dataSource[indexPath.row];
+    __block XJEditInfoModel *model = ((XJHeadModel *)self.mutArray[indexPath.section]).dataSource[indexPath.row];
     MJWeakSelf
     if (![@"nickname" isEqualToString:model.code]) {
         [self.view endEditing:YES];
@@ -131,14 +152,13 @@
             XJHeadModel *headModel = self.mutArray[1];
             XJEditInfoModel *model = [headModel.dataSource firstObject];
             if (model.showValue.length == 0) {
-                [SVProgressHUD showErrorWithStatus:@"请选择学校"];
+                [XJHud showInfoWithStatus:@"请选择学校"];
                 return;
             }
         }
-        __block XJEditInfoModel *blockModel = model;
         [XJActionSheet showWithList:model.dataList clickItemBlock:^(NSDictionary *item) {
-            blockModel.value = item[@"code"];
-            blockModel.showValue = item[@"name"];
+            model.value = item[@"code"];
+            model.showValue = item[@"name"];
             if ([@"in_school" isEqualToString:model.code]) {
                 
                 XJHeadModel *headModel = self.mutArray[1];
@@ -149,7 +169,7 @@
                         if ([@"1" isEqualToString:item[@"code"]]) {
                             model.titleColor = [UIColor descColor];
                             model.canNotClick = YES;
-                            // 是否需要清空
+                            // 是否需要清空职业行业（当之前选择已毕业，选择过职业、行业，然后选择在校的时候）
 //                            if (model.showValue.length > 0) {
 //                                model.value = model.showValue = @"";
 //                            }
@@ -160,10 +180,10 @@
                         }
                     }
                 }
-                [weakSelf.mTableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
+                [weakSelf reloadSectionWithSection:1];
             }
             else {
-                [weakSelf.mTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                [weakSelf reloadRowWithIndexPath:indexPath];
             }
         }];
     }
@@ -180,25 +200,32 @@
         
     }
     
-    else if ([@"school" isEqualToString:model.code]) {
-        model.value = @"1";
-        model.showValue = @"武汉纺织大学";
-        [weakSelf.mTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        
-//        XJEditLbCell *cell = [self.mTableView cellForRowAtIndexPath:indexPath];
-//        cell.valueLb.text = model.showValue;
-//        cell.valueLb.textColor = [UIColor contentColor];
+    else if ([@"schoolAll" isEqualToString:model.code]) {
+        XJEditSelectSchoolVC *vc = [[XJEditSelectSchoolVC alloc] init];
+        vc.selectDataBlock = ^(NSDictionary *item) {
+            model.value = item[@"id"];
+            model.showValue = item[@"name"];
+            [weakSelf reloadRowWithIndexPath:indexPath];
+        };
+        [self.navigationController pushViewController:vc animated:YES];
     }
 //    else if ([@"in_school" isEqualToString:model.code]) {
 //    }
-    else if ([@"industry" isEqualToString:model.code]) {
+    else if ([@"industry" isEqualToString:model.code] || [@"occupation" isEqualToString:model.code]) {
         if (!model.canNotClick) {
             NSLog(@"push");
-        }
-    }
-    else if ([@"occupation" isEqualToString:model.code]) {
-        if (!model.canNotClick) {
-            NSLog(@"push");
+            XJEditSelectDataVC *vc = [[XJEditSelectDataVC alloc] init];
+            
+            if ([@"industry" isEqualToString:model.code]) vc.selectType = XJSelect_Industry;
+            else vc.selectType = XJSelect_Occupation;
+            
+            vc.selectDataBlock = ^(NSDictionary *item) {
+                model.value = item[@"id"];
+                model.showValue = item[@"name"];
+                [weakSelf reloadRowWithIndexPath:indexPath];
+            };
+            XJNavigationController *nav = [[XJNavigationController alloc] initWithRootViewController:vc];
+            [self presentViewController:nav animated:YES completion:nil];
         }
     }
     
@@ -212,6 +239,10 @@
 #pragma mark - viewForHeaderInSection
 -(UIView *)viewForHeaderInSection:(NSInteger)section
 {
+    id obj = self.viewsForHeader[section];
+    if ([obj isKindOfClass:[UIView class]]) {
+        return (UIView *)obj;
+    }
     XJHeadModel *headModel= self.mutArray[section];
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 74)];
@@ -247,7 +278,19 @@
     if (section == 2) {
         descLb.attributedText = [XJAppUtil highlightWithKeyword:@"*" originText:descLb.text];
     }
+    [self.viewsForHeader replaceObjectAtIndex:section withObject:headerView];
     return headerView;
+}
+
+-(NSMutableArray *)viewsForHeader
+{
+    if (!_viewsForHeader) {
+        _viewsForHeader = [[NSMutableArray alloc] init];
+        for (int i = 0; i < self.mutArray.count; i++) {
+            [_viewsForHeader addObject:@""];
+        }
+    }
+    return _viewsForHeader;
 }
 
 - (void)clickAction:(UIButton *)btn

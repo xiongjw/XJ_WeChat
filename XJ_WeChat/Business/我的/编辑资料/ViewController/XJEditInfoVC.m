@@ -16,6 +16,12 @@
 
 @implementation XJEditInfoVC
 
+/// header是否需要悬停
+//-(UITableViewStyle)tableViewStyle
+//{
+//    return UITableViewStyleGrouped;
+//}
+
 - (void)requestWithRefresh:(BOOL)refresh
 {
     [super requestWithRefresh:refresh];
@@ -25,8 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = @"编辑个人资料";
-    self.mutArray = [XJEditInfoUtil pageData];
+    [self showBackBtn:YES withTitle:@"编辑个人资料"];
+    
     [self requestWithRefresh:YES];
 }
 
@@ -72,7 +78,7 @@
              [@"area" isEqualToString:model.code] ||
              [@"sign" isEqualToString:model.code] ||
              
-             [@"school" isEqualToString:model.code] ||
+             [@"schoolAll" isEqualToString:model.code] ||
              [@"in_school" isEqualToString:model.code] ||
              [@"industry" isEqualToString:model.code] ||
              [@"occupation" isEqualToString:model.code] ||
@@ -118,6 +124,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
     return 74;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return CGFLOAT_MIN;
 }
 
 @end

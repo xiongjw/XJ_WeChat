@@ -21,12 +21,14 @@
 /// app
 #import "XJBaseVC.h"
 #import "XJBaseTableVC.h"
+#import "XJNavigationController.h"
 
 #import "XJMacro.h"
 #import "XJAppUtil.h"
 #import "XJViewPhoto.h"
 #import "XJSelectPhoto.h"
 #import "XJActionSheet.h"
+#import "XJHud.h"
 
 #import "ZZJBlockBarButtonItem.h"
 

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ headView的数据 以及对应下面的section的数据源
+ */
 @interface XJHeadModel : NSObject
 
 @property (nonatomic,  copy) NSString *code;

@@ -13,9 +13,9 @@
 
 @implementation XJEditInfoUtil
 
-+ (NSMutableArray *)pageData
++ (NSMutableArray *)editPageData
 {
-    NSMutableArray *section = [[NSMutableArray alloc] init];
+    NSMutableArray *pageList = [[NSMutableArray alloc] init];
     for (int i = 0; i < 3; i++)
     {
         XJHeadModel *headModel = [[XJHeadModel alloc] init];
@@ -28,7 +28,7 @@
             NSArray *codes = @[@"head",@"empty",@"nickname",@"id",@"empty",@"sex",@"age",@"area",@"empty",@"sign",@"PhotoWall",@"empty"];
             NSArray *titles = @[@"头像",@"empty",@"昵称",@"陌玩号",@"empty",@"性别",@"年龄/星座",@"居住地区",@"empty",@"个性签名",@"照片墙",@"empty"];
             NSArray *placeholders = @[@"",@"empty",@"取个好听的名字吧",@"",@"empty",@"",@"",@"",@"empty",@"请设置",@"发几张美照吧",@"empty"];
-            NSMutableArray *row = [[NSMutableArray alloc] init];
+            NSMutableArray *sectionList = [[NSMutableArray alloc] init];
             for (int i = 0; i < codes.count; i++) {
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
@@ -47,19 +47,19 @@
                                        @{@"name":@"取消",@"code":@"cancel"},
                                        ];
                 }
-                [row addObject:model];
+                [sectionList addObject:model];
             }
-            headModel.dataSource = row.mutableCopy;
+            headModel.dataSource = sectionList.mutableCopy;
         }
         else if (i == 1) {
             headModel.code = @"personalData";
             headModel.title = @"个人资料";
             headModel.desc = @"完善个人信息，这里都是心动值哦";
             
-            NSArray *codes = @[@"school",@"in_school",@"industry",@"occupation",@"empty"];
+            NSArray *codes = @[@"schoolAll",@"in_school",@"industry",@"occupation",@"empty"];
             NSArray *titles = @[@"学校",@"在校/已毕业",@"行业",@"职业",@"empty"];
             NSArray *placeholders = @[@"下一秒匹配到同校的TA",@"请选择",@"请选择",@"请选择",@"empty"];
-            NSMutableArray *row = [[NSMutableArray alloc] init];
+            NSMutableArray *sectionList = [[NSMutableArray alloc] init];
             for (int i = 0; i < codes.count; i++) {
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
@@ -71,7 +71,7 @@
                 model.value = @"";
                 model.showValue = @"";
                 model.placeholder = placeholders[i];
-                if ([@"school" isEqualToString:model.code]) {
+                if ([@"schoolAll" isEqualToString:model.code]) {
                     model.placeholderColor = [UIColor themeColor];
                 }
                 
@@ -82,9 +82,9 @@
                                        @{@"name":@"取消",@"code":@"cancel"},
                                        ];
                 }
-                [row addObject:model];
+                [sectionList addObject:model];
             }
-            headModel.dataSource = row.mutableCopy;
+            headModel.dataSource = sectionList.mutableCopy;
         }
         else if (i == 2) {
             headModel.code = @"personalityData";
@@ -94,7 +94,7 @@
             NSArray *codes = @[@"emotion",@"question"];
             NSArray *titles = @[@"情感状态",@"你问我答"];
             NSArray *placeholders = @[@"请选择",@"请设置问题"];
-            NSMutableArray *row = [[NSMutableArray alloc] init];
+            NSMutableArray *sectionList = [[NSMutableArray alloc] init];
             for (int i = 0; i < codes.count; i++) {
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
@@ -115,13 +115,32 @@
                                        @{@"name":@"取消",@"code":@"cancel"},
                                        ];
                 }
-                [row addObject:model];
+                [sectionList addObject:model];
             }
-            headModel.dataSource = row.mutableCopy;
+            headModel.dataSource = sectionList.mutableCopy;
         }
-        [section addObject:headModel];
+        [pageList addObject:headModel];
     }
-    return section;
+    return pageList;
+}
+
++ (NSMutableArray *)schoolPageData
+{
+    NSMutableArray *pageList = [[NSMutableArray alloc] init];
+    NSArray *codes = @[@"school",@"major",@"grade"];
+    NSArray *titles = @[@"学校",@"专业",@"入学年份"];
+    NSArray *placeholders = @[@"请选择",@"请选择",@"请选择"];
+    
+    for (int i = 0; i < codes.count; i++) {
+        XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
+        model.code = codes[i];
+        model.title = titles[i];
+        model.value = @"";
+        model.showValue = @"";
+        model.placeholder = placeholders[i];
+        [pageList addObject:model];
+    }
+    return pageList;
 }
 
 @end

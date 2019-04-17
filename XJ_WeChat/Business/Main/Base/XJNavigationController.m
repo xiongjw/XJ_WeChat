@@ -8,7 +8,7 @@
 
 #import "XJNavigationController.h"
 
-@interface XJNavigationController ()
+@interface XJNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -23,6 +23,8 @@
     bar.barTintColor = [UIColor whiteColor];
     bar.tintColor = [UIColor themeColor];
     bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor blackColor]};
+    
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -30,6 +32,19 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (self.viewControllers[0] == self.topViewController) {
+        return NO;
+    }
+    else if ([self.topViewController isKindOfClass:[XJBaseVC class]]) {
+        return !((XJBaseVC *)self.topViewController).disablePopGesture;
+    }
+    
+    return YES;
 }
 
 @end

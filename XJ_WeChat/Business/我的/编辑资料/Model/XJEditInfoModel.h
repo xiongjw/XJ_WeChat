@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 每一行的数据源
+ */
 @interface XJEditInfoModel : NSObject
 
 /// 服务器的key

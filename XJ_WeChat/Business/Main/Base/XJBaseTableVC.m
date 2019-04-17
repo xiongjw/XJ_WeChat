@@ -14,7 +14,12 @@
 
 @implementation XJBaseTableVC
 
-#pragma mark -  user method
+-(UITableViewStyle)tableViewStyle
+{
+    return UITableViewStylePlain;
+}
+
+#pragma mark - user method
 - (void)addHeaderAction
 {
     MJWeakSelf
@@ -61,6 +66,20 @@
     }
 }
 
+#pragma mark -  util
+- (void)reloadRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self.mTableView reloadRowsAtIndexPaths:@[indexPath]
+                           withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)reloadSectionWithSection:(NSInteger)section
+{
+    [self.mTableView reloadSections:[NSIndexSet indexSetWithIndex:section]
+                   withRowAnimation:UITableViewRowAnimationNone];
+}
+
+#pragma mark -  system method
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -79,7 +98,7 @@
 -(UITableView *)mTableView
 {
     if (!_mTableView) {
-        _mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height - NavHeight) style:UITableViewStylePlain];
+        _mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height - NavHeight) style:self.tableViewStyle];
         _mTableView.separatorColor = [UIColor lineColor];
         //_mTableView.tag = 99;
         _mTableView.dataSource = self;
