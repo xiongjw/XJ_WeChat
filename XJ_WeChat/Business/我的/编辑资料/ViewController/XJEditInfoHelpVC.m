@@ -19,6 +19,12 @@
 
 @implementation XJEditInfoHelpVC
 
+/// header是否需要悬停
+//-(UITableViewStyle)tableViewStyle
+//{
+//    return UITableViewStyleGrouped;
+//}
+
 - (void)submit
 {
     
@@ -83,6 +89,9 @@
     [self tableRegisterClass];
     
     //self.mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 30)];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self requestWithRefresh:YES];
+    });
 }
 
 - (void)tableRegisterClass
@@ -165,15 +174,16 @@
                 for (XJEditInfoModel *model in headModel.dataSource)
                 {
                     if ([@"industry" isEqualToString:model.code] || [@"occupation" isEqualToString:model.code]) {
-                        
+                        /// 变为不可点击
                         if ([@"1" isEqualToString:item[@"code"]]) {
                             model.titleColor = [UIColor descColor];
                             model.canNotClick = YES;
                             // 是否需要清空职业行业（当之前选择已毕业，选择过职业、行业，然后选择在校的时候）
-//                            if (model.showValue.length > 0) {
-//                                model.value = model.showValue = @"";
-//                            }
+                            if (model.showValue.length > 0) {
+                                model.value = model.showValue = @"";
+                            }
                         }
+                        /// 变为可点击
                         else if ([@"2" isEqualToString:item[@"code"]]) {
                             model.titleColor = nil;
                             model.canNotClick = NO;

@@ -8,32 +8,16 @@
 
 #import "XJEditInfoVC.h"
 
-
-
 @interface XJEditInfoVC ()
 
 @end
 
 @implementation XJEditInfoVC
 
-/// header是否需要悬停
-//-(UITableViewStyle)tableViewStyle
-//{
-//    return UITableViewStyleGrouped;
-//}
-
-- (void)requestWithRefresh:(BOOL)refresh
-{
-    [super requestWithRefresh:refresh];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self showBackBtn:YES withTitle:@"编辑个人资料"];
-    
-    [self requestWithRefresh:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -42,7 +26,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     XJHeadModel *headModel = self.mutArray[section];
     return section == 0 ? headModel.dataSource.count : (headModel.isOpen ? headModel.dataSource.count : 0);
 }
@@ -108,7 +91,6 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     return [self heightForRowAtIndexPath:indexPath];
 }
 
@@ -122,17 +104,14 @@
     return [self viewForHeaderInSection:section];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-
     return 74;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return [UIView new];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
 

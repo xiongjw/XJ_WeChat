@@ -27,17 +27,23 @@
 
 + (void)showInfoWithStatus:(NSString*)status {
     [SVProgressHUD showInfoWithStatus:status];
-    [SVProgressHUD dismissWithDelay:2];
+    [SVProgressHUD dismissWithDelay:[self getDelayTime:status]];
 }
 
 + (void)showSuccessWithStatus:(NSString*)status {
     [SVProgressHUD showSuccessWithStatus:status];
-    [SVProgressHUD dismissWithDelay:2];
+    [SVProgressHUD dismissWithDelay:[self getDelayTime:status]];
 }
 
 + (void)showErrorWithStatus:(NSString*)status {
     [SVProgressHUD showErrorWithStatus:status];
-    [SVProgressHUD dismissWithDelay:2];
+    [SVProgressHUD dismissWithDelay:[self getDelayTime:status]];
+}
+
++ (NSTimeInterval)getDelayTime:(NSString*)status {
+    if (status.length < 8) return 1;
+    else if (status.length < 16) return 2;
+    return 3;
 }
 
 + (void)dismiss {
