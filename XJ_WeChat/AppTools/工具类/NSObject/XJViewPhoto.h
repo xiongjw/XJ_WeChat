@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 图片浏览类
+ */
 @interface XJViewPhoto : NSObject
 
 /**

@@ -72,6 +72,7 @@
 		04ADEBB92266C1790029E3BD /* XJEditSelectDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBB82266C1790029E3BD /* XJEditSelectDataVC.m */; };
 		04ADEBBC2266C2800029E3BD /* XJEditSelectSchoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBBB2266C2800029E3BD /* XJEditSelectSchoolVC.m */; };
 		04ADEBBF2266D9A10029E3BD /* XJHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBBE2266D9A10029E3BD /* XJHud.m */; };
+		04ADEBC722670C1D0029E3BD /* XJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBC622670C1D0029E3BD /* XJLabel.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -213,6 +214,8 @@
 		04ADEBBB2266C2800029E3BD /* XJEditSelectSchoolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditSelectSchoolVC.m; sourceTree = "<group>"; };
 		04ADEBBD2266D9A10029E3BD /* XJHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHud.h; sourceTree = "<group>"; };
 		04ADEBBE2266D9A10029E3BD /* XJHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHud.m; sourceTree = "<group>"; };
+		04ADEBC522670C1D0029E3BD /* XJLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLabel.h; sourceTree = "<group>"; };
+		04ADEBC622670C1D0029E3BD /* XJLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLabel.m; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
 				040EE12E2265C80700C66475 /* XJPickerView.h */,
 				040EE12F2265C80700C66475 /* XJPickerView.m */,
+				04ADEBC522670C1D0029E3BD /* XJLabel.h */,
+				04ADEBC622670C1D0029E3BD /* XJLabel.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1080,6 +1085,7 @@
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
+				04ADEBC722670C1D0029E3BD /* XJLabel.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
 				040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */,

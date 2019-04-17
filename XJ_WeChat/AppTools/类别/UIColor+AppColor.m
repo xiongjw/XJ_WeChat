@@ -40,4 +40,9 @@
     return RGBCOLOR(222, 223, 226);
 }
 
++ (UIColor *)HLBgColor
+{
+    return [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0];
+}
+
 @end

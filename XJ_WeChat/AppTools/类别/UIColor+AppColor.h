@@ -21,5 +21,7 @@
 + (UIColor *)bgColor;
 
 + (UIColor *)lineColor;
+// 按住背景颜色
++ (UIColor *)HLBgColor;
 
 @end

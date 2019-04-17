@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ app公共方法
+ */
 @interface XJAppUtil : NSObject
 
 + (NSMutableAttributedString *)highlightWithKeyword:(NSString *)keyword

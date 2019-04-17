@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 图片选择类
+ */
 @interface XJSelectPhoto : NSObject
 
 + (void)selectPhotoWithActionSheet;

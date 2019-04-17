@@ -239,11 +239,15 @@
 #pragma mark - viewForHeaderInSection
 -(UIView *)viewForHeaderInSection:(NSInteger)section
 {
+    XJHeadModel *headModel= self.mutArray[section];
+    
     id obj = self.viewsForHeader[section];
     if ([obj isKindOfClass:[UIView class]]) {
-        return (UIView *)obj;
+        UIView *view = (UIView *)obj;
+        /// 有变动的地方
+        ((UIImageView *)[view viewWithTag:7]).image = [self getArrowImage:headModel];
+        return view;
     }
-    XJHeadModel *headModel= self.mutArray[section];
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 74)];
     headerView.backgroundColor = [UIColor bgColor];
@@ -254,13 +258,13 @@
     btn.tag = 100 + section;
     [headerView addSubview:btn];
     
-    if (section > 0) {
+    if (headModel.canClick) {
         [btn addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
         
-        UIImage *image = headModel.isOpen ? [UIImage imageNamed:@"common_arrow_up"] : [UIImage imageNamed:@"common_arrow_down"];
-        UIImageView *arrowIcon = [[UIImageView alloc] initWithImage:image];
+        UIImageView *arrowIcon = [[UIImageView alloc] initWithImage:[self getArrowImage:headModel]];
         arrowIcon.centerX = Screen_Width - 20;
         arrowIcon.centerY = 25;
+        arrowIcon.tag = 7;
         [headerView addSubview:arrowIcon];
     }
     
@@ -282,6 +286,12 @@
     return headerView;
 }
 
+- (UIImage *)getArrowImage:(XJHeadModel *)headModel
+{
+    UIImage *image = headModel.isOpen ? [UIImage imageNamed:@"common_arrow_up"] : [UIImage imageNamed:@"common_arrow_down"];
+    return image;
+}
+
 -(NSMutableArray *)viewsForHeader
 {
     if (!_viewsForHeader) {
@@ -301,7 +311,9 @@
     [self.mTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
     
     if (headModel.isOpen) {
-        [self.mTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:headModel.dataSource.count - 1 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.mTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:headModel.dataSource.count - 1 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        });
     }
 }
 

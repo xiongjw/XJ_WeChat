@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ toast弹框
+ */
 @interface XJHud : NSObject
 
 + (void)setXJDefaultStyle;

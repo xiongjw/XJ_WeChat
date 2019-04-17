@@ -45,5 +45,6 @@
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
+#import <MLLinkLabel.h>
 
 #endif /* PrefixHeader_XJ_pch */

@@ -91,7 +91,11 @@
         [self presentViewController:nav animated:YES completion:nil];
     }
     else if ([@"grade" isEqualToString:model.code]) {
-        
+        XJEditInfoModel *school = [self modelWithCode:@"school"];
+        if (school.showValue.length == 0) {
+            [XJHud showInfoWithStatus:@"请选择学校"];
+            return;
+        }
     }
 }
 

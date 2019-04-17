@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 封装alert弹框
+ */
 @interface XJAlertView : UIView
 
 @end

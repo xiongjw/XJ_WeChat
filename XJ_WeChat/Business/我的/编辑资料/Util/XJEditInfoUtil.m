@@ -55,6 +55,7 @@
             headModel.code = @"personalData";
             headModel.title = @"个人资料";
             headModel.desc = @"完善个人信息，这里都是心动值哦";
+            headModel.canClick = YES;
             
             NSArray *codes = @[@"schoolAll",@"in_school",@"industry",@"occupation",@"empty"];
             NSArray *titles = @[@"学校",@"在校/已毕业",@"行业",@"职业",@"empty"];
@@ -90,6 +91,7 @@
             headModel.code = @"personalityData";
             headModel.title = @"个性化资料";
             headModel.desc = @"* 关于我的几件事（限为3个，可随时更换哦）";
+            headModel.canClick = YES;
             
             NSArray *codes = @[@"emotion",@"question"];
             NSArray *titles = @[@"情感状态",@"你问我答"];

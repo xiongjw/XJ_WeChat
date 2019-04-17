@@ -10,6 +10,9 @@
 
 typedef void (^XJClickActionSheetItemBlock)(NSDictionary *item);
 
+/**
+ 封装actionSheet
+ */
 @interface XJActionSheet : UIView
 
 @property (nonatomic,strong) NSArray *menuList;
