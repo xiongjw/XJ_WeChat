@@ -33,8 +33,6 @@
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
                 model.title = titles[i];
-                model.value = @"";
-                model.showValue = @"";
                 model.placeholder = placeholders[i];
                 
                 if ([@"id" isEqualToString:model.code]) {
@@ -69,8 +67,6 @@
                     model.titleColor = [UIColor descColor];
                     model.canNotClick = YES;
                 }
-                model.value = @"";
-                model.showValue = @"";
                 model.placeholder = placeholders[i];
                 if ([@"schoolAll" isEqualToString:model.code]) {
                     model.placeholderColor = [UIColor themeColor];
@@ -101,8 +97,6 @@
                 XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
                 model.code = codes[i];
                 model.title = titles[i];
-                model.value = @"";
-                model.showValue = @"";
                 model.placeholder = placeholders[i];
                 if ([@"question" isEqualToString:model.code]) {
                     model.placeholderColor = [UIColor themeColor];
@@ -137,8 +131,6 @@
         XJEditInfoModel *model = [[XJEditInfoModel alloc] init];
         model.code = codes[i];
         model.title = titles[i];
-        model.value = @"";
-        model.showValue = @"";
         model.placeholder = placeholders[i];
         [pageList addObject:model];
     }

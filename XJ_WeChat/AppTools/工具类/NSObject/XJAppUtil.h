@@ -16,4 +16,6 @@
 + (NSMutableAttributedString *)highlightWithKeyword:(NSString *)keyword
                                          originText:(NSString *)originText;
 
++ (NSArray *)readRegionDataWithKey:(NSString *)key;
+
 @end

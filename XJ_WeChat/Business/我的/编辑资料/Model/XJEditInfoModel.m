@@ -10,4 +10,15 @@
 
 @implementation XJEditInfoModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.value = @"";
+        self.showValue = @"";
+    }
+    return self;
+}
+
 @end

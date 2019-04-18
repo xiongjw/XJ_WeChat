@@ -10,4 +10,23 @@
 
 @implementation XJPickerModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.value = @"";
+        self.showValue = @"";
+        
+        self.valueList = [[NSMutableArray alloc] initWithArray:@[@"", @"", @""]];
+        self.showValueList = [[NSMutableArray alloc] initWithArray:@[@"", @"", @""]];
+        
+        self.codeKey = @"code";
+        self.nameKey = @"name";
+        
+        self.placeholder = @"请选择";
+    }
+    return self;
+}
+
 @end

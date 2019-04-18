@@ -27,11 +27,17 @@ typedef NS_ENUM(NSInteger, XJPickerType) {
 
 @interface XJPickerModel : NSObject
 
+@property (nonatomic,  copy) NSString *code;
+@property (nonatomic,  copy) NSString *title;
+
 @property (nonatomic,assign) XJPickerType pickerType;
 @property (nonatomic,strong) NSArray *dataSource;
 
 @property (nonatomic,  copy) NSString *value;
+/// 为多级数据选择器准备
+@property (nonatomic,strong) NSMutableArray *valueList;
 @property (nonatomic,  copy) NSString *showValue;
+@property (nonatomic,strong) NSMutableArray *showValueList;
 
 /// 默认code（如服务器返回的item，学校为school_id、school_name，此处赋此值）
 @property (nonatomic,  copy) NSString *codeKey;
@@ -46,5 +52,8 @@ typedef NS_ENUM(NSInteger, XJPickerType) {
 @property (nonatomic,assign) BOOL needMax;
 /// 默认今天
 @property (nonatomic,strong) NSString *maxValue;
+
+
+@property (nonatomic,  copy) NSString *placeholder;
 
 @end

@@ -33,4 +33,13 @@
     return attributeStr;
 }
 
++ (NSArray *)readRegionDataWithKey:(NSString *)key
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"region" ofType:@"plist"];
+    NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSArray *resultList = data[key];
+    
+    return resultList;
+}
+
 @end

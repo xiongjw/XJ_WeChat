@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE74226804B6002C3D98 /* XJAllPickerVC.m */; };
+		040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE77226804DA002C3D98 /* XJPickerUtil.m */; };
+		040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE7A22681611002C3D98 /* XJPickerCell.m */; };
+		040EAE7D226822D0002C3D98 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040EAE7C226822D0002C3D98 /* region.plist */; };
 		040EE11422656FB800C66475 /* XJEditFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11322656FB800C66475 /* XJEditFieldCell.m */; };
 		040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11622657FEE00C66475 /* XJHeadModel.m */; };
 		040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11A2265958F00C66475 /* XJAppUtil.m */; };
@@ -81,6 +85,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040EAE73226804B6002C3D98 /* XJAllPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAllPickerVC.h; sourceTree = "<group>"; };
+		040EAE74226804B6002C3D98 /* XJAllPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAllPickerVC.m; sourceTree = "<group>"; };
+		040EAE76226804DA002C3D98 /* XJPickerUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerUtil.h; sourceTree = "<group>"; };
+		040EAE77226804DA002C3D98 /* XJPickerUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPickerUtil.m; sourceTree = "<group>"; };
+		040EAE7922681611002C3D98 /* XJPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerCell.h; sourceTree = "<group>"; };
+		040EAE7A22681611002C3D98 /* XJPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPickerCell.m; sourceTree = "<group>"; };
+		040EAE7C226822D0002C3D98 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = region.plist; sourceTree = "<group>"; };
 		040EE11222656FB800C66475 /* XJEditFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditFieldCell.h; sourceTree = "<group>"; };
 		040EE11322656FB800C66475 /* XJEditFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditFieldCell.m; sourceTree = "<group>"; };
 		040EE11522657FEE00C66475 /* XJHeadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHeadModel.h; sourceTree = "<group>"; };
@@ -242,6 +253,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040EAE7222680458002C3D98 /* 选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				040EAE73226804B6002C3D98 /* XJAllPickerVC.h */,
+				040EAE74226804B6002C3D98 /* XJAllPickerVC.m */,
+				040EAE76226804DA002C3D98 /* XJPickerUtil.h */,
+				040EAE77226804DA002C3D98 /* XJPickerUtil.m */,
+				040EAE7922681611002C3D98 /* XJPickerCell.h */,
+				040EAE7A22681611002C3D98 /* XJPickerCell.m */,
+			);
+			path = "选择器";
+			sourceTree = "<group>";
+		};
 		040EE1182265958100C66475 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +487,7 @@
 				04E4D507225C351E0067D70C /* Info.plist */,
 				04E4D508225C351E0067D70C /* main.m */,
 				044C9945225DC39C0030AE9A /* PrefixHeader_XJ.pch */,
+				040EAE7C226822D0002C3D98 /* region.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -485,6 +510,7 @@
 			children = (
 				044C9922225D9E8E0030AE9A /* 我的 */,
 				040F0F6122648C0300F5371B /* 编辑资料 */,
+				040EAE7222680458002C3D98 /* 选择器 */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -966,6 +992,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040EAE7D226822D0002C3D98 /* region.plist in Resources */,
 				040F0F4B22646AAB00F5371B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				04E4D503225C351E0067D70C /* Assets.xcassets in Resources */,
 			);
@@ -1064,6 +1091,7 @@
 				04799934225F403F00470217 /* SDWaitingView.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
+				040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */,
 				040F0F7522648D6F00F5371B /* XJEditImageCell.m in Sources */,
 				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
@@ -1086,6 +1114,7 @@
 				04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */,
 				040EE1302265C80700C66475 /* XJPickerView.m in Sources */,
 				040EE12A2265C7CB00C66475 /* XJAlertView.m in Sources */,
+				040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */,
 				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
 				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
@@ -1093,6 +1122,7 @@
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				04ADEBC722670C1D0029E3BD /* XJLabel.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
+				040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
 				040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */,
 				040F0F4622646AAB00F5371B /* NSString+PinYin4Cocoa.m in Sources */,

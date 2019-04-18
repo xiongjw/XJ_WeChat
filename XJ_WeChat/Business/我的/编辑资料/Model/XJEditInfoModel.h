@@ -25,8 +25,10 @@
 
 @property (nonatomic,  copy) NSString *value;
 @property (nonatomic,  copy) NSString *otherValue;
+@property (nonatomic,strong) NSArray *valueList;
 
 @property (nonatomic,  copy) NSString *showValue;
+@property (nonatomic,strong) NSArray *showValueList;
 
 @property (nonatomic,  copy) NSString *placeholder;
 @property (nonatomic,strong) UIColor *placeholderColor;
