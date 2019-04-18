@@ -72,8 +72,6 @@
     /// 开始
     if (_model.pickerType == XJPicker_DataOne || _model.pickerType == XJPicker_DataTwo || _model.pickerType == XJPicker_DataThree)
     {
-        [self.contentView addSubview:self.pickerView];
-        
         /// 第一级
         _pickerList1 = _model.dataSource;
         _selectRow1 = 0;
@@ -89,15 +87,14 @@
                 }
             }
         }
-        if (_selectRow1 > 0) [_pickerView selectRow:_selectRow1 inComponent:0 animated:NO];
         
-        if (_model.pickerType == XJPicker_DataOne) {
-            return;
-        }
         /// 第二级
         _selectRow2 = 0;
         NSString *value2 = _model.valueList[1];
-        _pickerList2 = [XJAppUtil readRegionDataWithKey:FormatString(@"%lld",[_pickerList1[_selectRow1][_model.codeKey] longLongValue])];
+        if (_pickerList1.count > 0) {
+            _pickerList2 = [XJAppUtil readRegionDataWithKey:FormatString(@"%lld",[_pickerList1[_selectRow1][_model.codeKey] longLongValue])];
+        }
+        else _pickerList2 = @[];
         if (value2.length > 0) {
             for (int i = 0; i < _pickerList2.count; i++) {
                 if ([value2 isEqualToString:[self getValueStr:_pickerList2[i]]]) {
@@ -106,15 +103,14 @@
                 }
             }
         }
-        if (_selectRow2 > 0) [_pickerView selectRow:_selectRow2 inComponent:1 animated:NO];
-        
-        if (_model.pickerType == XJPicker_DataTwo) {
-            return;
-        }
+
         /// 第三级
         _selectRow3 = 0;
         NSString *value3 = _model.valueList[2];
-        _pickerList3 = [XJAppUtil readRegionDataWithKey:FormatString(@"%lld",[_pickerList2[_selectRow2][_model.codeKey] longLongValue])];
+        if (_pickerList2.count > 0) {
+            _pickerList3 = [XJAppUtil readRegionDataWithKey:FormatString(@"%lld",[_pickerList2[_selectRow2][_model.codeKey] longLongValue])];
+        }
+        else _pickerList3 = @[];
         if (value3.length > 0) {
             for (int i = 0; i < _pickerList3.count; i++) {
                 if ([value3 isEqualToString:[self getValueStr:_pickerList3[i]]]) {
@@ -123,6 +119,11 @@
                 }
             }
         }
+        
+        [self.contentView addSubview:self.pickerView];
+        
+        if (_selectRow1 > 0) [_pickerView selectRow:_selectRow1 inComponent:0 animated:NO];
+        if (_selectRow2 > 0) [_pickerView selectRow:_selectRow2 inComponent:1 animated:NO];
         if (_selectRow3 > 0) [_pickerView selectRow:_selectRow3 inComponent:2 animated:NO];
         
     }
@@ -351,9 +352,8 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     if (component == 0) {
-        if (_selectRow1 == row) {
-            return;
-        }
+        if (_selectRow1 == row) return;
+        
         _selectRow1 = row;
         if (_model.pickerType == XJPicker_DataOne) {
             return;
@@ -377,9 +377,8 @@
         [_pickerView selectRow:0 inComponent:2 animated:NO];
     }
     else if (component == 1) {
-        if (_selectRow2 == row) {
-            return;
-        }
+        if (_selectRow2 == row) return;
+        
         _selectRow2 = row;
         if (_model.pickerType == XJPicker_DataTwo) {
             return;
