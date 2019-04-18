@@ -11,6 +11,8 @@
 		040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE77226804DA002C3D98 /* XJPickerUtil.m */; };
 		040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE7A22681611002C3D98 /* XJPickerCell.m */; };
 		040EAE7D226822D0002C3D98 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040EAE7C226822D0002C3D98 /* region.plist */; };
+		040EAE8322685A63002C3D98 /* MWTestTowLineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */; };
+		040EAE8422685A63002C3D98 /* MWTestTowLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */; };
 		040EE11422656FB800C66475 /* XJEditFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11322656FB800C66475 /* XJEditFieldCell.m */; };
 		040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11622657FEE00C66475 /* XJHeadModel.m */; };
 		040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EE11A2265958F00C66475 /* XJAppUtil.m */; };
@@ -92,6 +94,10 @@
 		040EAE7922681611002C3D98 /* XJPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerCell.h; sourceTree = "<group>"; };
 		040EAE7A22681611002C3D98 /* XJPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPickerCell.m; sourceTree = "<group>"; };
 		040EAE7C226822D0002C3D98 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = region.plist; sourceTree = "<group>"; };
+		040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTestTowLineVC.m; sourceTree = "<group>"; };
+		040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTestTowLineCell.h; sourceTree = "<group>"; };
+		040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTestTowLineCell.m; sourceTree = "<group>"; };
+		040EAE8222685A63002C3D98 /* MWTestTowLineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTestTowLineVC.h; sourceTree = "<group>"; };
 		040EE11222656FB800C66475 /* XJEditFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditFieldCell.h; sourceTree = "<group>"; };
 		040EE11322656FB800C66475 /* XJEditFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditFieldCell.m; sourceTree = "<group>"; };
 		040EE11522657FEE00C66475 /* XJHeadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHeadModel.h; sourceTree = "<group>"; };
@@ -264,6 +270,17 @@
 				040EAE7A22681611002C3D98 /* XJPickerCell.m */,
 			);
 			path = "选择器";
+			sourceTree = "<group>";
+		};
+		040EAE7E22685A38002C3D98 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				040EAE8222685A63002C3D98 /* MWTestTowLineVC.h */,
+				040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */,
+				040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */,
+				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		040EE1182265958100C66475 /* UIView */ = {
@@ -500,6 +517,7 @@
 				044C9927225D9E8E0030AE9A /* 通讯录 */,
 				044C9932225D9E8E0030AE9A /* 发现 */,
 				044C9921225D9E8E0030AE9A /* 我的 */,
+				040EAE7E22685A38002C3D98 /* Test */,
 				044C992D225D9E8E0030AE9A /* Main */,
 			);
 			path = Business;
@@ -1066,6 +1084,7 @@
 				040F0F4922646AAB00F5371B /* ChineseToPinyinResource.m in Sources */,
 				04799933225F403F00470217 /* SDPhotoBrowser.m in Sources */,
 				04799935225F403F00470217 /* SDBrowserImageView.m in Sources */,
+				040EAE8422685A63002C3D98 /* MWTestTowLineCell.m in Sources */,
 				04ADEBB92266C1790029E3BD /* XJEditSelectDataVC.m in Sources */,
 				040EE12D2265C7E900C66475 /* XJActionSheet.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
@@ -1107,6 +1126,7 @@
 				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
 				040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */,
 				040F0F4722646AAB00F5371B /* PinyinHelper.m in Sources */,
+				040EAE8322685A63002C3D98 /* MWTestTowLineVC.m in Sources */,
 				044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */,
 				040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */,
 				04ADEBBF2266D9A10029E3BD /* XJHud.m in Sources */,

@@ -24,7 +24,6 @@
 @property (nonatomic,strong) UIColor *titleColor;
 
 @property (nonatomic,  copy) NSString *value;
-@property (nonatomic,  copy) NSString *otherValue;
 @property (nonatomic,strong) NSArray *valueList;
 
 @property (nonatomic,  copy) NSString *showValue;

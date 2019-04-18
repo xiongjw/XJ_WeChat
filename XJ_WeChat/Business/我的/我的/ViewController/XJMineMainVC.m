@@ -10,6 +10,7 @@
 
 #import "XJEditInfoVC.h"
 #import "XJAllPickerVC.h"
+#import "MWTestTowLineVC.h"
 
 @interface XJMineMainVC ()
 
@@ -23,7 +24,7 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料",@"选择器"];
+    self.array = @[@"编辑资料", @"选择器", @"Test换行"];
 }
 
 #pragma mark - UITableViewDataSource
@@ -58,6 +59,11 @@
     }
     else if (indexPath.row == 1) {
         XJAllPickerVC *vc = [[XJAllPickerVC alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 2) {
+        MWTestTowLineVC *vc = [[MWTestTowLineVC alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
