@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self showBackBtn:YES withTitle:@"学校"];
+    [self showBackBtn:YES withTitle:@"选择器"];
     
     [self.mTableView registerClass:[XJPickerCell class] forCellReuseIdentifier:@"XJPickerCell"];
     self.mutArray = [XJPickerUtil pickerPageData];
@@ -80,7 +80,7 @@
     for (int i = 0; i < items.count; i++) {
         if (i == items.count - 1) [string appendFormat:@"%@",items[i][key]];
         // 这里该怎么连接，看产品需求，暂时以“-”处理
-        else [string appendFormat:@"%@-",items[i][key]];
+        else [string appendFormat:@"%@ ",items[i][key]];
     }
     return [NSString stringWithString:string];
 }

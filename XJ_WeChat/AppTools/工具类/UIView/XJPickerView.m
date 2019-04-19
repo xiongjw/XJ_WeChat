@@ -213,14 +213,15 @@
         _toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 44)];
         _toolbar.tintColor = [UIColor themeColor];
         
-        UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
+//        UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
         //UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction)];
-        UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
+        UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:@"　取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
         UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
         //UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction)];
-        UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(doneAction)];
-        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
-        _toolbar.items = @[left, cancel, flexibleSpace, done, right];
+        UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"确定　" style:UIBarButtonItemStylePlain target:self action:@selector(doneAction)];
+//        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
+        //_toolbar.items = @[left, cancel, flexibleSpace, done, right];
+        _toolbar.items = @[cancel, flexibleSpace, done];
     }
     return _toolbar;
 }

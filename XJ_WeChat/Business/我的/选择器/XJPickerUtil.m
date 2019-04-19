@@ -15,8 +15,8 @@
 + (NSMutableArray *)pickerPageData
 {
     NSMutableArray *pageList = [[NSMutableArray alloc] init];
-    NSArray *codes = @[@"dataOne",@"dataTwo",@"dataThree",@"dateTime",@"date",@"time",@"countDown"];
-    NSArray *titles = @[@"数据选择器1",@"数据选择器2",@"数据选择器3",@"时间选择器1",@"时间选择器2",@"时间选择器3",@"时间选择器4"];
+    NSArray *codes = @[@"dataOne",@"dataTwo",@"dataTwoRelate",@"dataThree",@"dataThreeRelate",@"dateTime",@"date",@"time",@"countDown"];
+    NSArray *titles = @[@"单列数据选择",@"两列数据选择",@"两列数据选择关联",@"三列数据选择",@"三列数据选择关联",@"年月日时分",@"年月日",@"时分",@"倒计时"];
     
     for (int i = 0; i < codes.count; i++) {
         XJPickerModel *model = [[XJPickerModel alloc] init];
@@ -39,7 +39,15 @@
             model.pickerType = XJPicker_DataTwo;
             model.dataSource = [XJAppUtil readRegionDataWithKey:@"province"];
         }
+        else if ([@"dataTwoRelate" isEqualToString:model.code]) {
+            model.pickerType = XJPicker_DataTwo;
+            model.dataSource = [XJAppUtil readRegionDataWithKey:@"province"];
+        }
         else if ([@"dataThree" isEqualToString:model.code]) {
+            model.pickerType = XJPicker_DataThree;
+            model.dataSource = [XJAppUtil readRegionDataWithKey:@"province"];
+        }
+        else if ([@"dataThreeRelate" isEqualToString:model.code]) {
             model.pickerType = XJPicker_DataThree;
             model.dataSource = [XJAppUtil readRegionDataWithKey:@"province"];
         }

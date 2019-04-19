@@ -26,7 +26,7 @@
 -(UILabel *)keyLb
 {
     if (!_keyLb) {
-        _keyLb = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, 100, 16)];
+        _keyLb = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, 140, 16)];
         _keyLb.textColor = [UIColor titleColor];
         _keyLb.font = [UIFont systemFontOfSize:16];
     }

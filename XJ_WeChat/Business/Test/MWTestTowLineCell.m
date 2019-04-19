@@ -71,6 +71,7 @@
     _firstLb.text = @"";
     if (lines.count > 0) {
         _firstLb.text = lines[0];
+        // 不加这行代码，可能最后一个字无法展现全
         [_firstLb sizeToFit];
     }
     _secondLb.text = @"";

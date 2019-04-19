@@ -25,7 +25,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(15, 10, 40, 40) radius:5];
+        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(15, 12, 40, 40) radius:5];
         [self.contentView addSubview:_headIcon];
         
         _badgeLb = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
@@ -38,21 +38,22 @@
         _badgeLb.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:_badgeLb];
         
-        _timeLb = [[UILabel alloc] initWithFrame:CGRectMake(Screen_Width - 15 - 100, 10, 100, 20)];
+        _timeLb = [[UILabel alloc] initWithFrame:CGRectMake(Screen_Width - 15 - 100, _headIcon.top, 100, 20)];
         _timeLb.font = [UIFont systemFontOfSize:12];
         _timeLb.textColor = [UIColor descColor];
         _timeLb.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:_timeLb];
         
-        _nameLb = [[UILabel alloc] initWithFrame:CGRectMake(_headIcon.right + 10, 10, _timeLb.left - (_headIcon.right + 10), 20)];
+        _nameLb = [[UILabel alloc] initWithFrame:CGRectMake(_headIcon.right + 10, _headIcon.top, _timeLb.left - (_headIcon.right + 10), 18)];
         _nameLb.font = [UIFont systemFontOfSize:16];
         _nameLb.textColor = [UIColor titleColor];
         [self.contentView addSubview:_nameLb];
         
-        _descLb = [[UILabel alloc] initWithFrame:CGRectMake(_nameLb.left, _nameLb.bottom, Screen_Width - 15 - _nameLb.left, 20)];
+        _descLb = [[UILabel alloc] initWithFrame:CGRectMake(_nameLb.left, _nameLb.bottom, Screen_Width - 15 - _nameLb.left, 16)];
         _descLb.font = [UIFont systemFontOfSize:14];
         _descLb.textColor = [UIColor lightGrayColor];
         [self.contentView addSubview:_descLb];
+        _descLb.bottom = _headIcon.bottom;
     }
     return self;
 }

@@ -115,7 +115,7 @@
         return 10;
     }
     else if ([@"nickname" isEqualToString:model.code]) {
-        return 46;
+        return 50;
     }
     else if ([@"id" isEqualToString:model.code] ||
              [@"sex" isEqualToString:model.code] ||
@@ -130,15 +130,15 @@
              
              [@"emotion" isEqualToString:model.code] ||
              [@"question" isEqualToString:model.code]) {
-        return 46;
+        return 50;
     }
     else if ([@"PhotoWall" isEqualToString:model.code]) {
         if (model.dataList.count > 0) {
-            return 46 + 50 + 15;
+            return 50 + 50 + 15;
         }
-        return 46;
+        return 50;
     }
-    return 46;
+    return 50;
 }
 
 #pragma mark - didSelectRowAtIndexPath

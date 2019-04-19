@@ -27,7 +27,7 @@
 -(UILabel *)valueLb
 {
     if (!_valueLb) {
-        _valueLb = [[UILabel alloc] initWithFrame:CGRectMake(self.keyLb.right, 15, Screen_Width - 30 - self.keyLb.right, 16)];
+        _valueLb = [[UILabel alloc] initWithFrame:CGRectMake(self.keyLb.right, 15, Screen_Width - 30 - self.keyLb.right, 20)];
         _valueLb.textColor = [UIColor descColor];
         _valueLb.font = [UIFont systemFontOfSize:14];
         _valueLb.textAlignment = NSTextAlignmentRight;

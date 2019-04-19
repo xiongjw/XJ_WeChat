@@ -30,7 +30,7 @@
 -(UITextField *)mTextField
 {
     if (!_mTextField) {
-        _mTextField = [[UITextField alloc] initWithFrame:CGRectMake(self.keyLb.right, 0, Screen_Width - 15 - self.keyLb.right, 46)];
+        _mTextField = [[UITextField alloc] initWithFrame:CGRectMake(self.keyLb.right, 0, Screen_Width - 15 - self.keyLb.right, 50)];
         //_mTextField = [[UITextField alloc] initWithFrame:CGRectMake(self.keyLb.right, 0, Screen_Width - 10 - self.keyLb.right, 46)];
         _mTextField.textColor = [UIColor contentColor];
         _mTextField.font = [UIFont systemFontOfSize:14];

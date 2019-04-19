@@ -22,7 +22,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(15, 5, 36, 36) radius:5];
+        _headIcon = [UIImageView createImageViewWithFrame:CGRectMake(15, 7, 36, 36) radius:5];
         [self.contentView addSubview:_headIcon];
         
         _nameLb = [[UILabel alloc] initWithFrame:CGRectMake(_headIcon.right + 10, 0, Screen_Width - 15 - (_headIcon.right + 10), 20)];
