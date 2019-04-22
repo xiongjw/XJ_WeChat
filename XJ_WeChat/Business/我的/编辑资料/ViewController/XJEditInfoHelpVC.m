@@ -318,7 +318,7 @@
     NSInteger section = btn.tag - 100;
     XJHeadModel *headModel = self.mutArray[section];
     headModel.isOpen = !headModel.isOpen;
-    [self.mTableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
+    [self reloadSectionWithSection:section];
     
     if (headModel.isOpen) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

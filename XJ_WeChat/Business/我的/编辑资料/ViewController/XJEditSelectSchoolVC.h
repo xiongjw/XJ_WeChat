@@ -10,4 +10,6 @@
 
 @interface XJEditSelectSchoolVC : XJBaseTableVC
 
+// 如果有值，带入进来
+
 @end

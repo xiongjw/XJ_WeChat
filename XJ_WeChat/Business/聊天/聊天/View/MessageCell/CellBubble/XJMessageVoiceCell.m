@@ -22,7 +22,7 @@
         self.durationLb.frame = CGRectMake(0, 0, 40, KChatCellHeadHeight);
         [self.contentView addSubview:self.durationLb];
         
-        self.unreadView = [[UIView alloc] initWithFrame:CGRectMake(0, (KChatCellHeadHeight - 10)/2, 10, 10)];
+        self.unreadView = [[UIView alloc] initWithFrame:CGRectMake(0, (KChatCellHeadHeight - 10)/2, 8, 8)];
         self.unreadView.backgroundColor = [UIColor redColor];
         self.unreadView.layer.cornerRadius = self.unreadView.height/2;
         self.unreadView.layer.masksToBounds = YES;

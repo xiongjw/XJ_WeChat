@@ -24,7 +24,7 @@
         _arrowIcon.centerY = _valueLb.centerY;
         
         [self.contentView addSubview:self.sepLine];
-        self.sepLine.bottom = 46;
+        self.sepLine.bottom = 50;
     }
     return self;
 }

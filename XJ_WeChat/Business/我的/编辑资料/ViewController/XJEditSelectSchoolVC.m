@@ -22,8 +22,9 @@
 
 - (void)backAction
 {
+    XJEditInfoModel *model = [self.mutArray firstObject];
     if (self.selectDataBlock) {
-        self.selectDataBlock(@{});
+        self.selectDataBlock(@{@"id":model.value,@"name":model.showValue});
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

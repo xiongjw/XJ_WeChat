@@ -22,7 +22,7 @@
         
         [self.contentView addSubview:self.mTextField];
         [self.contentView addSubview:self.sepLine];
-        self.sepLine.bottom = 46;
+        self.sepLine.bottom = 50;
     }
     return self;
 }
