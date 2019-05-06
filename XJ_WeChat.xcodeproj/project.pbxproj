@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3E7227EEAB90058415F /* XJFMDBTool.m */; };
+		0406C3EB227EEB930058415F /* XJUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3EA227EEB930058415F /* XJUserDefaults.m */; };
+		0406C3EE227EEDB90058415F /* XJCircleDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3ED227EEDB90058415F /* XJCircleDBTool.m */; };
+		0406C3F3227EEF990058415F /* XJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3F2227EEF990058415F /* XJUser.m */; };
 		040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE74226804B6002C3D98 /* XJAllPickerVC.m */; };
 		040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE77226804DA002C3D98 /* XJPickerUtil.m */; };
 		040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE7A22681611002C3D98 /* XJPickerCell.m */; };
@@ -53,6 +57,7 @@
 		0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABF9225C3ED700236154 /* XJMineMainVC.m */; };
 		0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFC225C3F1B00236154 /* XJTabBarVC.m */; };
 		0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFF225C3F2D00236154 /* XJLoginVC.m */; };
+		04335C4722731CF9003A9779 /* XJMaxLengthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335C4622731CF9003A9779 /* XJMaxLengthVC.m */; };
 		044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C991A225D9C1D0030AE9A /* XJChatVC.m */; };
 		044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */; };
 		044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9942225DA4C50030AE9A /* UIColor+AppColor.m */; };
@@ -87,6 +92,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0406C3E6227EEAB90058415F /* XJFMDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFMDBTool.h; sourceTree = "<group>"; };
+		0406C3E7227EEAB90058415F /* XJFMDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJFMDBTool.m; sourceTree = "<group>"; };
+		0406C3E9227EEB930058415F /* XJUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJUserDefaults.h; sourceTree = "<group>"; };
+		0406C3EA227EEB930058415F /* XJUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJUserDefaults.m; sourceTree = "<group>"; };
+		0406C3EC227EEDB90058415F /* XJCircleDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJCircleDBTool.h; sourceTree = "<group>"; };
+		0406C3ED227EEDB90058415F /* XJCircleDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJCircleDBTool.m; sourceTree = "<group>"; };
+		0406C3F1227EEF990058415F /* XJUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJUser.h; sourceTree = "<group>"; };
+		0406C3F2227EEF990058415F /* XJUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJUser.m; sourceTree = "<group>"; };
 		040EAE73226804B6002C3D98 /* XJAllPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAllPickerVC.h; sourceTree = "<group>"; };
 		040EAE74226804B6002C3D98 /* XJAllPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAllPickerVC.m; sourceTree = "<group>"; };
 		040EAE76226804DA002C3D98 /* XJPickerUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerUtil.h; sourceTree = "<group>"; };
@@ -178,6 +191,8 @@
 		0430ABFC225C3F1B00236154 /* XJTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTabBarVC.m; sourceTree = "<group>"; };
 		0430ABFE225C3F2D00236154 /* XJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLoginVC.h; sourceTree = "<group>"; };
 		0430ABFF225C3F2D00236154 /* XJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLoginVC.m; sourceTree = "<group>"; };
+		04335C4522731CF9003A9779 /* XJMaxLengthVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMaxLengthVC.h; sourceTree = "<group>"; };
+		04335C4622731CF9003A9779 /* XJMaxLengthVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMaxLengthVC.m; sourceTree = "<group>"; };
 		044C9919225D9C1D0030AE9A /* XJChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatVC.h; sourceTree = "<group>"; };
 		044C991A225D9C1D0030AE9A /* XJChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatVC.m; sourceTree = "<group>"; };
 		044C993E225DA38B0030AE9A /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
@@ -259,6 +274,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0406C3EF227EEF7F0058415F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0430ABE1225C3DEF00236154 /* XJBaseVC.h */,
+				0430ABE2225C3DEF00236154 /* XJBaseVC.m */,
+				0430ABE4225C3E1000236154 /* XJBaseTableVC.h */,
+				0430ABE5225C3E1000236154 /* XJBaseTableVC.m */,
+				0430ABE7225C3E2100236154 /* XJBaseWebVC.h */,
+				0430ABE8225C3E2100236154 /* XJBaseWebVC.m */,
+				044C9946225DC5700030AE9A /* XJNavigationController.h */,
+				044C9947225DC5700030AE9A /* XJNavigationController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0406C3F0227EEF8A0058415F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0406C3F1227EEF990058415F /* XJUser.h */,
+				0406C3F2227EEF990058415F /* XJUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		040EAE7222680458002C3D98 /* 选择器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +318,8 @@
 				040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */,
 				040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */,
 				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
+				04335C4522731CF9003A9779 /* XJMaxLengthVC.h */,
+				04335C4622731CF9003A9779 /* XJMaxLengthVC.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -395,6 +436,8 @@
 		040F0F54226479A400F5371B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0406C3EC227EEDB90058415F /* XJCircleDBTool.h */,
+				0406C3ED227EEDB90058415F /* XJCircleDBTool.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -676,14 +719,8 @@
 		044C9931225D9E8E0030AE9A /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0430ABE1225C3DEF00236154 /* XJBaseVC.h */,
-				0430ABE2225C3DEF00236154 /* XJBaseVC.m */,
-				0430ABE4225C3E1000236154 /* XJBaseTableVC.h */,
-				0430ABE5225C3E1000236154 /* XJBaseTableVC.m */,
-				0430ABE7225C3E2100236154 /* XJBaseWebVC.h */,
-				0430ABE8225C3E2100236154 /* XJBaseWebVC.m */,
-				044C9946225DC5700030AE9A /* XJNavigationController.h */,
-				044C9947225DC5700030AE9A /* XJNavigationController.m */,
+				0406C3EF227EEF7F0058415F /* ViewController */,
+				0406C3F0227EEF8A0058415F /* Model */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -798,6 +835,8 @@
 		044C9954225DEB1F0030AE9A /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				0406C3E6227EEAB90058415F /* XJFMDBTool.h */,
+				0406C3E7227EEAB90058415F /* XJFMDBTool.m */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -901,6 +940,8 @@
 				040EE1262265C7B500C66475 /* XJSelectPhoto.m */,
 				04ADEBBD2266D9A10029E3BD /* XJHud.h */,
 				04ADEBBE2266D9A10029E3BD /* XJHud.m */,
+				0406C3E9227EEB930058415F /* XJUserDefaults.h */,
+				0406C3EA227EEB930058415F /* XJUserDefaults.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -1077,6 +1118,7 @@
 				0430ABE9225C3E2100236154 /* XJBaseWebVC.m in Sources */,
 				04799914225EEE2C00470217 /* XJMessageImageCell.m in Sources */,
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
+				04335C4722731CF9003A9779 /* XJMaxLengthVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
 				040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */,
@@ -1113,7 +1155,9 @@
 				040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */,
 				040F0F7522648D6F00F5371B /* XJEditImageCell.m in Sources */,
 				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
+				0406C3EB227EEB930058415F /* XJUserDefaults.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
+				0406C3EE227EEDB90058415F /* XJCircleDBTool.m in Sources */,
 				040F0F7222648D6300F5371B /* XJEditLbCell.m in Sources */,
 				04ADEBBC2266C2800029E3BD /* XJEditSelectSchoolVC.m in Sources */,
 				040F0F3022645A1500F5371B /* XJAddressBookCell.m in Sources */,
@@ -1123,6 +1167,7 @@
 				040F0F6022647B0500F5371B /* XJCircleListModel.m in Sources */,
 				040F0F52226471D400F5371B /* XJDiscoveryUtil.m in Sources */,
 				04799917225EEE3700470217 /* XJMessageVoiceCell.m in Sources */,
+				0406C3F3227EEF990058415F /* XJUser.m in Sources */,
 				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
 				040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */,
 				040F0F4722646AAB00F5371B /* PinyinHelper.m in Sources */,
@@ -1136,6 +1181,7 @@
 				040EE12A2265C7CB00C66475 /* XJAlertView.m in Sources */,
 				040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */,
 				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
+				0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */,
 				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,

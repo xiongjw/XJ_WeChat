@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XJBaseWebVC : UIViewController
+@interface XJBaseWebVC : XJBaseVC
 
 @end
 

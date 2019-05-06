@@ -47,4 +47,7 @@
 #define FormatString(...)       [NSString stringWithFormat: __VA_ARGS__]
 //#define StringNotNull(string)
 
+
+#define kDocumentDirectory ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject])
+
 #endif /* XJMacro_h */

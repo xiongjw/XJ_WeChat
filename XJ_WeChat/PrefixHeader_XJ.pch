@@ -22,6 +22,7 @@
 #import "XJBaseVC.h"
 #import "XJBaseTableVC.h"
 #import "XJNavigationController.h"
+#import "XJBaseWebVC.h"
 
 #import "XJMacro.h"
 #import "XJAppUtil.h"
@@ -29,6 +30,7 @@
 #import "XJSelectPhoto.h"
 #import "XJActionSheet.h"
 #import "XJHud.h"
+#import "XJUserDefaults.h"
 
 #import "ZZJBlockBarButtonItem.h"
 
@@ -46,5 +48,6 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import <MLLinkLabel.h>
+#import <FMDB.h>
 
 #endif /* PrefixHeader_XJ_pch */

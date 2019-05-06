@@ -11,6 +11,7 @@
 #import "XJEditInfoVC.h"
 #import "XJAllPickerVC.h"
 #import "MWTestTowLineVC.h"
+#import "XJMaxLengthVC.h"
 
 @interface XJMineMainVC ()
 
@@ -24,7 +25,7 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料", @"选择器", @"Test换行"];
+    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情"];
 }
 
 #pragma mark - UITableViewDataSource
@@ -54,18 +55,30 @@
     
     if (indexPath.row == 0) {
         XJEditInfoVC *vc = [[XJEditInfoVC alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 1) {
         XJAllPickerVC *vc = [[XJAllPickerVC alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 2) {
         MWTestTowLineVC *vc = [[MWTestTowLineVC alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 3) {
+        XJMaxLengthVC *vc = [[XJMaxLengthVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 4) {
+        /*
+        XJBaseWebVC *vc = [[XJBaseWebVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+         */
+        NSString *urlString = FormatString(@"mwAppJumpCircleDetail://jump?circleId=%@",@"742");
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        //打开url
+        [[UIApplication sharedApplication] openURL:url];
     }
     
 }

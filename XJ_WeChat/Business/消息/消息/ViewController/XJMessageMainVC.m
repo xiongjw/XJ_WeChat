@@ -66,7 +66,6 @@
     XJConversationModel *model = self.mutArray[indexPath.row];
     XJChatVC *vc = [[XJChatVC alloc] init];
     vc.navigationItem.title = model.nickname;
-    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end
