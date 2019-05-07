@@ -18,7 +18,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
+    self = [super initWithFrame:Screen_Frame];
     if (self) {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     }

@@ -35,7 +35,7 @@
     // 请求接口并赋值
     //[super requestWithRefresh:refresh];
     [XJHud showWithStatus:@"加载中..."];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [XJHud dismiss];
         [self setUpUI:nil];
     });
@@ -165,6 +165,42 @@
                 return;
             }
         }
+        [XJActionSheetView showWithConfig:^(XJActionSheetModel * _Nullable configModel) {
+            configModel.value = model.value;
+            configModel.menuList = [XJActionSheetItem getModelArray:model.dataList];
+            configModel.hasCancel = [XJActionSheetItem hasCancel:model.dataList];
+        } clickBlock:^(XJActionSheetItem *item) {
+            model.value = item.code;
+            model.showValue = item.name;
+            if ([@"in_school" isEqualToString:model.code]) {
+                
+                XJHeadModel *headModel = self.mutArray[1];
+                for (XJEditInfoModel *model in headModel.dataSource)
+                {
+                    if ([@"industry" isEqualToString:model.code] || [@"occupation" isEqualToString:model.code]) {
+                        /// 变为不可点击
+                        if ([@"1" isEqualToString:item.code]) {
+                            model.titleColor = [UIColor descColor];
+                            model.canNotClick = YES;
+                            // 是否需要清空职业行业（当之前选择已毕业，选择过职业、行业，然后选择在校的时候）
+                            if (model.showValue.length > 0) {
+                                model.value = model.showValue = @"";
+                            }
+                        }
+                        /// 变为可点击
+                        else if ([@"2" isEqualToString:item.code]) {
+                            model.titleColor = nil;
+                            model.canNotClick = NO;
+                        }
+                    }
+                }
+                [weakSelf reloadSectionWithSection:1];
+            }
+            else {
+                [weakSelf reloadRowWithIndexPath:indexPath];
+            }
+        }];
+        /*
         [XJActionSheet showWithList:model.dataList clickItemBlock:^(NSDictionary *item) {
             model.value = item[@"code"];
             model.showValue = item[@"name"];
@@ -196,6 +232,7 @@
                 [weakSelf reloadRowWithIndexPath:indexPath];
             }
         }];
+         */
     }
     else if ([@"age" isEqualToString:model.code]) {
         

@@ -71,6 +71,10 @@
 		044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9952225DEA5A0030AE9A /* XJConversationModel.m */; };
 		044C9957225DED850030AE9A /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9956225DED850030AE9A /* UIView+Create.m */; };
 		044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9959225DF1150030AE9A /* UIView+Ex.m */; };
+		045CB32C228160E3007902CE /* XJActionSheetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CB32B228160E3007902CE /* XJActionSheetModel.m */; };
+		045CB32F22816145007902CE /* XJActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CB32E22816145007902CE /* XJActionSheetItem.m */; };
+		045CB3322281629E007902CE /* XJActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CB3312281629E007902CE /* XJActionSheetView.m */; };
+		045CB335228189B1007902CE /* XJActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CB334228189B1007902CE /* XJActionSheetCell.m */; };
 		04799908225EEA8C00470217 /* XJMessageBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799907225EEA8C00470217 /* XJMessageBaseCell.m */; };
 		0479990D225EEB2100470217 /* XJChatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479990C225EEB2100470217 /* XJChatUtil.m */; };
 		04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04799910225EEE1500470217 /* XJMessageTextCell.m */; };
@@ -225,6 +229,14 @@
 		044C9956225DED850030AE9A /* UIView+Create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
 		044C9958225DF1150030AE9A /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
 		044C9959225DF1150030AE9A /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		045CB32A228160E3007902CE /* XJActionSheetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJActionSheetModel.h; sourceTree = "<group>"; };
+		045CB32B228160E3007902CE /* XJActionSheetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJActionSheetModel.m; sourceTree = "<group>"; };
+		045CB32D22816145007902CE /* XJActionSheetItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJActionSheetItem.h; sourceTree = "<group>"; };
+		045CB32E22816145007902CE /* XJActionSheetItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJActionSheetItem.m; sourceTree = "<group>"; };
+		045CB3302281629E007902CE /* XJActionSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJActionSheetView.h; sourceTree = "<group>"; };
+		045CB3312281629E007902CE /* XJActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJActionSheetView.m; sourceTree = "<group>"; };
+		045CB333228189B1007902CE /* XJActionSheetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJActionSheetCell.h; sourceTree = "<group>"; };
+		045CB334228189B1007902CE /* XJActionSheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJActionSheetCell.m; sourceTree = "<group>"; };
 		04799906225EEA8C00470217 /* XJMessageBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMessageBaseCell.h; sourceTree = "<group>"; };
 		04799907225EEA8C00470217 /* XJMessageBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMessageBaseCell.m; sourceTree = "<group>"; };
 		0479990A225EEB0E00470217 /* XJChatDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatDefine.h; sourceTree = "<group>"; };
@@ -888,6 +900,14 @@
 			children = (
 				040EE12B2265C7E900C66475 /* XJActionSheet.h */,
 				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
+				045CB3302281629E007902CE /* XJActionSheetView.h */,
+				045CB3312281629E007902CE /* XJActionSheetView.m */,
+				045CB32A228160E3007902CE /* XJActionSheetModel.h */,
+				045CB32B228160E3007902CE /* XJActionSheetModel.m */,
+				045CB32D22816145007902CE /* XJActionSheetItem.h */,
+				045CB32E22816145007902CE /* XJActionSheetItem.m */,
+				045CB333228189B1007902CE /* XJActionSheetCell.h */,
+				045CB334228189B1007902CE /* XJActionSheetCell.m */,
 			);
 			path = ActionSheet;
 			sourceTree = "<group>";
@@ -1178,6 +1198,7 @@
 				0430ABE9225C3E2100236154 /* XJBaseWebVC.m in Sources */,
 				04799914225EEE2C00470217 /* XJMessageImageCell.m in Sources */,
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
+				045CB32C228160E3007902CE /* XJActionSheetModel.m in Sources */,
 				04335C4722731CF9003A9779 /* XJMaxLengthVC.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
@@ -1188,6 +1209,7 @@
 				04799935225F403F00470217 /* SDBrowserImageView.m in Sources */,
 				040EAE8422685A63002C3D98 /* MWTestTowLineCell.m in Sources */,
 				04ADEBB92266C1790029E3BD /* XJEditSelectDataVC.m in Sources */,
+				045CB32F22816145007902CE /* XJActionSheetItem.m in Sources */,
 				040EE12D2265C7E900C66475 /* XJActionSheet.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
 				040F0F5D22647A2B00F5371B /* XJCircleListCell.m in Sources */,
@@ -1246,6 +1268,7 @@
 				040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */,
 				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
 				0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */,
+				045CB335228189B1007902CE /* XJActionSheetCell.m in Sources */,
 				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,
@@ -1254,6 +1277,7 @@
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,
+				045CB3322281629E007902CE /* XJActionSheetView.m in Sources */,
 				040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */,
 				040F0F4622646AAB00F5371B /* NSString+PinYin4Cocoa.m in Sources */,
 				0479990D225EEB2100470217 /* XJChatUtil.m in Sources */,

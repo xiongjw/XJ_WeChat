@@ -29,6 +29,7 @@
 #import "XJViewPhoto.h"
 #import "XJSelectPhoto.h"
 #import "XJActionSheet.h"
+#import "XJActionSheetView.h"
 #import "XJHud.h"
 #import "XJUserDefaults.h"
 
