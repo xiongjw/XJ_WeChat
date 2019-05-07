@@ -42,6 +42,8 @@
 -(UITextField *)mTextField
 {
     if (!_mTextField) {
+        _mTextField = [[UITextField alloc] initWithFrame:CGRectMake(9, 9, 9, 9)];
+        _mTextField.delegate = self;
     }
     return _mTextField;
 }

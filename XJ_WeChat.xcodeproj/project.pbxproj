@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04032851227FC72100AD8B66 /* XJPokerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032850227FC72100AD8B66 /* XJPokerVC.m */; };
+		04032854227FC84200AD8B66 /* XJPoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032853227FC84200AD8B66 /* XJPoker.m */; };
+		04032858227FDD0300AD8B66 /* XJPokerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032857227FDD0300AD8B66 /* XJPokerView.m */; };
+		0403285E2280105000AD8B66 /* XJPokerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403285D2280105000AD8B66 /* XJPokerPlayer.m */; };
 		0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3E7227EEAB90058415F /* XJFMDBTool.m */; };
 		0406C3EB227EEB930058415F /* XJUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3EA227EEB930058415F /* XJUserDefaults.m */; };
 		0406C3EE227EEDB90058415F /* XJCircleDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406C3ED227EEDB90058415F /* XJCircleDBTool.m */; };
@@ -92,6 +96,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0403284F227FC72100AD8B66 /* XJPokerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPokerVC.h; sourceTree = "<group>"; };
+		04032850227FC72100AD8B66 /* XJPokerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPokerVC.m; sourceTree = "<group>"; };
+		04032852227FC84200AD8B66 /* XJPoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPoker.h; sourceTree = "<group>"; };
+		04032853227FC84200AD8B66 /* XJPoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPoker.m; sourceTree = "<group>"; };
+		04032856227FDD0300AD8B66 /* XJPokerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPokerView.h; sourceTree = "<group>"; };
+		04032857227FDD0300AD8B66 /* XJPokerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPokerView.m; sourceTree = "<group>"; };
+		0403285C2280105000AD8B66 /* XJPokerPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPokerPlayer.h; sourceTree = "<group>"; };
+		0403285D2280105000AD8B66 /* XJPokerPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPokerPlayer.m; sourceTree = "<group>"; };
 		0406C3E6227EEAB90058415F /* XJFMDBTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFMDBTool.h; sourceTree = "<group>"; };
 		0406C3E7227EEAB90058415F /* XJFMDBTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJFMDBTool.m; sourceTree = "<group>"; };
 		0406C3E9227EEB930058415F /* XJUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJUserDefaults.h; sourceTree = "<group>"; };
@@ -274,6 +286,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04032855227FDCEA00AD8B66 /* 扑克 */ = {
+			isa = PBXGroup;
+			children = (
+				0403284F227FC72100AD8B66 /* XJPokerVC.h */,
+				04032850227FC72100AD8B66 /* XJPokerVC.m */,
+				0403285C2280105000AD8B66 /* XJPokerPlayer.h */,
+				0403285D2280105000AD8B66 /* XJPokerPlayer.m */,
+				04032853227FC84200AD8B66 /* XJPoker.m */,
+				04032852227FC84200AD8B66 /* XJPoker.h */,
+				04032856227FDD0300AD8B66 /* XJPokerView.h */,
+				04032857227FDD0300AD8B66 /* XJPokerView.m */,
+			);
+			path = "扑克";
+			sourceTree = "<group>";
+		};
 		0406C3EF227EEF7F0058415F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +347,7 @@
 				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
 				04335C4522731CF9003A9779 /* XJMaxLengthVC.h */,
 				04335C4622731CF9003A9779 /* XJMaxLengthVC.m */,
+				04032855227FDCEA00AD8B66 /* 扑克 */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -327,16 +355,10 @@
 		040EE1182265958100C66475 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				040EE1282265C7CB00C66475 /* XJAlertView.h */,
-				040EE1292265C7CB00C66475 /* XJAlertView.m */,
-				040EE12B2265C7E900C66475 /* XJActionSheet.h */,
-				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
-				040EE12E2265C80700C66475 /* XJPickerView.h */,
-				040EE12F2265C80700C66475 /* XJPickerView.m */,
-				04ADEBC82267215D0029E3BD /* XJPickerModel.h */,
-				04ADEBC92267215D0029E3BD /* XJPickerModel.m */,
-				04ADEBC522670C1D0029E3BD /* XJLabel.h */,
-				04ADEBC622670C1D0029E3BD /* XJLabel.m */,
+				045CB32922816080007902CE /* Alert */,
+				045CB32822816065007902CE /* ActionSheet */,
+				045CB32722816060007902CE /* Picker */,
+				045CB32622816058007902CE /* Label */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -841,6 +863,44 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		045CB32622816058007902CE /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				04ADEBC522670C1D0029E3BD /* XJLabel.h */,
+				04ADEBC622670C1D0029E3BD /* XJLabel.m */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		045CB32722816060007902CE /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				040EE12E2265C80700C66475 /* XJPickerView.h */,
+				040EE12F2265C80700C66475 /* XJPickerView.m */,
+				04ADEBC82267215D0029E3BD /* XJPickerModel.h */,
+				04ADEBC92267215D0029E3BD /* XJPickerModel.m */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		045CB32822816065007902CE /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				040EE12B2265C7E900C66475 /* XJActionSheet.h */,
+				040EE12C2265C7E900C66475 /* XJActionSheet.m */,
+			);
+			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		045CB32922816080007902CE /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				040EE1282265C7CB00C66475 /* XJAlertView.h */,
+				040EE1292265C7CB00C66475 /* XJAlertView.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		04799902225EE94E00470217 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1149,6 +1209,7 @@
 				040F0F7B22648E1F00F5371B /* XJEditBaseCell.m in Sources */,
 				040EE11422656FB800C66475 /* XJEditFieldCell.m in Sources */,
 				040EE1212265AE3200C66475 /* XJEditInfoHelpVC.m in Sources */,
+				04032851227FC72100AD8B66 /* XJPokerVC.m in Sources */,
 				04799934225F403F00470217 /* SDWaitingView.m in Sources */,
 				0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */,
 				0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */,
@@ -1158,7 +1219,9 @@
 				0406C3EB227EEB930058415F /* XJUserDefaults.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
 				0406C3EE227EEDB90058415F /* XJCircleDBTool.m in Sources */,
+				0403285E2280105000AD8B66 /* XJPokerPlayer.m in Sources */,
 				040F0F7222648D6300F5371B /* XJEditLbCell.m in Sources */,
+				04032858227FDD0300AD8B66 /* XJPokerView.m in Sources */,
 				04ADEBBC2266C2800029E3BD /* XJEditSelectSchoolVC.m in Sources */,
 				040F0F3022645A1500F5371B /* XJAddressBookCell.m in Sources */,
 				0479992A225EFAE600470217 /* XJLocationModel.m in Sources */,
@@ -1169,6 +1232,7 @@
 				04799917225EEE3700470217 /* XJMessageVoiceCell.m in Sources */,
 				0406C3F3227EEF990058415F /* XJUser.m in Sources */,
 				044C995A225DF1150030AE9A /* UIView+Ex.m in Sources */,
+				04032854227FC84200AD8B66 /* XJPoker.m in Sources */,
 				040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */,
 				040F0F4722646AAB00F5371B /* PinyinHelper.m in Sources */,
 				040EAE8322685A63002C3D98 /* MWTestTowLineVC.m in Sources */,

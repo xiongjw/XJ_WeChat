@@ -12,6 +12,7 @@
 #import "XJAllPickerVC.h"
 #import "MWTestTowLineVC.h"
 #import "XJMaxLengthVC.h"
+#import "XJPokerVC.h"
 
 @interface XJMineMainVC ()
 
@@ -25,7 +26,18 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情"];
+    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情", @"斗地主"];
+    
+    NSArray *one = @[@"加",@"＋",@"+",@"➕"];
+    //NSArray *two = @[@"微信",@"薇信",@"微",@"薇",@"WX",@"wx",@"VX",@"vx",@"v",@"V",@"WeChat",@"wechat",@"weixin"];
+    NSArray *two = @[@"QQ",@"qq",@"q",@"Q",@"Qq",@"qQ",@"企鹅号",@"企鹅号码",@"扣扣",@"扣"];
+    NSMutableString *result = [NSMutableString new];
+    for (NSString *oneStr in one) {
+        for (NSString *twoStr in two) {
+            [result appendFormat:@"%@%@|",oneStr, twoStr];
+        }
+    }
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -79,6 +91,10 @@
         
         //打开url
         [[UIApplication sharedApplication] openURL:url];
+    }
+    else if (indexPath.row == 5) {
+        XJPokerVC *vc = [[XJPokerVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }
