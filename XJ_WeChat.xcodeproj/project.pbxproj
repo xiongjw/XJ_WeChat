@@ -93,6 +93,8 @@
 		04ADEBBF2266D9A10029E3BD /* XJHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBBE2266D9A10029E3BD /* XJHud.m */; };
 		04ADEBC722670C1D0029E3BD /* XJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBC622670C1D0029E3BD /* XJLabel.m */; };
 		04ADEBCA2267215D0029E3BD /* XJPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBC92267215D0029E3BD /* XJPickerModel.m */; };
+		04BD3210228274F4006E43AE /* XJGradualChangeWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD320F228274F4006E43AE /* XJGradualChangeWordVC.m */; };
+		04BD321622827BA2006E43AE /* XJFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD321522827BA2006E43AE /* XJFadeView.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -275,6 +277,10 @@
 		04ADEBC622670C1D0029E3BD /* XJLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLabel.m; sourceTree = "<group>"; };
 		04ADEBC82267215D0029E3BD /* XJPickerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerModel.h; sourceTree = "<group>"; };
 		04ADEBC92267215D0029E3BD /* XJPickerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPickerModel.m; sourceTree = "<group>"; };
+		04BD320E228274F4006E43AE /* XJGradualChangeWordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJGradualChangeWordVC.h; sourceTree = "<group>"; };
+		04BD320F228274F4006E43AE /* XJGradualChangeWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJGradualChangeWordVC.m; sourceTree = "<group>"; };
+		04BD321422827BA2006E43AE /* XJFadeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFadeView.h; sourceTree = "<group>"; };
+		04BD321522827BA2006E43AE /* XJFadeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJFadeView.m; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -359,6 +365,7 @@
 				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
 				04335C4522731CF9003A9779 /* XJMaxLengthVC.h */,
 				04335C4622731CF9003A9779 /* XJMaxLengthVC.m */,
+				04BD32072282747B006E43AE /* 渐变 */,
 				04032855227FDCEA00AD8B66 /* 扑克 */,
 			);
 			path = Test;
@@ -1026,6 +1033,17 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
+		04BD32072282747B006E43AE /* 渐变 */ = {
+			isa = PBXGroup;
+			children = (
+				04BD320E228274F4006E43AE /* XJGradualChangeWordVC.h */,
+				04BD320F228274F4006E43AE /* XJGradualChangeWordVC.m */,
+				04BD321422827BA2006E43AE /* XJFadeView.h */,
+				04BD321522827BA2006E43AE /* XJFadeView.m */,
+			);
+			path = "渐变";
+			sourceTree = "<group>";
+		};
 		04E4D4ED225C351D0067D70C = {
 			isa = PBXGroup;
 			children = (
@@ -1257,6 +1275,7 @@
 				04032854227FC84200AD8B66 /* XJPoker.m in Sources */,
 				040F0F6C22648C5800F5371B /* XJEditInfoModel.m in Sources */,
 				040F0F4722646AAB00F5371B /* PinyinHelper.m in Sources */,
+				04BD3210228274F4006E43AE /* XJGradualChangeWordVC.m in Sources */,
 				040EAE8322685A63002C3D98 /* MWTestTowLineVC.m in Sources */,
 				044C994F225DE9BD0030AE9A /* XJConversationCell.m in Sources */,
 				040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */,
@@ -1267,6 +1286,7 @@
 				040EE12A2265C7CB00C66475 /* XJAlertView.m in Sources */,
 				040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */,
 				040F0F6922648C4700F5371B /* XJEditInfoVC.m in Sources */,
+				04BD321622827BA2006E43AE /* XJFadeView.m in Sources */,
 				0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */,
 				045CB335228189B1007902CE /* XJActionSheetCell.m in Sources */,
 				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,

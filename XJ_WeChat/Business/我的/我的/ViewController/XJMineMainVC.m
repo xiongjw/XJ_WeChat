@@ -13,6 +13,7 @@
 #import "MWTestTowLineVC.h"
 #import "XJMaxLengthVC.h"
 #import "XJPokerVC.h"
+#import "XJGradualChangeWordVC.h"
 
 @interface XJMineMainVC ()
 
@@ -26,7 +27,7 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情", @"斗地主"];
+    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情", @"斗地主", @"渐变文字"];
     
     NSArray *one = @[@"加",@"＋",@"+",@"➕"];
     //NSArray *two = @[@"微信",@"薇信",@"微",@"薇",@"WX",@"wx",@"VX",@"vx",@"v",@"V",@"WeChat",@"wechat",@"weixin"];
@@ -94,6 +95,10 @@
     }
     else if (indexPath.row == 5) {
         XJPokerVC *vc = [[XJPokerVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 6) {
+        XJGradualChangeWordVC *vc = [[XJGradualChangeWordVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
