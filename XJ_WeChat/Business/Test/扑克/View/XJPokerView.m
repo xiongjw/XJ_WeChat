@@ -33,11 +33,23 @@
         [self addSubview:self.numLb];
         [self addSubview:self.colorLb];
         
-//        self.userInteractionEnabled = YES;
-//        UITapGestureRecognizer *tap = nil;
-//        [self addGestureRecognizer:tap];
+        self.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickPoker:)];
+        [self addGestureRecognizer:tap];
     }
     return self;
+}
+
+- (void)clickPoker:(UITapGestureRecognizer *)tap
+{
+    if (self.top == 0) {
+        if (self.clickBlock) {
+            self.clickBlock(self.pokerStr);
+        }
+    }
+    else {
+        self.top = 0;
+    }
 }
 
 -(UILabel *)numLb
@@ -59,41 +71,41 @@
     return _colorLb;
 }
 
-
-- (void)pokerWithStr:(NSString *)str
+-(void)setPokerStr:(NSString *)pokerStr
 {
-    if ([str hasPrefix:@"大王"]) {
+    _pokerStr = pokerStr;
+    if ([pokerStr hasPrefix:@"大王"]) {
         self.numLb.height = self.numLb.font.lineHeight * 5;
         self.colorLb.hidden = YES;
         
         self.numLb.text = @"JOKER";
         self.numLb.textColor = [UIColor redColor];
     }
-    else if ([str hasPrefix:@"小王"]) {
+    else if ([pokerStr hasPrefix:@"小王"]) {
         self.numLb.height = 80;
         self.colorLb.hidden = YES;
         
         self.numLb.text = @"JOKER";
         self.numLb.textColor = [UIColor blackColor];
     }
-    else if ([str hasPrefix:@"黑"] || [str hasPrefix:@"梅"]) {
+    else if ([pokerStr hasPrefix:@"黑"] || [pokerStr hasPrefix:@"梅"]) {
         self.numLb.height = 20;
         self.colorLb.hidden = NO;
         
-        self.numLb.text = [str substringFromIndex:1];
+        self.numLb.text = [pokerStr substringFromIndex:1];
         self.numLb.textColor = [UIColor blackColor];
         
-        self.colorLb.text = [str substringToIndex:1];
+        self.colorLb.text = [pokerStr substringToIndex:1];
         self.colorLb.textColor = [UIColor blackColor];
     }
-    else if ([str hasPrefix:@"红"] || [str hasPrefix:@"方"]) {
+    else if ([pokerStr hasPrefix:@"红"] || [pokerStr hasPrefix:@"方"]) {
         self.numLb.height = 20;
         self.colorLb.hidden = NO;
         
-        self.numLb.text = [str substringFromIndex:1];
+        self.numLb.text = [pokerStr substringFromIndex:1];
         self.numLb.textColor = [UIColor redColor];
         
-        self.colorLb.text = [str substringToIndex:1];
+        self.colorLb.text = [pokerStr substringToIndex:1];
         self.colorLb.textColor = [UIColor redColor];
     }
 }

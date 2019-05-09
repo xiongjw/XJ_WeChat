@@ -52,7 +52,6 @@
         __block XJEditInfoModel *blockModel = model;
         cell.textFieldShouldReturnBlock = ^(NSString *text) {
             blockModel.value = blockModel.showValue = text;
-            [self getStringLengthWithText:text];
         };
         return cell;
     }

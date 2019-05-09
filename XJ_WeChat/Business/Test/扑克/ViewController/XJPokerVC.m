@@ -10,13 +10,13 @@
 
 #import "XJPoker.h"
 
+#import "XJAllPokerView.h"
 #import "XJPokerView.h"
 
 @interface XJPokerVC ()
 
 @property (nonatomic,strong) NSMutableArray *allPokerArr;
 
-@property (nonatomic,strong) UIView *allPokerView;
 @property (nonatomic,strong) NSMutableArray *lastPokerArr;
 
 @end
@@ -25,33 +25,61 @@
 
 - (void)createCards
 {
-    CGFloat posX = 15;
     CGFloat posY = 60;
-    for (NSMutableArray *mutArray in self.lastPokerArr) {
-        for (NSString *str in mutArray) {
-            XJPokerView *pokerView = [[XJPokerView alloc] initWithFrame:CGRectMake(posX, posY, 30, 80)];
-            [pokerView pokerWithStr:str];
-            [self.allPokerView addSubview:pokerView];
-            
-            posX += 20;
-        }
-        posX = 15;
-        posY += 100;
+    XJAllPokerView *allPokerView = nil;
+    for (int i = 0; i < self.lastPokerArr.count; i++) {
+        NSMutableArray *mutArray = self.lastPokerArr[i];
+        XJPokerPlayer *model = [[XJPokerPlayer alloc] init];
+        model.pokers = mutArray.mutableCopy;
+        MJWeakSelf
+        allPokerView = [[XJAllPokerView alloc] initWithFrame:CGRectMake(0, posY, Screen_Width - 15, 90)];
+        allPokerView.tag = 10000 + i;
+        allPokerView.model = model;
+        allPokerView.clickBlock = ^(NSString *pokerStr) {
+            [weakSelf clickPokerWithIndex:i pokerStr:pokerStr];
+        };
+        [self.view addSubview:allPokerView];
+        posY += 110;
     }
+}
+
+- (void)clickPokerWithIndex:(int)index pokerStr:(NSString *)pokerStr
+{
+    if (index > 2) {
+        return;
+    }
+    XJAllPokerView *allPokerView = [self.view viewWithTag:10000 + index];
+    XJPokerPlayer *model = allPokerView.model;
+    [model.pokers removeObject:pokerStr];
+    allPokerView.model = model;
+}
+
+- (void)reSend
+{
+    for (int i = 0; i < 4; i++) {
+        UIView *view = [self.view viewWithTag:10000 + i];
+        [view removeFromSuperview];
+    }
+    [self mixPoker:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.allPokerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height - NavHeight - 60)];
-    [self.view addSubview:self.allPokerView];
-    
     [self mixPoker:YES];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake(0, Screen_Height - NavHeight - 40, Screen_Width, 40);
+    [btn setTitle:@"重新发牌" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(reSend) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
 - (void)mixPoker:(BOOL)shuffleCards
 {
+    [self.lastPokerArr removeAllObjects];
+    
     NSMutableArray *mixMutArray = [NSMutableArray new];
     
     if (shuffleCards) {

@@ -28,8 +28,4 @@
 
 -(UIView *)viewForHeaderInSection:(NSInteger)section;
 
-- (NSInteger)getStringLengthWithString:(NSString *)string;
-
-- (NSInteger)getStringLengthWithText:(NSString *)text;
-
 @end

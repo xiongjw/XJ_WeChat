@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040071392283CBE300A7F57D /* XJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040071382283CBE300A7F57D /* XJTextView.m */; };
+		0400713C2283CBF500A7F57D /* XJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400713B2283CBF500A7F57D /* XJTextField.m */; };
+		0400713F2283D4A300A7F57D /* XJTestInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400713E2283D4A300A7F57D /* XJTestInputVC.m */; };
+		040071422283E8E100A7F57D /* XJInputUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040071412283E8E100A7F57D /* XJInputUtil.m */; };
 		04032851227FC72100AD8B66 /* XJPokerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032850227FC72100AD8B66 /* XJPokerVC.m */; };
 		04032854227FC84200AD8B66 /* XJPoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032853227FC84200AD8B66 /* XJPoker.m */; };
 		04032858227FDD0300AD8B66 /* XJPokerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04032857227FDD0300AD8B66 /* XJPokerView.m */; };
@@ -61,7 +65,6 @@
 		0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABF9225C3ED700236154 /* XJMineMainVC.m */; };
 		0430ABFD225C3F1B00236154 /* XJTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFC225C3F1B00236154 /* XJTabBarVC.m */; };
 		0430AC00225C3F2D00236154 /* XJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABFF225C3F2D00236154 /* XJLoginVC.m */; };
-		04335C4722731CF9003A9779 /* XJMaxLengthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335C4622731CF9003A9779 /* XJMaxLengthVC.m */; };
 		044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C991A225D9C1D0030AE9A /* XJChatVC.m */; };
 		044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */; };
 		044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9942225DA4C50030AE9A /* UIColor+AppColor.m */; };
@@ -95,6 +98,7 @@
 		04ADEBCA2267215D0029E3BD /* XJPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADEBC92267215D0029E3BD /* XJPickerModel.m */; };
 		04BD3210228274F4006E43AE /* XJGradualChangeWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD320F228274F4006E43AE /* XJGradualChangeWordVC.m */; };
 		04BD321622827BA2006E43AE /* XJFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD321522827BA2006E43AE /* XJFadeView.m */; };
+		04BD32192282D506006E43AE /* XJAllPokerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD32182282D506006E43AE /* XJAllPokerView.m */; };
 		04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D4FA225C351D0067D70C /* AppDelegate.m */; };
 		04E4D503225C351E0067D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4D502225C351E0067D70C /* Assets.xcassets */; };
 		04E4D509225C351E0067D70C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D508225C351E0067D70C /* main.m */; };
@@ -102,6 +106,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040071372283CBE300A7F57D /* XJTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTextView.h; sourceTree = "<group>"; };
+		040071382283CBE300A7F57D /* XJTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTextView.m; sourceTree = "<group>"; };
+		0400713A2283CBF500A7F57D /* XJTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTextField.h; sourceTree = "<group>"; };
+		0400713B2283CBF500A7F57D /* XJTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTextField.m; sourceTree = "<group>"; };
+		0400713D2283D4A300A7F57D /* XJTestInputVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTestInputVC.h; sourceTree = "<group>"; };
+		0400713E2283D4A300A7F57D /* XJTestInputVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTestInputVC.m; sourceTree = "<group>"; };
+		040071402283E8E100A7F57D /* XJInputUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJInputUtil.h; sourceTree = "<group>"; };
+		040071412283E8E100A7F57D /* XJInputUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJInputUtil.m; sourceTree = "<group>"; };
 		0403284F227FC72100AD8B66 /* XJPokerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPokerVC.h; sourceTree = "<group>"; };
 		04032850227FC72100AD8B66 /* XJPokerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPokerVC.m; sourceTree = "<group>"; };
 		04032852227FC84200AD8B66 /* XJPoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPoker.h; sourceTree = "<group>"; };
@@ -209,8 +221,6 @@
 		0430ABFC225C3F1B00236154 /* XJTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTabBarVC.m; sourceTree = "<group>"; };
 		0430ABFE225C3F2D00236154 /* XJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLoginVC.h; sourceTree = "<group>"; };
 		0430ABFF225C3F2D00236154 /* XJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLoginVC.m; sourceTree = "<group>"; };
-		04335C4522731CF9003A9779 /* XJMaxLengthVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMaxLengthVC.h; sourceTree = "<group>"; };
-		04335C4622731CF9003A9779 /* XJMaxLengthVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMaxLengthVC.m; sourceTree = "<group>"; };
 		044C9919225D9C1D0030AE9A /* XJChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatVC.h; sourceTree = "<group>"; };
 		044C991A225D9C1D0030AE9A /* XJChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatVC.m; sourceTree = "<group>"; };
 		044C993E225DA38B0030AE9A /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
@@ -281,6 +291,8 @@
 		04BD320F228274F4006E43AE /* XJGradualChangeWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJGradualChangeWordVC.m; sourceTree = "<group>"; };
 		04BD321422827BA2006E43AE /* XJFadeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFadeView.h; sourceTree = "<group>"; };
 		04BD321522827BA2006E43AE /* XJFadeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJFadeView.m; sourceTree = "<group>"; };
+		04BD32172282D506006E43AE /* XJAllPokerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAllPokerView.h; sourceTree = "<group>"; };
+		04BD32182282D506006E43AE /* XJAllPokerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAllPokerView.m; sourceTree = "<group>"; };
 		04E4D4F6225C351D0067D70C /* XJ_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJ_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4D4F9225C351D0067D70C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E4D4FA225C351D0067D70C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -304,17 +316,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04032855227FDCEA00AD8B66 /* 扑克 */ = {
+		040071432283F42600A7F57D /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				0400713A2283CBF500A7F57D /* XJTextField.h */,
+				0400713B2283CBF500A7F57D /* XJTextField.m */,
+				040071372283CBE300A7F57D /* XJTextView.h */,
+				040071382283CBE300A7F57D /* XJTextView.m */,
+				040071402283E8E100A7F57D /* XJInputUtil.h */,
+				040071412283E8E100A7F57D /* XJInputUtil.m */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		040071442283F4E600A7F57D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0403285C2280105000AD8B66 /* XJPokerPlayer.h */,
+				0403285D2280105000AD8B66 /* XJPokerPlayer.m */,
+				04032852227FC84200AD8B66 /* XJPoker.h */,
+				04032853227FC84200AD8B66 /* XJPoker.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		040071452283F4EC00A7F57D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04BD32172282D506006E43AE /* XJAllPokerView.h */,
+				04BD32182282D506006E43AE /* XJAllPokerView.m */,
+				04032856227FDD0300AD8B66 /* XJPokerView.h */,
+				04032857227FDD0300AD8B66 /* XJPokerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		040071462283F4F200A7F57D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				0403284F227FC72100AD8B66 /* XJPokerVC.h */,
 				04032850227FC72100AD8B66 /* XJPokerVC.m */,
-				0403285C2280105000AD8B66 /* XJPokerPlayer.h */,
-				0403285D2280105000AD8B66 /* XJPokerPlayer.m */,
-				04032853227FC84200AD8B66 /* XJPoker.m */,
-				04032852227FC84200AD8B66 /* XJPoker.h */,
-				04032856227FDD0300AD8B66 /* XJPokerView.h */,
-				04032857227FDD0300AD8B66 /* XJPokerView.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04032855227FDCEA00AD8B66 /* 扑克 */ = {
+			isa = PBXGroup;
+			children = (
+				040071462283F4F200A7F57D /* ViewController */,
+				040071452283F4EC00A7F57D /* View */,
+				040071442283F4E600A7F57D /* Model */,
 			);
 			path = "扑克";
 			sourceTree = "<group>";
@@ -363,8 +414,8 @@
 				040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */,
 				040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */,
 				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
-				04335C4522731CF9003A9779 /* XJMaxLengthVC.h */,
-				04335C4622731CF9003A9779 /* XJMaxLengthVC.m */,
+				0400713D2283D4A300A7F57D /* XJTestInputVC.h */,
+				0400713E2283D4A300A7F57D /* XJTestInputVC.m */,
 				04BD32072282747B006E43AE /* 渐变 */,
 				04032855227FDCEA00AD8B66 /* 扑克 */,
 			);
@@ -374,6 +425,7 @@
 		040EE1182265958100C66475 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				040071432283F42600A7F57D /* TextInput */,
 				045CB32922816080007902CE /* Alert */,
 				045CB32822816065007902CE /* ActionSheet */,
 				045CB32722816060007902CE /* Picker */,
@@ -1217,7 +1269,7 @@
 				04799914225EEE2C00470217 /* XJMessageImageCell.m in Sources */,
 				0430ABE6225C3E1000236154 /* XJBaseTableVC.m in Sources */,
 				045CB32C228160E3007902CE /* XJActionSheetModel.m in Sources */,
-				04335C4722731CF9003A9779 /* XJMaxLengthVC.m in Sources */,
+				04BD32192282D506006E43AE /* XJAllPokerView.m in Sources */,
 				0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */,
 				044C9957225DED850030AE9A /* UIView+Create.m in Sources */,
 				040EE11722657FEE00C66475 /* XJHeadModel.m in Sources */,
@@ -1234,6 +1286,7 @@
 				044C9948225DC5700030AE9A /* XJNavigationController.m in Sources */,
 				040F0F4A22646AAB00F5371B /* PinyinFormatter.m in Sources */,
 				04E4D509225C351E0067D70C /* main.m in Sources */,
+				0400713C2283CBF500A7F57D /* XJTextField.m in Sources */,
 				040EE11B2265958F00C66475 /* XJAppUtil.m in Sources */,
 				044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */,
 				040F0F3622645C6300F5371B /* XJAddressBookUtil.m in Sources */,
@@ -1258,8 +1311,10 @@
 				044C9953225DEA5A0030AE9A /* XJConversationModel.m in Sources */,
 				0406C3EB227EEB930058415F /* XJUserDefaults.m in Sources */,
 				044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */,
+				040071422283E8E100A7F57D /* XJInputUtil.m in Sources */,
 				0406C3EE227EEDB90058415F /* XJCircleDBTool.m in Sources */,
 				0403285E2280105000AD8B66 /* XJPokerPlayer.m in Sources */,
+				0400713F2283D4A300A7F57D /* XJTestInputVC.m in Sources */,
 				040F0F7222648D6300F5371B /* XJEditLbCell.m in Sources */,
 				04032858227FDD0300AD8B66 /* XJPokerView.m in Sources */,
 				04ADEBBC2266C2800029E3BD /* XJEditSelectSchoolVC.m in Sources */,
@@ -1289,6 +1344,7 @@
 				04BD321622827BA2006E43AE /* XJFadeView.m in Sources */,
 				0406C3E8227EEAB90058415F /* XJFMDBTool.m in Sources */,
 				045CB335228189B1007902CE /* XJActionSheetCell.m in Sources */,
+				040071392283CBE300A7F57D /* XJTextView.m in Sources */,
 				040EE1272265C7B500C66475 /* XJSelectPhoto.m in Sources */,
 				04799911225EEE1500470217 /* XJMessageTextCell.m in Sources */,
 				040F0F3322645A2800F5371B /* XJAddressBookModel.m in Sources */,

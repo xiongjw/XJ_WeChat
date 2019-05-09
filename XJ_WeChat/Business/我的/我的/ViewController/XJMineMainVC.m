@@ -11,7 +11,7 @@
 #import "XJEditInfoVC.h"
 #import "XJAllPickerVC.h"
 #import "MWTestTowLineVC.h"
-#import "XJMaxLengthVC.h"
+#import "XJTestInputVC.h"
 #import "XJPokerVC.h"
 #import "XJGradualChangeWordVC.h"
 
@@ -79,7 +79,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 3) {
-        XJMaxLengthVC *vc = [[XJMaxLengthVC alloc] init];
+        XJTestInputVC *vc = [[XJTestInputVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 4) {

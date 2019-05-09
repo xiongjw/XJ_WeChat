@@ -1,14 +1,13 @@
 //
-//  XJMaxLengthVC.h
+//  XJTestInputVC.h
 //  XJ_WeChat
 //
-//  Created by mac on 2019/4/26.
+//  Created by mac on 2019/5/9.
 //  Copyright © 2019 mac. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-
-@interface XJMaxLengthVC : XJBaseVC
+@interface XJTestInputVC : XJBaseVC
 
 @end
