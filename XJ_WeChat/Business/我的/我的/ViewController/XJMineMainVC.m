@@ -27,8 +27,17 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料", @"选择器", @"Test换行", @"输入检测", @"跳转动态详情", @"斗地主", @"渐变文字"];
-    
+    self.array = @[@"编辑资料",
+                   @"选择器",
+                   @"Test换行",
+                   @"输入检测",
+                   @"跳转动态详情",
+                   @"斗地主",
+                   @"渐变文字"];
+}
+
+- (void)testPrint
+{
     NSArray *one = @[@"加",@"＋",@"+",@"➕"];
     //NSArray *two = @[@"微信",@"薇信",@"微",@"薇",@"WX",@"wx",@"VX",@"vx",@"v",@"V",@"WeChat",@"wechat",@"weixin"];
     NSArray *two = @[@"QQ",@"qq",@"q",@"Q",@"Qq",@"qQ",@"企鹅号",@"企鹅号码",@"扣扣",@"扣"];
@@ -38,7 +47,6 @@
             [result appendFormat:@"%@%@|",oneStr, twoStr];
         }
     }
-    
 }
 
 #pragma mark - UITableViewDataSource
@@ -87,7 +95,7 @@
         XJBaseWebVC *vc = [[XJBaseWebVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
          */
-        NSString *urlString = FormatString(@"mwAppJumpCircleDetail://jump?circleId=%@",@"742");
+        NSString *urlString = FormatString(@"mwappjumpcircledetail://jump?circleId=%@",@"742");
         NSURL *url = [NSURL URLWithString:urlString];
         
         //打开url

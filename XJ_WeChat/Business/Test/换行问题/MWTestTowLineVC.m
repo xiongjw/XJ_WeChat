@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self showBackBtn:YES withTitle:@"换行问题处理"];
+    
     [self.mTableView registerClass:[MWTestTowLineCell class] forCellReuseIdentifier:@"MWTestTowLineCell"];
     
     for (int i = 0; i < 5; i++) {

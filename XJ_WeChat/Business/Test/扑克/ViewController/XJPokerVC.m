@@ -67,6 +67,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self showBackBtn:YES withTitle:@"斗地主"];
+    
     [self mixPoker:YES];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
