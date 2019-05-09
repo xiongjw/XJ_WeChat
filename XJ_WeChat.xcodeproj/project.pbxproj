@@ -360,6 +360,26 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		040071472283F58000A7F57D /* 输入检测 */ = {
+			isa = PBXGroup;
+			children = (
+				0400713D2283D4A300A7F57D /* XJTestInputVC.h */,
+				0400713E2283D4A300A7F57D /* XJTestInputVC.m */,
+			);
+			path = "输入检测";
+			sourceTree = "<group>";
+		};
+		040071482283F58C00A7F57D /* 换行问题 */ = {
+			isa = PBXGroup;
+			children = (
+				040EAE8222685A63002C3D98 /* MWTestTowLineVC.h */,
+				040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */,
+				040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */,
+				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
+			);
+			path = "换行问题";
+			sourceTree = "<group>";
+		};
 		04032855227FDCEA00AD8B66 /* 扑克 */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,12 +430,8 @@
 		040EAE7E22685A38002C3D98 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				040EAE8222685A63002C3D98 /* MWTestTowLineVC.h */,
-				040EAE7F22685A63002C3D98 /* MWTestTowLineVC.m */,
-				040EAE8022685A63002C3D98 /* MWTestTowLineCell.h */,
-				040EAE8122685A63002C3D98 /* MWTestTowLineCell.m */,
-				0400713D2283D4A300A7F57D /* XJTestInputVC.h */,
-				0400713E2283D4A300A7F57D /* XJTestInputVC.m */,
+				040071482283F58C00A7F57D /* 换行问题 */,
+				040071472283F58000A7F57D /* 输入检测 */,
 				04BD32072282747B006E43AE /* 渐变 */,
 				04032855227FDCEA00AD8B66 /* 扑克 */,
 			);
