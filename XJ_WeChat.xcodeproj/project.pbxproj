@@ -84,6 +84,8 @@
 		043A37AB228BB931009DDE12 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A3798228BB931009DDE12 /* TZLocationManager.m */; };
 		043A37AC228BB931009DDE12 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A3799228BB931009DDE12 /* TZGifPhotoPreviewController.m */; };
 		043A37AD228BB931009DDE12 /* TZImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A379A228BB931009DDE12 /* TZImageRequestOperation.m */; };
+		043A37B0228BC4F5009DDE12 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A37AF228BC4F5009DDE12 /* NSString+Util.m */; };
+		043A37B6228C2BC0009DDE12 /* NSObject+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A37B5228C2BC0009DDE12 /* NSObject+Hierarchy.m */; };
 		044C991B225D9C1D0030AE9A /* XJChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C991A225D9C1D0030AE9A /* XJChatVC.m */; };
 		044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C993F225DA38B0030AE9A /* ZZJBlockBarButtonItem.m */; };
 		044C9943225DA4C50030AE9A /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C9942225DA4C50030AE9A /* UIColor+AppColor.m */; };
@@ -277,6 +279,10 @@
 		043A3799228BB931009DDE12 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
 		043A379A228BB931009DDE12 /* TZImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageRequestOperation.m; sourceTree = "<group>"; };
 		043A379B228BB931009DDE12 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+		043A37AE228BC4F5009DDE12 /* NSString+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		043A37AF228BC4F5009DDE12 /* NSString+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		043A37B4228C2BC0009DDE12 /* NSObject+Hierarchy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hierarchy.h"; sourceTree = "<group>"; };
+		043A37B5228C2BC0009DDE12 /* NSObject+Hierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hierarchy.m"; sourceTree = "<group>"; };
 		044C9919225D9C1D0030AE9A /* XJChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatVC.h; sourceTree = "<group>"; };
 		044C991A225D9C1D0030AE9A /* XJChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatVC.m; sourceTree = "<group>"; };
 		044C993E225DA38B0030AE9A /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
@@ -1071,6 +1077,10 @@
 				044C9959225DF1150030AE9A /* UIView+Ex.m */,
 				040EE1312265D10700C66475 /* UIImage+color.h */,
 				040EE1322265D10700C66475 /* UIImage+color.m */,
+				043A37AE228BC4F5009DDE12 /* NSString+Util.h */,
+				043A37AF228BC4F5009DDE12 /* NSString+Util.m */,
+				043A37B4228C2BC0009DDE12 /* NSObject+Hierarchy.h */,
+				043A37B5228C2BC0009DDE12 /* NSObject+Hierarchy.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -1463,6 +1473,7 @@
 				040EAE8422685A63002C3D98 /* MWTestTowLineCell.m in Sources */,
 				04ADEBB92266C1790029E3BD /* XJEditSelectDataVC.m in Sources */,
 				045CB32F22816145007902CE /* XJActionSheetItem.m in Sources */,
+				043A37B0228BC4F5009DDE12 /* NSString+Util.m in Sources */,
 				043A379E228BB931009DDE12 /* TZImageCropManager.m in Sources */,
 				040EE12D2265C7E900C66475 /* XJActionSheet.m in Sources */,
 				0430ABF4225C3EBD00236154 /* XJAddressBookMainVC.m in Sources */,
@@ -1547,6 +1558,7 @@
 				043A37AA228BB931009DDE12 /* TZImagePickerController.m in Sources */,
 				0430ABFA225C3ED700236154 /* XJMineMainVC.m in Sources */,
 				04ADEBC722670C1D0029E3BD /* XJLabel.m in Sources */,
+				043A37B6228C2BC0009DDE12 /* NSObject+Hierarchy.m in Sources */,
 				0430ABF1225C3EAE00236154 /* XJMessageMainVC.m in Sources */,
 				040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */,
 				044C9940225DA38B0030AE9A /* ZZJBlockBarButtonItem.m in Sources */,

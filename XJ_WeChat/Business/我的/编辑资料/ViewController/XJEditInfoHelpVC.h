@@ -26,6 +26,6 @@
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
--(UIView *)viewForHeaderInSection:(NSInteger)section;
+- (UIView *)viewForHeaderInSection:(NSInteger)section;
 
 @end

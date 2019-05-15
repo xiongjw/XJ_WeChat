@@ -10,7 +10,27 @@
 
 #import "TZImagePickerController.h"
 
+@interface XJSelectPhoto () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic,strong) UIImagePickerController *imagePickerVc;
+
+@property (nonatomic,strong) XJSelectPhotoConfig *model;
+@property (nonatomic,  copy) SelectPhotoCompleteBlock completeBlock;
+
+@end
+
 @implementation XJSelectPhoto
+
+#pragma mark - private
++ (XJSelectPhoto *)sharedInstance {
+    static XJSelectPhoto *instance;
+    static dispatch_once_t onceToken;
+    //利用dispatch_once 来创建单例模式
+    dispatch_once(&onceToken, ^ {
+        instance = [[XJSelectPhoto alloc] init];
+    });
+    return instance;
+}
 
 + (void)selectPhoto:(id)delegate
          withConfig:(SelectPhotoConfigBlock)config
@@ -21,7 +41,8 @@
     
     UIViewController *aSelf = nil;
     if (delegate) aSelf = delegate;
-    
+    else aSelf = [self currentViewController];
+        
     MJWeakSelf
     if (model.useActionSheet) {
         if (model.useSystemActionSheet) {
@@ -29,9 +50,11 @@
             [ac addAction:[UIAlertAction actionWithTitle:model.libraryTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [weakSelf selectFromLibrary:aSelf model:model completeBlock:completeBlock];
             }]];
+            
             [ac addAction:[UIAlertAction actionWithTitle:model.cameraTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [weakSelf selectFromCamera:aSelf model:model completeBlock:completeBlock];
+                [[XJSelectPhoto sharedInstance] selectFromCamera:aSelf model:model completeBlock:completeBlock];
             }]];
+            
             [ac addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 
             }]];
@@ -53,7 +76,7 @@
                     [weakSelf selectFromLibrary:aSelf model:model completeBlock:completeBlock];
                 }
                 else if ([@"camera" isEqualToString:item.code]) {
-                    [weakSelf selectFromCamera:aSelf model:model completeBlock:completeBlock];
+                    [[XJSelectPhoto sharedInstance] selectFromCamera:aSelf model:model completeBlock:completeBlock];
                 }
             }];
         }
@@ -64,7 +87,7 @@
             [self selectFromLibrary:aSelf model:model completeBlock:completeBlock];
         }
         else {
-            [self selectFromCamera:aSelf model:model completeBlock:completeBlock];
+            [[XJSelectPhoto sharedInstance] selectFromCamera:aSelf model:model completeBlock:completeBlock];
         }
     }
     
@@ -91,11 +114,40 @@
     [aSelf presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
-+ (void)selectFromCamera:(UIViewController *)aSelf
+- (void)selectFromCamera:(UIViewController *)aSelf
                    model:(XJSelectPhotoConfig *)model
            completeBlock:(SelectPhotoCompleteBlock)completeBlock
 {
+    _completeBlock = completeBlock;
+    _model = model;
+    self.imagePickerVc.allowsEditing = _model.isCut;
+    [aSelf presentViewController:self.imagePickerVc animated:YES completion:nil];
+}
+
+-(UIImagePickerController *)imagePickerVc
+{
+    if (!_imagePickerVc) {
+        _imagePickerVc = [[UIImagePickerController alloc] init];
+        _imagePickerVc.delegate = self;
+        _imagePickerVc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    return _imagePickerVc;
+}
+
+#pragma mark - UINavigationControllerDelegate,UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
+    UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (photo) {
+        if (self.completeBlock) self.completeBlock(@[photo], nil, YES);
+    }
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

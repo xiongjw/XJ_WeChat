@@ -26,4 +26,12 @@
     return self;
 }
 
+-(void)setMaxCount:(NSInteger)maxCount
+{
+    _maxCount = maxCount;
+    if (_isSingle && maxCount > 1) {
+        _maxCount = 1;
+    }
+}
+
 @end

@@ -39,6 +39,8 @@
 #import "UIView+Create.h"
 #import "UIView+Ex.h"
 #import "UIImage+color.h"
+#import "NSString+Util.h"
+#import "NSObject+Hierarchy.h"
 
 /// 模块
 #import "XJChatDefine.h"

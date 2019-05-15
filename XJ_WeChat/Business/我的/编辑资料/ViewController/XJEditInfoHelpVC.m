@@ -151,10 +151,11 @@
     }
     if ([@"head" isEqualToString:model.code]) {
         //[XJSelectPhoto selectPhotoWithActionSheet];
-        [XJSelectPhoto selectPhoto:self withConfig:^(XJSelectPhotoConfig * _Nullable configModel) {
+        [XJSelectPhoto selectPhoto:nil withConfig:^(XJSelectPhotoConfig * _Nullable configModel) {
             //
             configModel.useActionSheet = YES;
-            configModel.maxCount = 9;
+            configModel.isSingle = YES;
+            configModel.isCut = NO;
             //configModel.useSystemActionSheet =  NO;
             //configModel.actionSheetTitle = @"换头像";
             
@@ -297,7 +298,7 @@
 }
 
 #pragma mark - viewForHeaderInSection
--(UIView *)viewForHeaderInSection:(NSInteger)section
+- (UIView *)viewForHeaderInSection:(NSInteger)section
 {
     XJHeadModel *headModel= self.mutArray[section];
     
