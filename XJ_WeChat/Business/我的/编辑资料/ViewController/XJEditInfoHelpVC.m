@@ -150,7 +150,20 @@
         [self.view endEditing:YES];
     }
     if ([@"head" isEqualToString:model.code]) {
-        [XJSelectPhoto selectPhotoWithActionSheet];
+        //[XJSelectPhoto selectPhotoWithActionSheet];
+        [XJSelectPhoto selectPhoto:self withConfig:^(XJSelectPhotoConfig * _Nullable configModel) {
+            //
+            configModel.useActionSheet = YES;
+            configModel.maxCount = 9;
+            //configModel.useSystemActionSheet =  NO;
+            //configModel.actionSheetTitle = @"换头像";
+            
+        } completeBlock:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+            XJEditHeadCell *cell = [weakSelf.mTableView cellForRowAtIndexPath:indexPath];
+            cell.headIcon.image = [photos firstObject];
+            model.showValue = nil;
+            //[weakSelf reloadRowWithIndexPath:indexPath];
+        }];
     }
     else if ([@"sex" isEqualToString:model.code] ||
              [@"in_school" isEqualToString:model.code] ||

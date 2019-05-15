@@ -49,10 +49,10 @@
     if (_model.title && _model.title.length > 0) {
         UILabel *titleLb = [[UILabel alloc] initWithFrame:CGRectMake(15, posY + 10, _contentView.width - 30, 20)];
         titleLb.font = [UIFont systemFontOfSize:14];
-        titleLb.textColor = [UIColor titleColor];
+        titleLb.textColor = [UIColor descColor];
         titleLb.textAlignment = NSTextAlignmentCenter;
         titleLb.text = _model.title;
-        [titleLb sizeToFit];
+        //[titleLb sizeToFit];
         [_contentView addSubview:titleLb];
         posY = titleLb.bottom + 10;
     }
@@ -150,13 +150,13 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
-        if (_lastIndexPath) {
-            UITableViewCell *lastCell = [tableView cellForRowAtIndexPath:_lastIndexPath];
-            lastCell.accessoryType = UITableViewCellAccessoryNone;
-        }
-        UITableViewCell *currentCell = [tableView cellForRowAtIndexPath:indexPath];
-        currentCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        _lastIndexPath = [indexPath copy];
+//        if (_lastIndexPath) {
+//            UITableViewCell *lastCell = [tableView cellForRowAtIndexPath:_lastIndexPath];
+//            lastCell.accessoryType = UITableViewCellAccessoryNone;
+//        }
+//        UITableViewCell *currentCell = [tableView cellForRowAtIndexPath:indexPath];
+//        currentCell.accessoryType = UITableViewCellAccessoryCheckmark;
+//        _lastIndexPath = [indexPath copy];
         
         if (self.clickBlock) {
             self.clickBlock(_model.menuList[indexPath.row]);

@@ -29,13 +29,13 @@
             [self.mutArray addObject:@{@"text":@"要始终保持敬畏之心,对阳光，对美，对痛楚"}];
         }
         else if (i == 1) {
-            [self.mutArray addObject:@{@"text":@"没有比当傻瓜更简单的事了,为一件事疯狂，总有一天可以从中找到答案"}];
+            [self.mutArray addObject:@{@"text":@"没有比当傻瓜更简单的事了,为一件事疯狂，总有一天可以从中找到答案找到答案"}];
         }
         else if (i == 2) {
             [self.mutArray addObject:@{@"text":@"任何变化都不是突然发生的,都是自己无意间一点一点选择的"}];
         }
         else if (i == 3) {
-            [self.mutArray addObject:@{@"text":@"山有木兮卿有意,昨夜星辰恰似你"}];
+            [self.mutArray addObject:@{@"text":@"山有木兮卿有意,昨夜星辰恰似你/山有木兮卿有意,昨夜星辰恰似你/山有木兮卿有意,昨夜星辰恰似你"}];
         }
         else if (i == 4) {
             [self.mutArray addObject:@{@"text":@"山有木兮卿有意,昨夜星辰恰似你山有木兮卿有意,昨夜星辰恰似你山有木兮卿有意,昨夜星辰恰似你山有木兮卿有意,昨夜星辰恰似你"}];

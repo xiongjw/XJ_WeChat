@@ -49,7 +49,7 @@
         _firstBtn.backgroundColor = [UIColor purpleColor];
         [self.contentView addSubview:_firstBtn];
         
-        _secondLb.width = _firstBtn.left - 5 - _firstLb.left;
+        _secondLb.width = _firstBtn.left - _firstLb.left;
     }
     return self;
 }
