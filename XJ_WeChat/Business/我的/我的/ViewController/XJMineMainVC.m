@@ -14,6 +14,7 @@
 #import "XJTestInputVC.h"
 #import "XJPokerVC.h"
 #import "XJGradualChangeWordVC.h"
+#import "XJTestQQPreviewVC.h"
 
 @interface XJMineMainVC ()
 
@@ -33,7 +34,9 @@
                    @"输入检测",
                    @"跳转动态详情",
                    @"斗地主",
-                   @"渐变文字"];
+                   @"渐变文字",
+                   @"QQ相册"
+                   ];
 }
 
 - (void)testPrint
@@ -107,6 +110,10 @@
     }
     else if (indexPath.row == 6) {
         XJGradualChangeWordVC *vc = [[XJGradualChangeWordVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 7) {
+        XJTestQQPreviewVC *vc = [[XJTestQQPreviewVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
