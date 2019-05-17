@@ -19,6 +19,9 @@
         self.useSystemActionSheet = YES;
         self.libraryTitle = @"相册";
         self.cameraTitle = @"拍照";
+        
+        self.selectPhotoType = XJSelectPhotoLibrary;
+        
         self.isSingle = YES;
         self.maxCount = 1;
         self.isCut = YES;

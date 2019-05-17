@@ -153,9 +153,10 @@
         //[XJSelectPhoto selectPhotoWithActionSheet];
         [XJSelectPhoto selectPhoto:nil withConfig:^(XJSelectPhotoConfig * _Nullable configModel) {
             //
-            configModel.useActionSheet = YES;
-            configModel.isSingle = YES;
+            //configModel.useActionSheet = YES;
+            configModel.isSingle = NO;
             configModel.isCut = NO;
+            configModel.maxCount = 10;
             //configModel.useSystemActionSheet =  NO;
             //configModel.actionSheetTitle = @"换头像";
             

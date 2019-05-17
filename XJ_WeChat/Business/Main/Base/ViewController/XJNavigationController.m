@@ -19,10 +19,17 @@
     // Do any additional setup after loading the view.
     
     UINavigationBar *bar = [UINavigationBar appearance];
-    //bar.barTintColor = RGBACOLOR(0.1, 0.1, 0.1, 0.9);
+    bar.backgroundColor = [UIColor clearColor];
     bar.barTintColor = [UIColor whiteColor];
     bar.tintColor = [UIColor themeColor];
-    bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor blackColor]};
+    bar.titleTextAttributes = @{
+                                NSForegroundColorAttributeName : [UIColor titleColor],
+                                NSFontAttributeName : [UIFont boldSystemFontOfSize:18]
+                                };
+    [bar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    
+    //bar.shadowImage = [UIImage new];
+    //bar.translucent = NO;
     
     self.interactivePopGestureRecognizer.delegate = self;
 }

@@ -104,6 +104,7 @@
             completeBlock(photos, assets, isSelectOriginalPhoto);
         }
     }];
+    imagePickerVc.allowTakeVideo = NO;
     imagePickerVc.showSelectedIndex = YES;
     imagePickerVc.allowTakePicture = NO;
     imagePickerVc.showPhotoCannotSelectLayer = YES;
@@ -111,6 +112,28 @@
         imagePickerVc.allowCrop = YES;
         imagePickerVc.cropRect = CGRectMake(0, (Screen_Height - Screen_Width)/2, Screen_Width, Screen_Width);
     }
+    
+    /// 配置
+    /// 导航部分
+    imagePickerVc.statusBarStyle = UIStatusBarStyleDefault;
+    imagePickerVc.naviBgColor = [UIColor whiteColor];
+    imagePickerVc.naviTitleColor = [UIColor titleColor];
+    imagePickerVc.naviTitleFont = [UIFont boldSystemFontOfSize:18];
+    imagePickerVc.barItemTextColor = [UIColor themeColor];
+    imagePickerVc.barItemTextFont = [UIFont boldSystemFontOfSize:15];
+    imagePickerVc.navLeftBarButtonSettingBlock = ^(UIButton *leftButton) {
+        [leftButton setImage:[UIImage imageNamed:@"icon_nav_black"] forState:UIControlStateNormal];
+        ///增加返回按钮点击范围
+        [leftButton setTitle:@"　　　" forState:(UIControlStateNormal)];
+        [leftButton sizeToFit];
+    };
+    
+    /// 一些按钮，选中等
+    imagePickerVc.photoSelImage = [UIImage imageNamed:@"tz_photoSelImage"];
+    imagePickerVc.oKButtonTitleColorNormal = RGBCOLOR(228, 99, 82);
+    imagePickerVc.oKButtonTitleColorDisabled = RGBACOLOR(228, 99, 82, 0.5);
+    imagePickerVc.photoNumberIconImage = [UIImage imageNamed:@"tz_photoSelImage"];
+    imagePickerVc.photoOriginSelImage = [UIImage imageNamed:@"tz_photoOriginSelImage"];
     [aSelf presentViewController:imagePickerVc animated:YES completion:nil];
 }
 

@@ -69,6 +69,7 @@
     if (self.imageCount > 1) {
         indexLabel.text = [NSString stringWithFormat:@"1/%ld", (long)self.imageCount];
     }
+    else indexLabel.hidden = YES;
     _indexLabel = indexLabel;
     [self addSubview:indexLabel];
     
