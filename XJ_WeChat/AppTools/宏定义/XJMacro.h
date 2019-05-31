@@ -36,7 +36,7 @@
 #define iPhoneXSafeHeight      (IS_iPhoneX_XS ? 34 : 0)
 
 #define StatusBarHeight        [[UIApplication sharedApplication] statusBarFrame].size.height
-#define TabBarHeight           (IS_iPhoneX_XS ? 83 : 49)
+#define TabBarHeight           ((IS_iPhoneX_XS || IS_iPhoneXR_XSMax) ? 83 : 49)
 #define NavHeight              (StatusBarHeight + 44)
 
 //设置颜色

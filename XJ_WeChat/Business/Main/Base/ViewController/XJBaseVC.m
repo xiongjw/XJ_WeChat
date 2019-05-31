@@ -47,6 +47,11 @@
             [weakSelf backAction];
         }];
     }
+    else {
+        /// 隐藏返回按钮，且不让滑动返回
+        self.navigationItem.hidesBackButton = YES;
+        self.disablePopGesture = YES;
+    }
 }
 
 - (void)viewDidLoad {

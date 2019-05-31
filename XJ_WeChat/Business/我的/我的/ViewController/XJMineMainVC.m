@@ -37,6 +37,30 @@
                    @"渐变文字",
                    @"QQ相册"
                    ];
+    
+//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com" param:nil]);
+//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?" param:@{@"key":@"1"}]);
+//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?a=b" param:@{@"key":@"1"}]);
+}
+
+- (NSString *)getUrl:(NSString *)urlString param:(NSDictionary *)param
+{
+    __block NSString *formatApi = urlString;
+    NSRange rangeMark = [urlString rangeOfString:@"?"];
+    if (rangeMark.length > 0) {
+        NSRange rangeAnd = [urlString rangeOfString:@"="];
+        if (rangeAnd.length > 0) {
+            formatApi = FormatString(@"%@&",formatApi);
+        }
+    }
+    else {
+        formatApi = FormatString(@"%@?",formatApi);
+    }
+    [param enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        formatApi = [formatApi stringByAppendingFormat:@"%@=%@&", key, obj];
+    }];
+    return [formatApi substringToIndex:formatApi.length-1];
+    
 }
 
 - (void)testPrint
