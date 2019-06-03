@@ -1161,18 +1161,11 @@
 		044C9938225D9FCE0030AE9A /* 类别 */ = {
 			isa = PBXGroup;
 			children = (
-				044C9941225DA4C50030AE9A /* UIColor+AppColor.h */,
-				044C9942225DA4C50030AE9A /* UIColor+AppColor.m */,
-				044C9955225DED850030AE9A /* UIView+Create.h */,
-				044C9956225DED850030AE9A /* UIView+Create.m */,
-				044C9958225DF1150030AE9A /* UIView+Ex.h */,
-				044C9959225DF1150030AE9A /* UIView+Ex.m */,
-				040EE1312265D10700C66475 /* UIImage+color.h */,
-				040EE1322265D10700C66475 /* UIImage+color.m */,
-				043A37AE228BC4F5009DDE12 /* NSString+Util.h */,
-				043A37AF228BC4F5009DDE12 /* NSString+Util.m */,
-				043A37B4228C2BC0009DDE12 /* NSObject+Hierarchy.h */,
-				043A37B5228C2BC0009DDE12 /* NSObject+Hierarchy.m */,
+				04CD36C522A4AE83000AB30A /* UIColor */,
+				04CD36C422A4AE7B000AB30A /* UIView */,
+				04CD36C322A4AE73000AB30A /* UIImage */,
+				04CD36C222A4AE6C000AB30A /* NSObject */,
+				04CD36C122A4AE64000AB30A /* NSString */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -1377,6 +1370,53 @@
 				04BD321522827BA2006E43AE /* XJFadeView.m */,
 			);
 			path = "渐变";
+			sourceTree = "<group>";
+		};
+		04CD36C122A4AE64000AB30A /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				043A37AE228BC4F5009DDE12 /* NSString+Util.h */,
+				043A37AF228BC4F5009DDE12 /* NSString+Util.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		04CD36C222A4AE6C000AB30A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				043A37B4228C2BC0009DDE12 /* NSObject+Hierarchy.h */,
+				043A37B5228C2BC0009DDE12 /* NSObject+Hierarchy.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		04CD36C322A4AE73000AB30A /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				040EE1312265D10700C66475 /* UIImage+color.h */,
+				040EE1322265D10700C66475 /* UIImage+color.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		04CD36C422A4AE7B000AB30A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				044C9955225DED850030AE9A /* UIView+Create.h */,
+				044C9956225DED850030AE9A /* UIView+Create.m */,
+				044C9958225DF1150030AE9A /* UIView+Ex.h */,
+				044C9959225DF1150030AE9A /* UIView+Ex.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		04CD36C522A4AE83000AB30A /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				044C9941225DA4C50030AE9A /* UIColor+AppColor.h */,
+				044C9942225DA4C50030AE9A /* UIColor+AppColor.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		04E4D4ED225C351D0067D70C = {

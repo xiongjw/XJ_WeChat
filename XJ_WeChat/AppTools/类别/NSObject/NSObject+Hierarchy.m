@@ -32,4 +32,24 @@
     return currentViewController;
 }
 
+- (UIViewController *)getRootVC
+{
+    return KeyWindow.rootViewController;
+}
+
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *vc = [self getRootVC];
+    while (vc.presentedViewController) {
+        vc = vc.presentedViewController;
+    }
+    if ([vc isKindOfClass:[UITabBarController class]]) {
+        vc = [((UITabBarController *)vc) selectedViewController];
+    }
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        vc = [((UINavigationController *)vc) topViewController];
+    }
+    return nil;
+}
+
 @end

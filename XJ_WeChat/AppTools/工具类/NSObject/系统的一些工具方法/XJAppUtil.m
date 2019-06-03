@@ -10,6 +10,17 @@
 
 @implementation XJAppUtil
 
++ (CGSize)getLabelSizeWithText:(NSString *)text lbFont:(UIFont *)lbFont lbWidth:(CGFloat)lbWidth
+{
+    CGSize retSize = [text boundingRectWithSize:CGSizeMake(lbWidth, MAXFLOAT)
+                                        options:(NSStringDrawingTruncatesLastVisibleLine |
+                                                 NSStringDrawingUsesLineFragmentOrigin |
+                                                 NSStringDrawingUsesFontLeading)
+                                     attributes:@{NSFontAttributeName: lbFont}
+                                        context:nil].size;
+    return retSize;
+}
+
 + (NSMutableAttributedString *)highlightWithKeyword:(NSString *)keyword
                                          originText:(NSString *)originText
 {
@@ -40,6 +51,38 @@
     NSArray *resultList = data[key];
     
     return resultList;
+}
+
++ (BOOL)isSafeObj:(id)obj
+{
+    if ([obj isKindOfClass:[NSNull class]] || [obj isEqual:[NSNull null]] || obj == nil) {
+        return NO;
+    }
+    return YES;
+}
+
++ (NSString *)safeString:(id)obj
+{
+    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSString class]]) {
+        return obj;
+    }
+    return @"";
+}
+
++ (NSDictionary *)safeDictionary:(id)obj
+{
+    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSDictionary class]]) {
+        return obj;
+    }
+    return @{};
+}
+
++ (NSArray *)safeArray:(id)obj
+{
+    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSArray class]]) {
+        return obj;
+    }
+    return @[];
 }
 
 @end
