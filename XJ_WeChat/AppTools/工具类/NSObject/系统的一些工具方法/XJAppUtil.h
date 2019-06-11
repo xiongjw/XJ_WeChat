@@ -22,10 +22,4 @@
 /// plist读取
 + (NSArray *)readRegionDataWithKey:(NSString *)key;
 
-/// 对象的安全取值
-+ (BOOL)isSafeObj:(id)obj;
-+ (NSString *)safeString:(id)obj;
-+ (NSDictionary *)safeDictionary:(id)obj;
-+ (NSArray *)safeArray:(id)obj;
-
 @end

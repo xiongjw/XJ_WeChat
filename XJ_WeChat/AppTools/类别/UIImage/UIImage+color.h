@@ -12,4 +12,6 @@
 
 + (UIImage *)imageWithColor:(UIColor *)color;
 
++ (UIImage *)bundleImageNamed:(NSString *)nnn;
+
 @end

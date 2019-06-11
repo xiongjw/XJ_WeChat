@@ -43,7 +43,7 @@
     }
     if (showBackBtn) {
         MJWeakSelf
-        self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"icon_nav_black"] eventHandler:^{
+        self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"nav_back"] eventHandler:^{
             [weakSelf backAction];
         }];
     }

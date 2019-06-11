@@ -11,15 +11,15 @@
 @interface XJCircleDBTool : NSObject
 
 /// 发布圈子
-+ (void)insert;
+//+ (void)insert;
 
 /// 删除圈子
-+ (void)del;
+//+ (void)del;
 
 /// 修改圈子（点赞、评论）
-+ (void)update;
+//+ (void)update;
 
 /// 查询圈子
-+ (void)query;
+//+ (void)query;
 
 @end

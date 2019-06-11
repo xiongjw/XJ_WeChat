@@ -122,7 +122,7 @@
     imagePickerVc.barItemTextColor = [UIColor themeColor];
     imagePickerVc.barItemTextFont = [UIFont boldSystemFontOfSize:15];
     imagePickerVc.navLeftBarButtonSettingBlock = ^(UIButton *leftButton) {
-        [leftButton setImage:[UIImage imageNamed:@"icon_nav_black"] forState:UIControlStateNormal];
+        [leftButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
         ///增加返回按钮点击范围
         [leftButton setTitle:@"　　　" forState:(UIControlStateNormal)];
         [leftButton sizeToFit];

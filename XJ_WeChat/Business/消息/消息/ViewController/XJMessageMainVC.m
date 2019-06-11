@@ -33,7 +33,7 @@
         model.nickname = @"大熊、";
         //model.time =
         model.desc = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
-        model.unReadNum = i;
+        //model.unReadNum = i;
         [self.mutArray addObject:model];
     }
     

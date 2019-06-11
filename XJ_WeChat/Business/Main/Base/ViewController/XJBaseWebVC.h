@@ -8,10 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSInteger, WKWebLoadType) {
+    LoadWebUrlString = 0,
+    LoadLocalFile = 1,
+    LoadHtmlString
+};
 
 @interface XJBaseWebVC : XJBaseVC
 
-@end
+/// 加载网络url
+- (void)loadWebUrl:(NSString *)webUrlString;
 
-NS_ASSUME_NONNULL_END
+/// 加载本地html等其它文件
+- (void)loadLocalHtml:(NSString *)htmlName;
+- (void)loadLocalFile:(NSString *)FileName fileType:(NSString *)fileType;
+
+/// 加载字符串
+- (void)loadHtmlString:(NSString *)htmlString;
+
+@end

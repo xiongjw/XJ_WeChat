@@ -10,6 +10,7 @@
 
 @implementation XJAppUtil
 
+/// label size
 + (CGSize)getLabelSizeWithText:(NSString *)text lbFont:(UIFont *)lbFont lbWidth:(CGFloat)lbWidth
 {
     CGSize retSize = [text boundingRectWithSize:CGSizeMake(lbWidth, MAXFLOAT)
@@ -21,6 +22,7 @@
     return retSize;
 }
 
+/// 文字高亮
 + (NSMutableAttributedString *)highlightWithKeyword:(NSString *)keyword
                                          originText:(NSString *)originText
 {
@@ -44,6 +46,8 @@
     return attributeStr;
 }
 
+
+/// plist读取
 + (NSArray *)readRegionDataWithKey:(NSString *)key
 {
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"region" ofType:@"plist"];
@@ -51,38 +55,6 @@
     NSArray *resultList = data[key];
     
     return resultList;
-}
-
-+ (BOOL)isSafeObj:(id)obj
-{
-    if ([obj isKindOfClass:[NSNull class]] || [obj isEqual:[NSNull null]] || obj == nil) {
-        return NO;
-    }
-    return YES;
-}
-
-+ (NSString *)safeString:(id)obj
-{
-    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSString class]]) {
-        return obj;
-    }
-    return @"";
-}
-
-+ (NSDictionary *)safeDictionary:(id)obj
-{
-    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSDictionary class]]) {
-        return obj;
-    }
-    return @{};
-}
-
-+ (NSArray *)safeArray:(id)obj
-{
-    if ([self isSafeObj:obj] && [obj isKindOfClass:[NSArray class]]) {
-        return obj;
-    }
-    return @[];
 }
 
 @end

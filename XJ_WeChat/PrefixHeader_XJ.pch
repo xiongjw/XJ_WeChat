@@ -32,6 +32,7 @@
 #import "XJActionSheetView.h"
 #import "XJHud.h"
 #import "XJUserDefaults.h"
+#import "XJNetwork.h"
 
 #import "ZZJBlockBarButtonItem.h"
 

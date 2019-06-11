@@ -30,4 +30,25 @@
     return theImage;
 }
 
++ (UIImage *)bundleImageNamed:(NSString *)name
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"png"];
+    return [UIImage imageWithContentsOfFile:path];
+}
+
++ (UIImage *)bundleImageNamed:(NSString *)name inBundle:(NSString *)bundleName
+{
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
+    NSString *imagePath = [bundlePath stringByAppendingPathComponent:name];;
+    return [UIImage imageWithContentsOfFile:imagePath];
+}
+
++ (UIImage *)bundleImageNamed:(NSString *)name inBundle:(NSString *)bundleName dirName:(NSString *)dirName
+{
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
+    //NSString *imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:name ofType:@"png" inDirectory:dirName];
+    NSString *imagePath = [[bundlePath stringByAppendingPathComponent:dirName] stringByAppendingPathComponent:name];
+    return [UIImage imageWithContentsOfFile:imagePath];
+}
+
 @end
