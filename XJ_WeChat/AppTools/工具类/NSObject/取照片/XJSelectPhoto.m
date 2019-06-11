@@ -162,7 +162,9 @@
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *photo = nil;
+    if (picker.allowsEditing) photo = [info objectForKey:UIImagePickerControllerEditedImage];
+    else photo = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (photo) {
         if (self.completeBlock) self.completeBlock(@[photo], nil, YES);
     }
