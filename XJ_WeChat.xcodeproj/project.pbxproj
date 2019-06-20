@@ -80,6 +80,7 @@
 		040F0F7822648DCF00F5371B /* XJEditQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7722648DCF00F5371B /* XJEditQuestionCell.m */; };
 		040F0F7B22648E1F00F5371B /* XJEditBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7A22648E1F00F5371B /* XJEditBaseCell.m */; };
 		040F0F7E22648E3900F5371B /* XJEditInfoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040F0F7D22648E3900F5371B /* XJEditInfoUtil.m */; };
+		040FEFAC22BA0B7D00ED5CB6 /* XJTestOpenUrlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FEFAB22BA0B7C00ED5CB6 /* XJTestOpenUrlVC.m */; };
 		0413179522AE0A7C00E1E9D6 /* XJSafeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413179422AE0A7C00E1E9D6 /* XJSafeUtil.m */; };
 		0413179822AE0AD400E1E9D6 /* XJDateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413179722AE0AD400E1E9D6 /* XJDateUtil.m */; };
 		0430ABE3225C3DEF00236154 /* XJBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430ABE2225C3DEF00236154 /* XJBaseVC.m */; };
@@ -278,6 +279,8 @@
 		040F0F7A22648E1F00F5371B /* XJEditBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditBaseCell.m; sourceTree = "<group>"; };
 		040F0F7C22648E3900F5371B /* XJEditInfoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEditInfoUtil.h; sourceTree = "<group>"; };
 		040F0F7D22648E3900F5371B /* XJEditInfoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEditInfoUtil.m; sourceTree = "<group>"; };
+		040FEFAA22BA0B7C00ED5CB6 /* XJTestOpenUrlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTestOpenUrlVC.h; sourceTree = "<group>"; };
+		040FEFAB22BA0B7C00ED5CB6 /* XJTestOpenUrlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTestOpenUrlVC.m; sourceTree = "<group>"; };
 		0413179322AE0A7C00E1E9D6 /* XJSafeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSafeUtil.h; sourceTree = "<group>"; };
 		0413179422AE0A7C00E1E9D6 /* XJSafeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSafeUtil.m; sourceTree = "<group>"; };
 		0413179622AE0AD400E1E9D6 /* XJDateUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJDateUtil.h; sourceTree = "<group>"; };
@@ -596,6 +599,7 @@
 		040EAE7E22685A38002C3D98 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				040FEFA922BA0B4A00ED5CB6 /* 测试打开app */,
 				04071415228E8D8000CEAAFF /* qq相册预览 */,
 				040071482283F58C00A7F57D /* 换行问题 */,
 				040071472283F58000A7F57D /* 输入检测 */,
@@ -814,6 +818,15 @@
 				040EE11622657FEE00C66475 /* XJHeadModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		040FEFA922BA0B4A00ED5CB6 /* 测试打开app */ = {
+			isa = PBXGroup;
+			children = (
+				040FEFAA22BA0B7C00ED5CB6 /* XJTestOpenUrlVC.h */,
+				040FEFAB22BA0B7C00ED5CB6 /* XJTestOpenUrlVC.m */,
+			);
+			path = "测试打开app";
 			sourceTree = "<group>";
 		};
 		0430ABD8225C39FC00236154 /* Supporting Files */ = {
@@ -1679,6 +1692,7 @@
 				04799926225EEF9F00470217 /* XJMessageTipsCell.m in Sources */,
 				040F0F5A22647A1A00F5371B /* XJCircleListVC.m in Sources */,
 				04E4D4FB225C351D0067D70C /* AppDelegate.m in Sources */,
+				040FEFAC22BA0B7D00ED5CB6 /* XJTestOpenUrlVC.m in Sources */,
 				04ADEBCA2267215D0029E3BD /* XJPickerModel.m in Sources */,
 				04799920225EEF5800470217 /* XJMessageModel.m in Sources */,
 				040F0F7B22648E1F00F5371B /* XJEditBaseCell.m in Sources */,

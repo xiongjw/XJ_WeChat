@@ -15,6 +15,7 @@
 #import "XJPokerVC.h"
 #import "XJGradualChangeWordVC.h"
 #import "XJTestQQPreviewVC.h"
+#import "XJTestOpenUrlVC.h"
 
 @interface XJMineMainVC ()
 
@@ -32,7 +33,7 @@
                    @"选择器",
                    @"Test换行",
                    @"输入检测",
-                   @"跳转动态详情",
+                   @"测试打开第三方app",
                    @"斗地主",
                    @"渐变文字",
                    @"QQ相册"
@@ -41,6 +42,7 @@
 //    NSLog(@"%@",[self getUrl:@"http://www.baidu.com" param:nil]);
 //    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?" param:@{@"key":@"1"}]);
 //    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?a=b" param:@{@"key":@"1"}]);
+    
 }
 
 - (NSString *)getUrl:(NSString *)urlString param:(NSDictionary *)param
@@ -118,15 +120,8 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 4) {
-        /*
-        XJBaseWebVC *vc = [[XJBaseWebVC alloc] init];
+        XJTestOpenUrlVC *vc = [[XJTestOpenUrlVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-         */
-        NSString *urlString = FormatString(@"mwappjumpcircledetail://jump?circleId=%@",@"742");
-        NSURL *url = [NSURL URLWithString:urlString];
-        
-        //打开url
-        [[UIApplication sharedApplication] openURL:url];
     }
     else if (indexPath.row == 5) {
         XJPokerVC *vc = [[XJPokerVC alloc] init];
