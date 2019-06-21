@@ -17,5 +17,6 @@ pod 'BMKLocationKit'
 pod 'FMDB', '~> 2.7.2'
 pod 'SVProgressHUD'
 #pod 'TZImagePickerController'
+pod 'KRVideoPlayer'
 
 end

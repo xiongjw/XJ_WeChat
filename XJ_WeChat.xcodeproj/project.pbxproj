@@ -43,6 +43,7 @@
 		04071444228E901000CEAAFF /* testImage_8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0407142E228E901000CEAAFF /* testImage_8.jpeg */; };
 		04071445228E901000CEAAFF /* testImage_17.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0407142F228E901000CEAAFF /* testImage_17.jpeg */; };
 		04071448228E907A00CEAAFF /* XJPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04071447228E907A00CEAAFF /* XJPreviewView.m */; };
+		040792BB22BCC82E00B2F2B9 /* douyin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 040792BA22BCC82E00B2F2B9 /* douyin.mp4 */; };
 		040EAE75226804B6002C3D98 /* XJAllPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE74226804B6002C3D98 /* XJAllPickerVC.m */; };
 		040EAE78226804DA002C3D98 /* XJPickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE77226804DA002C3D98 /* XJPickerUtil.m */; };
 		040EAE7B22681611002C3D98 /* XJPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040EAE7A22681611002C3D98 /* XJPickerCell.m */; };
@@ -206,6 +207,7 @@
 		0407142F228E901000CEAAFF /* testImage_17.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage_17.jpeg; sourceTree = "<group>"; };
 		04071446228E907A00CEAAFF /* XJPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPreviewView.h; sourceTree = "<group>"; };
 		04071447228E907A00CEAAFF /* XJPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPreviewView.m; sourceTree = "<group>"; };
+		040792BA22BCC82E00B2F2B9 /* douyin.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin.mp4; sourceTree = "<group>"; };
 		040EAE73226804B6002C3D98 /* XJAllPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAllPickerVC.h; sourceTree = "<group>"; };
 		040EAE74226804B6002C3D98 /* XJAllPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAllPickerVC.m; sourceTree = "<group>"; };
 		040EAE76226804DA002C3D98 /* XJPickerUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPickerUtil.h; sourceTree = "<group>"; };
@@ -583,6 +585,14 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		040792B922BCC82000B2F2B9 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				040792BA22BCC82E00B2F2B9 /* douyin.mp4 */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
 		040EAE7222680458002C3D98 /* 选择器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +842,7 @@
 		0430ABD8225C39FC00236154 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				040792B922BCC82000B2F2B9 /* source */,
 				04E4D502225C351E0067D70C /* Assets.xcassets */,
 				04E4D507225C351E0067D70C /* Info.plist */,
 				04E4D508225C351E0067D70C /* main.m */,
@@ -1582,6 +1593,7 @@
 				040F0F4B22646AAB00F5371B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				04071438228E901000CEAAFF /* testImage_21.jpeg in Resources */,
 				04071444228E901000CEAAFF /* testImage_8.jpeg in Resources */,
+				040792BB22BCC82E00B2F2B9 /* douyin.mp4 in Resources */,
 				04071431228E901000CEAAFF /* testImage_19.jpeg in Resources */,
 				0407143F228E901000CEAAFF /* testImage_14.jpeg in Resources */,
 				04071434228E901000CEAAFF /* testImage_18.jpeg in Resources */,
@@ -1609,6 +1621,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XJ_WeChat/Pods-XJ_WeChat-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KRVideoPlayer/KRVideoPlayer.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -1617,6 +1630,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KRVideoPlayer.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);

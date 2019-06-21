@@ -23,8 +23,10 @@
     
     self.view.backgroundColor = [UIColor blackColor];
     
+    NSString *text = @"武汉梦象家科技有限公司";
+    
     XJFadeView *stringRightView = [[XJFadeView alloc] initWithFrame:CGRectMake(0, 40, Screen_Width, 40)];
-    stringRightView.text = @"武汉水象科技有限公司";
+    stringRightView.text = text;
     stringRightView.foreColor = [UIColor whiteColor];
     stringRightView.backColor = [UIColor redColor];
     stringRightView.font = [UIFont systemFontOfSize:24];
@@ -35,7 +37,7 @@
     [stringRightView fadeWithDuration:2];
     
     XJFadeView *iphoneRightView = [[XJFadeView alloc] initWithFrame:CGRectMake(0, stringRightView.bottom + 40, Screen_Width, 40)];
-    iphoneRightView.text = @"武汉水象科技有限公司";
+    iphoneRightView.text = text;
     iphoneRightView.foreColor = [UIColor whiteColor];
     iphoneRightView.backColor = [UIColor redColor];
     iphoneRightView.font = [UIFont systemFontOfSize:24];
@@ -45,8 +47,8 @@
     
     [iphoneRightView fadeWithDuration:2];
     
-    XJFadeView *stringDownView = [[XJFadeView alloc] initWithFrame:CGRectMake(100, iphoneRightView.bottom + 40, 40, 300)];
-    stringDownView.text = @"武汉水象科技有限公司";
+    XJFadeView *stringDownView = [[XJFadeView alloc] initWithFrame:CGRectMake(100, iphoneRightView.bottom + 40, 40, 400)];
+    stringDownView.text = text;
     stringDownView.foreColor = [UIColor whiteColor];
     stringDownView.backColor = [UIColor redColor];
     stringDownView.font = [UIFont systemFontOfSize:24];
@@ -57,7 +59,7 @@
     [stringDownView fadeWithDuration:2];
     
     XJFadeView *iphoneDownView = [[XJFadeView alloc] initWithFrame:CGRectMake(stringDownView.right + 40, stringDownView.top, stringDownView.width, stringDownView.height)];
-    iphoneDownView.text = @"武汉水象科技有限公司";
+    iphoneDownView.text = text;
     iphoneDownView.foreColor = [UIColor whiteColor];
     iphoneDownView.backColor = [UIColor redColor];
     iphoneDownView.font = [UIFont systemFontOfSize:24];

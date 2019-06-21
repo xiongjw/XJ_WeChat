@@ -16,8 +16,11 @@
 #import "XJGradualChangeWordVC.h"
 #import "XJTestQQPreviewVC.h"
 #import "XJTestOpenUrlVC.h"
+#import <KRVideoPlayerController.h>
 
 @interface XJMineMainVC ()
+
+@property (nonatomic,strong) KRVideoPlayerController *videoController;
 
 @end
 
@@ -29,53 +32,19 @@
     
     [self.mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.array = @[@"编辑资料",
-                   @"选择器",
-                   @"Test换行",
-                   @"输入检测",
-                   @"测试打开第三方app",
-                   @"斗地主",
-                   @"渐变文字",
-                   @"QQ相册"
+    self.array = @[
+                   @{@"code":@"editInfo", @"name":@"编辑资料"},
+                   @{@"code":@"picker", @"name":@"选择器"},
+                   @{@"code":@"line", @"name":@"Test换行"},
+                   @{@"code":@"inputCheck", @"name":@"输入检测"},
+                   @{@"code":@"openUrl", @"name":@"测试打开第三方app"},
+                   @{@"code":@"pocker", @"name":@"斗地主"},
+                   @{@"code":@"gradualChange", @"name":@"渐变文字"},
+                   @{@"code":@"qqPreview", @"name":@"QQ相册"},
+                   @{@"code":@"webview", @"name":@"webview"},
+                   @{@"code":@"vedio", @"name":@"视频播放器"},
                    ];
     
-//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com" param:nil]);
-//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?" param:@{@"key":@"1"}]);
-//    NSLog(@"%@",[self getUrl:@"http://www.baidu.com?a=b" param:@{@"key":@"1"}]);
-    
-}
-
-- (NSString *)getUrl:(NSString *)urlString param:(NSDictionary *)param
-{
-    __block NSString *formatApi = urlString;
-    NSRange rangeMark = [urlString rangeOfString:@"?"];
-    if (rangeMark.length > 0) {
-        NSRange rangeAnd = [urlString rangeOfString:@"="];
-        if (rangeAnd.length > 0) {
-            formatApi = FormatString(@"%@&",formatApi);
-        }
-    }
-    else {
-        formatApi = FormatString(@"%@?",formatApi);
-    }
-    [param enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        formatApi = [formatApi stringByAppendingFormat:@"%@=%@&", key, obj];
-    }];
-    return [formatApi substringToIndex:formatApi.length-1];
-    
-}
-
-- (void)testPrint
-{
-    NSArray *one = @[@"加",@"＋",@"+",@"➕"];
-    //NSArray *two = @[@"微信",@"薇信",@"微",@"薇",@"WX",@"wx",@"VX",@"vx",@"v",@"V",@"WeChat",@"wechat",@"weixin"];
-    NSArray *two = @[@"QQ",@"qq",@"q",@"Q",@"Qq",@"qQ",@"企鹅号",@"企鹅号码",@"扣扣",@"扣"];
-    NSMutableString *result = [NSMutableString new];
-    for (NSString *oneStr in one) {
-        for (NSString *twoStr in two) {
-            [result appendFormat:@"%@%@|",oneStr, twoStr];
-        }
-    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -89,9 +58,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSDictionary *data = self.array[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.array[indexPath.row];
+    cell.textLabel.text = data[@"name"];
     return cell;
 }
 
@@ -103,39 +73,65 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
+    NSDictionary *data = self.array[indexPath.row];
+    NSString *code = data[@"code"];
+    if ([@"editInfo" isEqualToString:code]) {
         XJEditInfoVC *vc = [[XJEditInfoVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 1) {
+    else if ([@"picker" isEqualToString:code]) {
         XJAllPickerVC *vc = [[XJAllPickerVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 2) {
+    else if ([@"line" isEqualToString:code]) {
         MWTestTowLineVC *vc = [[MWTestTowLineVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 3) {
+    else if ([@"inputCheck" isEqualToString:code]) {
         XJTestInputVC *vc = [[XJTestInputVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 4) {
+    else if ([@"openUrl" isEqualToString:code]) {
         XJTestOpenUrlVC *vc = [[XJTestOpenUrlVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 5) {
+    else if ([@"pocker" isEqualToString:code]) {
         XJPokerVC *vc = [[XJPokerVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 6) {
+    else if ([@"gradualChange" isEqualToString:code]) {
         XJGradualChangeWordVC *vc = [[XJGradualChangeWordVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 7) {
+    else if ([@"qqPreview" isEqualToString:code]) {
         XJTestQQPreviewVC *vc = [[XJTestQQPreviewVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    
+    else if ([@"webview" isEqualToString:code]) {
+        XJBaseWebVC *vc = [[XJBaseWebVC alloc] init];
+        [vc loadWebUrl:@"https://www.baidu.com"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if ([@"vedio" isEqualToString:code]) {
+        NSURL *localUrl = [[NSBundle mainBundle] URLForResource:@"douyin" withExtension:@"mp4"];
+        self.videoController.contentURL = localUrl;
+        [self.videoController showInWindow];
+        
+//        NSURL *remoteUrl = [NSURL URLWithString:@"http://v.douyin.com/hFHCev/"];
+//        self.videoController.contentURL = remoteUrl;
+    }
+}
+
+-(KRVideoPlayerController *)videoController
+{
+    if (!_videoController) {
+        MJWeakSelf
+        _videoController = [[KRVideoPlayerController alloc] initWithFrame:Screen_Frame];
+        _videoController.dimissCompleteBlock = ^{
+            [weakSelf.videoController stop];
+        };
+    }
+    return _videoController;
 }
 
 @end
