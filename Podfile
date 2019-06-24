@@ -9,6 +9,7 @@ target 'XJ_WeChat' do
 
 pod 'AFNetworking', '~> 3.2.1'
 pod 'MJRefresh'
+pod 'MJExtension'
 pod 'SDWebImage'
 
 pod 'MLLabel'

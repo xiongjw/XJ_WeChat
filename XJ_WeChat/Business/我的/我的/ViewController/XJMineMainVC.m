@@ -115,10 +115,11 @@
     else if ([@"vedio" isEqualToString:code]) {
         NSURL *localUrl = [[NSBundle mainBundle] URLForResource:@"douyin" withExtension:@"mp4"];
         self.videoController.contentURL = localUrl;
-        [self.videoController showInWindow];
         
 //        NSURL *remoteUrl = [NSURL URLWithString:@"http://v.douyin.com/hFHCev/"];
 //        self.videoController.contentURL = remoteUrl;
+        
+        [self.videoController showInWindow];
     }
 }
 
@@ -127,6 +128,7 @@
     if (!_videoController) {
         MJWeakSelf
         _videoController = [[KRVideoPlayerController alloc] initWithFrame:Screen_Frame];
+        //_videoController = [[KRVideoPlayerController alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Width*(9.0/16.0))];
         _videoController.dimissCompleteBlock = ^{
             [weakSelf.videoController stop];
         };
